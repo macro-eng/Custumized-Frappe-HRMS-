@@ -1,0 +1,21 @@
+.secondary-navbar{
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+
+}.secondary-navbar .nav-links{
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.secondary-navbar .nav-links li{
+    display: inline-block;
+}
+.secondary-navbar .nav-links a{
+    text-decoration: none;
+
+    color:#007bff
+    
+}

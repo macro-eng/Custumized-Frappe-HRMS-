@@ -1,0 +1,530 @@
+2025-03-18 07:18:03,776 ERROR frappe Could not take error snapshot: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+Site: HRPU.localhost
+Form Dict: {'limit': '20', 'cmd': 'frappe.desk.doctype.notification_log.notification_log.get_notification_logs'}
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 649, in connect
+    sock = socket.create_connection(
+  File "/usr/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/usr/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/app.py", line 115, in application
+    response = frappe.api.handle(request)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/api/__init__.py", line 49, in handle
+    data = endpoint(**arguments)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/api/v1.py", line 36, in handle_rpc_call
+    return frappe.handler.handle()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/handler.py", line 50, in handle
+    data = execute_cmd(cmd)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/handler.py", line 86, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 1726, in call
+    return fn(*args, **newargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/typing_validations.py", line 31, in wrapper
+    return func(*args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/desk/doctype/notification_log/notification_log.py", line 167, in get_notification_logs
+    notification_logs = frappe.db.get_list(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 761, in get_list
+    return frappe.get_list(*args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 1990, in get_list
+    return frappe.model.db_query.DatabaseQuery(doctype).execute(*args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/db_query.py", line 192, in execute
+    result = self.build_and_run()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/db_query.py", line 233, in build_and_run
+    return frappe.db.sql(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 716, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 649, in connect
+    sock = socket.create_connection(
+  File "/usr/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/usr/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/error.py", line 86, in log_error_snapshot
+    log_error(title=str(exception), defer_insert=True)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/error.py", line 61, in log_error
+    error_log = frappe.get_doc(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 1291, in get_doc
+    doc = frappe.model.document.get_doc(*args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 83, in get_doc
+    controller = get_controller(doctype)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/base_document.py", line 67, in get_controller
+    return import_controller(doctype)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/base_document.py", line 82, in import_controller
+    doctype_info = frappe.db.get_value("DocType", doctype, fieldname="*")
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 515, in get_value
+    result = self.get_values(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 619, in get_values
+    out = self._get_values_from_table(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 892, in _get_values_from_table
+    return query.run(as_dict=as_dict, debug=debug, update=update, run=run, pluck=pluck)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 716, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+2025-03-18 07:18:03,807 ERROR frappe Could not take error snapshot: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+Site: HRPU.localhost
+Form Dict: {'cmd': 'frappe.desk.desktop.get_workspace_sidebar_items'}
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 649, in connect
+    sock = socket.create_connection(
+  File "/usr/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/usr/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/app.py", line 115, in application
+    response = frappe.api.handle(request)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/api/__init__.py", line 49, in handle
+    data = endpoint(**arguments)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/api/v1.py", line 36, in handle_rpc_call
+    return frappe.handler.handle()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/handler.py", line 50, in handle
+    data = execute_cmd(cmd)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/handler.py", line 86, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 1726, in call
+    return fn(*args, **newargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/typing_validations.py", line 31, in wrapper
+    return func(*args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/desk/desktop.py", line 451, in get_workspace_sidebar_items
+    all_pages = frappe.get_all(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 2015, in get_all
+    return get_list(doctype, *args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 1990, in get_list
+    return frappe.model.db_query.DatabaseQuery(doctype).execute(*args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/db_query.py", line 192, in execute
+    result = self.build_and_run()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/db_query.py", line 233, in build_and_run
+    return frappe.db.sql(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 716, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 649, in connect
+    sock = socket.create_connection(
+  File "/usr/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/usr/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/error.py", line 86, in log_error_snapshot
+    log_error(title=str(exception), defer_insert=True)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/error.py", line 61, in log_error
+    error_log = frappe.get_doc(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 1291, in get_doc
+    doc = frappe.model.document.get_doc(*args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 83, in get_doc
+    controller = get_controller(doctype)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/base_document.py", line 67, in get_controller
+    return import_controller(doctype)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/base_document.py", line 82, in import_controller
+    doctype_info = frappe.db.get_value("DocType", doctype, fieldname="*")
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 515, in get_value
+    result = self.get_values(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 619, in get_values
+    out = self._get_values_from_table(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 892, in _get_values_from_table
+    return query.run(as_dict=as_dict, debug=debug, update=update, run=run, pluck=pluck)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 716, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+2025-03-19 02:28:21,143 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Salary Component","name":"new-salary-component-feulmtcrsb","__islocal":1,"__unsaved":1,"owner":"Administrator","type":"Deduction","depends_on_payment_days":1,"deduct_full_tax_on_selected_payroll_date":0,"do_not_include_in_total":0,"remove_if_zero_valued":1,"amount_based_on_formula":1,"accounts":[],"salary_component":"خصم الغياب","salary_component_abbr":"Absent Deduction(AD)","formula":"(600000/20)*5"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-03-19 02:28:46,365 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Salary Component","name":"new-salary-component-feulmtcrsb","__islocal":1,"__unsaved":1,"owner":"Administrator","type":"Deduction","depends_on_payment_days":1,"deduct_full_tax_on_selected_payroll_date":0,"do_not_include_in_total":0,"remove_if_zero_valued":1,"amount_based_on_formula":1,"accounts":[],"salary_component":"خصم الغياب","salary_component_abbr":"Absent Deduction(AD)","formula":""}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-03-19 02:28:54,106 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Salary Component","name":"new-salary-component-feulmtcrsb","__islocal":1,"__unsaved":1,"owner":"Administrator","type":"Deduction","depends_on_payment_days":1,"deduct_full_tax_on_selected_payroll_date":0,"do_not_include_in_total":0,"remove_if_zero_valued":1,"amount_based_on_formula":1,"accounts":[],"salary_component":"خصم الغياب","salary_component_abbr":"Absent Deduction(AD)","formula":""}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-03-19 02:29:10,506 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Salary Component","name":"new-salary-component-feulmtcrsb","__islocal":1,"__unsaved":1,"owner":"Administrator","type":"Deduction","depends_on_payment_days":1,"deduct_full_tax_on_selected_payroll_date":0,"do_not_include_in_total":0,"remove_if_zero_valued":0,"amount_based_on_formula":1,"accounts":[],"salary_component":"خصم الغياب","salary_component_abbr":"Absent Deduction(AD)","formula":""}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-03-19 02:30:03,814 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Salary Component","name":"new-salary-component-mjwrjikgzz","__islocal":1,"__unsaved":1,"owner":"Administrator","type":"Earning","depends_on_payment_days":1,"deduct_full_tax_on_selected_payroll_date":0,"do_not_include_in_total":0,"remove_if_zero_valued":1,"amount_based_on_formula":0,"accounts":[],"salary_component":"خصم غياب","salary_component_abbr":"Absence Deduction(AD)"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-03-19 02:33:36,269 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Salary Component","name":"new-salary-component-sdykxsbldp","__islocal":1,"__unsaved":1,"owner":"Administrator","type":"Earning","depends_on_payment_days":1,"deduct_full_tax_on_selected_payroll_date":0,"do_not_include_in_total":0,"remove_if_zero_valued":1,"amount_based_on_formula":0,"accounts":[],"salary_component":"Income Tax","salary_component_abbr":"ssssssss"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-03-19 02:40:55,424 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Salary Component","name":"new-salary-component-kmuijruddc","__islocal":1,"__unsaved":1,"owner":"Administrator","type":"Earning","depends_on_payment_days":1,"deduct_full_tax_on_selected_payroll_date":0,"do_not_include_in_total":0,"remove_if_zero_valued":1,"amount_based_on_formula":0,"accounts":[],"salary_component":"Absent Deduction","salary_component_abbr":"AD","formula":"(base/total_working_days)*paid_leave_days"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-03-19 08:10:45,009 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'status': 'Open'}
+2025-03-19 08:15:05,356 ERROR frappe Error while inserting deferred Error Log record: Error Log pig2ini6uq: 'Title' (Module import failed for leave-application, the DocType you're trying to open might be deleted.
+Error: No module named 'frappe.core.doctype.leave_application') will get truncated, as max characters allowed is 140
+Site: HRPU.localhost
+Form Dict: {}
+2025-03-20 02:00:58,973 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'cmd': 'hrms.api.employee.get_attendances'}
+2025-03-20 02:03:44,657 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'cmd': 'hrms.api.employee.get_attendances'}
+2025-03-20 02:04:09,514 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'cmd': 'hrms.api.employee.get_attendances'}
+2025-03-20 02:05:20,304 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'cmd': 'hrms.api.employee.get_attendances'}
+2025-03-20 02:05:25,088 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'cmd': 'hrms.api.employee.get_attendances'}
+2025-03-20 02:05:27,461 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'cmd': 'hrms.api.employee.get_attendances'}
+2025-03-20 02:09:47,629 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'cmd': 'hrms.api.employee.get_attendances'}
+2025-03-20 02:18:11,563 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'cmd': 'hrms.api.employee.get_attendances'}
+2025-03-20 03:33:20,993 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {}
+2025-03-22 02:35:04,107 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Salary Component","name":"new-salary-component-yqzqouwyxn","__islocal":1,"__unsaved":1,"owner":"Administrator","type":"Earning","depends_on_payment_days":1,"deduct_full_tax_on_selected_payroll_date":0,"do_not_include_in_total":0,"remove_if_zero_valued":1,"amount_based_on_formula":0,"accounts":[],"salary_component":"sssssssss","salary_component_abbr":"ssssssssss"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-03-22 03:16:05,361 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Salary Component","name":"new-salary-component-xoccfkxvep","__islocal":1,"__unsaved":1,"owner":"Administrator","type":"Earning","depends_on_payment_days":1,"deduct_full_tax_on_selected_payroll_date":0,"do_not_include_in_total":0,"remove_if_zero_valued":1,"accounts":[],"salary_component":"nnnn","salary_component_abbr":"f"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-03-22 04:58:43,615 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Salary Component","name":"new-salary-component-qugsgzejbk","__islocal":1,"__unsaved":1,"owner":"Administrator","type":"Deduction","depends_on_payment_days":1,"deduct_full_tax_on_selected_payroll_date":0,"do_not_include_in_total":0,"statistical_component":0,"remove_if_zero_valued":1,"accounts":[],"amount_based_on_formula":0,"salary_component":"خصم غياب","salary_component_abbr":"AD"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-04-03 03:56:11,732 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'doc': '{"name":"Al-Saeeda-University","owner":"Administrator","creation":"2025-02-09 06:04:28.100995","modified":"2025-04-03 01:15:01.537157","modified_by":"Administrator","docstatus":0,"idx":98,"company_name":"Al-Saeeda-University","abbr":"A","is_group":0,"lft":1,"rgt":2,"old_parent":"","create_chart_of_accounts_based_on":"Standard Template","chart_of_accounts":"Standard","default_bank_account":"Bank Account - A","default_cash_account":"Cash - A","default_receivable_account":"","default_payable_account":"Creditors - A","write_off_account":"الحساب النقدي العام - A","allow_account_creation_against_child_company":0,"default_expense_account":"Cost of Goods Sold - A","default_income_account":"","cost_center":"Main - A","exchange_gain_loss_account":"Exchange Gain/Loss - A","round_off_account":"Round Off - A","round_off_cost_center":"Main - A","book_advance_payments_in_separate_party_account":0,"reconcile_on_advance_payment_date":0,"reconciliation_takes_effect_on":"Oldest Of Invoice Or Advance","auto_exchange_rate_revaluation":0,"auto_err_frequency":"Daily","submit_err_jv":0,"accumulated_depreciation_account":"Accumulated Depreciation - A","depreciation_expense_account":"Depreciation - A","expenses_included_in_asset_valuation":"Expenses Included In Asset Valuation - A","disposal_account":"Gain/Loss on Asset Disposal - A","depreciation_cost_center":"Main - A","capital_work_in_progress_account":"CWIP Account - A","asset_received_but_not_billed":"Asset Received But Not Billed - A","default_payroll_payable_account":"Payroll Payable - A","default_employee_advance_account":"Employee Advances - A","doctype":"Company","__onload":{"addr_list":[],"contact_list":[]},"__unsaved":1,"university_logo":"/private/files/download7dfbb8.jpeg"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-04-03 03:56:25,176 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'doc': '{"name":"Al-Saeeda-University","owner":"Administrator","creation":"2025-02-09 06:04:28.100995","modified":"2025-04-03 01:15:01.537157","modified_by":"Administrator","docstatus":0,"idx":98,"company_name":"Al-Saeeda-University","abbr":"A","is_group":0,"lft":1,"rgt":2,"old_parent":"","create_chart_of_accounts_based_on":"Standard Template","chart_of_accounts":"Standard","default_bank_account":"Bank Account - A","default_cash_account":"Cash - A","default_receivable_account":"","default_payable_account":"Creditors - A","write_off_account":"الحساب النقدي العام - A","allow_account_creation_against_child_company":0,"default_expense_account":"Cost of Goods Sold - A","default_income_account":"","cost_center":"Main - A","exchange_gain_loss_account":"Exchange Gain/Loss - A","round_off_account":"Round Off - A","round_off_cost_center":"Main - A","book_advance_payments_in_separate_party_account":0,"reconcile_on_advance_payment_date":0,"reconciliation_takes_effect_on":"Oldest Of Invoice Or Advance","auto_exchange_rate_revaluation":0,"auto_err_frequency":"Daily","submit_err_jv":0,"accumulated_depreciation_account":"Accumulated Depreciation - A","depreciation_expense_account":"Depreciation - A","expenses_included_in_asset_valuation":"Expenses Included In Asset Valuation - A","disposal_account":"Gain/Loss on Asset Disposal - A","depreciation_cost_center":"Main - A","capital_work_in_progress_account":"CWIP Account - A","asset_received_but_not_billed":"Asset Received But Not Billed - A","default_payroll_payable_account":"Payroll Payable - A","default_employee_advance_account":"Employee Advances - A","doctype":"Company","__onload":{"addr_list":[],"contact_list":[]},"__unsaved":1,"university_logo":"/private/files/download7dfbb8.jpeg"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-04-03 03:58:09,791 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'doc': '{"name":"Al-Saeeda-University","owner":"Administrator","creation":"2025-02-09 06:04:28.100995","modified":"2025-04-03 01:15:01.537157","modified_by":"Administrator","docstatus":0,"idx":98,"company_name":"Al-Saeeda-University","abbr":"A","is_group":0,"lft":1,"rgt":2,"old_parent":"","create_chart_of_accounts_based_on":"Standard Template","chart_of_accounts":"Standard","default_bank_account":"Bank Account - A","default_cash_account":"Cash - A","default_receivable_account":"","default_payable_account":"Creditors - A","write_off_account":"الحساب النقدي العام - A","allow_account_creation_against_child_company":0,"default_expense_account":"Cost of Goods Sold - A","default_income_account":"","cost_center":"Main - A","exchange_gain_loss_account":"Exchange Gain/Loss - A","round_off_account":"Round Off - A","round_off_cost_center":"Main - A","book_advance_payments_in_separate_party_account":0,"reconcile_on_advance_payment_date":0,"reconciliation_takes_effect_on":"Oldest Of Invoice Or Advance","auto_exchange_rate_revaluation":0,"auto_err_frequency":"Daily","submit_err_jv":0,"accumulated_depreciation_account":"Accumulated Depreciation - A","depreciation_expense_account":"Depreciation - A","expenses_included_in_asset_valuation":"Expenses Included In Asset Valuation - A","disposal_account":"Gain/Loss on Asset Disposal - A","depreciation_cost_center":"Main - A","capital_work_in_progress_account":"CWIP Account - A","asset_received_but_not_billed":"Asset Received But Not Billed - A","default_payroll_payable_account":"Payroll Payable - A","default_employee_advance_account":"Employee Advances - A","doctype":"Company","__onload":{"addr_list":[],"contact_list":[]},"__unsaved":1,"university_logo":"/private/files/download7dfbb8.jpeg"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-04-03 03:58:26,830 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'doc': '{"name":"Al-Saeeda-University","owner":"Administrator","creation":"2025-02-09 06:04:28.100995","modified":"2025-04-03 01:15:01.537157","modified_by":"Administrator","docstatus":0,"idx":98,"company_name":"Al-Saeeda-University","abbr":"A","is_group":0,"lft":1,"rgt":2,"old_parent":"","create_chart_of_accounts_based_on":"Standard Template","chart_of_accounts":"Standard","default_bank_account":"Bank Account - A","default_cash_account":"Cash - A","default_receivable_account":"","default_payable_account":"Creditors - A","write_off_account":"الحساب النقدي العام - A","allow_account_creation_against_child_company":0,"default_expense_account":"Cost of Goods Sold - A","default_income_account":"","cost_center":"Main - A","exchange_gain_loss_account":"Exchange Gain/Loss - A","round_off_account":"Round Off - A","round_off_cost_center":"Main - A","book_advance_payments_in_separate_party_account":0,"reconcile_on_advance_payment_date":0,"reconciliation_takes_effect_on":"Oldest Of Invoice Or Advance","auto_exchange_rate_revaluation":0,"auto_err_frequency":"Daily","submit_err_jv":0,"accumulated_depreciation_account":"Accumulated Depreciation - A","depreciation_expense_account":"Depreciation - A","expenses_included_in_asset_valuation":"Expenses Included In Asset Valuation - A","disposal_account":"Gain/Loss on Asset Disposal - A","depreciation_cost_center":"Main - A","capital_work_in_progress_account":"CWIP Account - A","asset_received_but_not_billed":"Asset Received But Not Billed - A","default_payroll_payable_account":"Payroll Payable - A","default_employee_advance_account":"Employee Advances - A","doctype":"Company","__onload":{"addr_list":[],"contact_list":[]},"__unsaved":1,"university_logo":"/private/files/download7dfbb8.jpeg"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-04-03 04:06:13,146 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'doc': '{"name":"Al-Saeeda-University","owner":"Administrator","creation":"2025-02-09 06:04:28.100995","modified":"2025-04-03 01:15:01.537157","modified_by":"Administrator","docstatus":0,"idx":98,"company_name":"Al-Saeeda-University","abbr":"A","is_group":0,"lft":1,"rgt":2,"old_parent":"","create_chart_of_accounts_based_on":"Standard Template","chart_of_accounts":"Standard","default_bank_account":"Bank Account - A","default_cash_account":"Cash - A","default_receivable_account":"","default_payable_account":"Creditors - A","write_off_account":"","allow_account_creation_against_child_company":0,"default_expense_account":"Cost of Goods Sold - A","default_income_account":"","cost_center":"Main - A","exchange_gain_loss_account":"Exchange Gain/Loss - A","round_off_account":"Round Off - A","round_off_cost_center":"Main - A","book_advance_payments_in_separate_party_account":0,"reconcile_on_advance_payment_date":0,"reconciliation_takes_effect_on":"Oldest Of Invoice Or Advance","auto_exchange_rate_revaluation":0,"auto_err_frequency":"Daily","submit_err_jv":0,"accumulated_depreciation_account":"Accumulated Depreciation - A","depreciation_expense_account":"Depreciation - A","expenses_included_in_asset_valuation":"Expenses Included In Asset Valuation - A","disposal_account":"Gain/Loss on Asset Disposal - A","depreciation_cost_center":"Main - A","capital_work_in_progress_account":"CWIP Account - A","asset_received_but_not_billed":"Asset Received But Not Billed - A","default_payroll_payable_account":"Payroll Payable - A","default_employee_advance_account":"Employee Advances - A","doctype":"Company","__onload":{"addr_list":[],"contact_list":[]},"__unsaved":1,"university_logo":"/private/files/download7dfbb8.jpeg","exception_budget_approver_role":"System Manager"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-04-05 00:07:44,383 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'report_name': 'Provident Fund Deductions', 'filters': '{"company":"Al-Saeeda-University","month":"4","year":"2025"}', 'ignore_prepared_report': 'false', 'are_default_filters': 'false', 'cmd': 'frappe.desk.query_report.run'}
+2025-04-12 05:09:41,670 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'docs': '{"docstatus":0,"doctype":"Salary Withholding","name":"new-salary-withholding-jovzmdrffp","__islocal":1,"__unsaved":1,"owner":"ba0936129@gmail.com","company":"Al-Saeeda-University","posting_date":"2025-04-12","payroll_frequency":"","status":"Draft","cycles":[],"from_date":"2025-04-01"}', 'method': 'set_withholding_cycles_and_to_date', 'cmd': 'run_doc_method'}
+2025-04-13 18:12:42,493 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Employee","name":"new-employee-gpzozscudw","__islocal":1,"__unsaved":1,"owner":"ba0936129@gmail.com","naming_series":"HR-EMP-","degree_level":"دكتوراه","status":"Active","job_category":"اكاديمي","create_user_permission":1,"company":"Al-Saeeda-University","education_table":[{"docstatus":0,"doctype":"Employee Education","name":"new-employee-education-wflqxgjutf","__islocal":1,"__unsaved":1,"owner":"ba0936129@gmail.com","level":"Graduate","parent":"new-employee-gpzozscudw","parentfield":"education_table","parenttype":"Employee","idx":1,"__unedited":false,"school_univ":"جامعة اكس فورد","qualification":"دكتوراة","year_of_passing":2009,"class_per":"100","maj_opt_subj":"تحليل بيانات\\n\\n"},{"docstatus":0,"doctype":"Employee Education","name":"new-employee-education-qsoqihgtdl","__islocal":1,"__unsaved":1,"owner":"ba0936129@gmail.com","level":"Graduate","parent":"new-employee-gpzozscudw","parentfield":"education_table","parenttype":"Employee","idx":2,"__unedited":true}],"first_name":"هاشم","middle_name":"عبدالعزيز","last_name":"الجملي","gender":"Male","date_of_birth":"2002-11-20","job_code":"1115558558","salutation":"Prof","certificate":"/private/files/المؤسسة الوطنية لمكافحة السرطان.docx","date_of_joining":"2025-04-13","personal_email":"كمسنبكنب@بنميبنيمبزؤخنيؤينؤيؤية","branch":"Sanna","designation":"Secretary","payroll_cost_center":null,"department":"IT DepartMent","employment_type":"Full-Time","grade":"درجة فئة المطورين","employee_number":"774543943933"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-04-13 18:13:08,511 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Employee","name":"new-employee-gpzozscudw","__islocal":1,"__unsaved":1,"owner":"ba0936129@gmail.com","naming_series":"HR-EMP-","degree_level":"دكتوراه","status":"Active","job_category":"اكاديمي","create_user_permission":1,"company":"Al-Saeeda-University","education_table":[{"docstatus":0,"doctype":"Employee Education","name":"new-employee-education-wflqxgjutf","__islocal":1,"__unsaved":1,"owner":"ba0936129@gmail.com","level":"Graduate","parent":"new-employee-gpzozscudw","parentfield":"education_table","parenttype":"Employee","idx":1,"__unedited":false,"school_univ":"جامعة اكس فورد","qualification":"دكتوراة","year_of_passing":2009,"class_per":"100","maj_opt_subj":"تحليل بيانات\\n\\n"},{"docstatus":0,"doctype":"Employee Education","name":"new-employee-education-qsoqihgtdl","__islocal":1,"__unsaved":1,"owner":"ba0936129@gmail.com","level":"Graduate","parent":"new-employee-gpzozscudw","parentfield":"education_table","parenttype":"Employee","idx":2,"__unedited":true}],"first_name":"هاشم","middle_name":"عبدالعزيز","last_name":"الجملي","gender":"Male","date_of_birth":"2002-11-20","job_code":"1115558558","salutation":"Prof","certificate":"/private/files/المؤسسة الوطنية لمكافحة السرطان.docx","date_of_joining":"2025-04-13","personal_email":"hasem@gmail.com","branch":"Sanna","designation":"Secretary","payroll_cost_center":null,"department":"IT DepartMent","employment_type":"Full-Time","grade":"درجة فئة المطورين","employee_number":"774543943933"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-04-13 18:25:07,949 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'user': 'mohammed@gmail.com', 'cmd': 'frappe.core.doctype.user.user.reset_password'}
+2025-04-13 20:49:23,480 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'txt': '', 'doctype': 'department', 'reference_doctype': 'Report Filter', 'page_length': '10', 'cmd': 'frappe.desk.search.search_link'}
+2025-04-13 21:10:57,685 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'with_parent': '1', 'cached_timestamp': '', 'cmd': 'frappe.desk.form.load.getdoctype'}
+2025-04-13 21:41:44,095 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'user': 'mohammed@gmail.com', 'cmd': 'frappe.core.doctype.user.user.reset_password'}
+2025-04-13 21:41:56,223 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'user': 'mohammed@gmail.com', 'cmd': 'frappe.core.doctype.user.user.reset_password'}
+2025-04-13 21:45:52,313 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'user': 'ba0936129@gmail.com', 'cmd': 'frappe.core.doctype.user.user.reset_password'}
+2025-04-14 00:17:04,673 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'report_name': 'attendance_and_department_report', 'filters': '{}', 'ignore_prepared_report': 'false', 'are_default_filters': 'true', 'cmd': 'frappe.desk.query_report.run'}
+2025-04-14 00:25:13,919 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'report_name': 'attendance_and_department_report', 'filters': '{}', 'ignore_prepared_report': 'false', 'are_default_filters': 'true', 'cmd': 'frappe.desk.query_report.run'}
+2025-04-14 00:30:38,675 ERROR frappe Error while inserting deferred Error Log record: Error Log v15riccb80: 'Title' ((1064, "You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''tabEmployee'\n WHERE deparment =(department)s\n GROUP BY employee_name ASC' at line 4")) will get truncated, as max characters allowed is 140
+Site: HRPU.localhost
+Form Dict: {}
+2025-04-14 00:40:59,236 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'report_name': 'attendance_and_department_report', 'filters': '{}', 'ignore_prepared_report': 'false', 'are_default_filters': 'true', 'cmd': 'frappe.desk.query_report.run'}
+2025-04-14 00:43:12,138 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'report_name': 'attendance_and_department_report', 'filters': '{}', 'ignore_prepared_report': 'false', 'are_default_filters': 'true', 'cmd': 'frappe.desk.query_report.run'}
+2025-04-14 00:56:58,842 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'report_name': 'attendance_and_department_report', 'filters': '{}', 'ignore_prepared_report': 'false', 'are_default_filters': 'true', 'cmd': 'frappe.desk.query_report.run'}
+2025-04-14 01:10:14,210 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'report_name': 'attendance_and_department_report', 'filters': '{"department":"(Reception) الاستقبال - A"}', 'ignore_prepared_report': 'false', 'are_default_filters': 'false', 'cmd': 'frappe.desk.query_report.run'}
+2025-04-14 01:28:36,194 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'report_name': 'attendance_and_department_report', 'filters': '{}', 'ignore_prepared_report': 'false', 'are_default_filters': 'true', 'cmd': 'frappe.desk.query_report.run'}
+2025-04-14 01:28:42,943 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'report_name': 'attendance_and_department_report', 'filters': '{"department":"IT DepartMent"}', 'ignore_prepared_report': 'false', 'are_default_filters': 'false', 'cmd': 'frappe.desk.query_report.run'}
+2025-04-14 01:28:48,033 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'report_name': 'attendance_and_department_report', 'filters': '{"department":"الطب - A"}', 'ignore_prepared_report': 'false', 'are_default_filters': 'false', 'cmd': 'frappe.desk.query_report.run'}
+2025-04-14 01:29:36,335 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'report_name': 'attendance_and_department_report', 'filters': '{"department":"الطب - A"}', 'ignore_prepared_report': 'false', 'are_default_filters': 'false', 'cmd': 'frappe.desk.query_report.run'}
+2025-04-14 01:30:55,720 ERROR frappe Error while inserting deferred Error Log record: Error Log mf7vkq68u1: 'Title' ((1064, "You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM `tabEmployee`\n WHERE department = 'IT DepartMent'\n GROUP BY employee_nam...' at line 8")) will get truncated, as max characters allowed is 140
+Site: HRPU.localhost
+Form Dict: {}
+2025-04-14 01:30:55,725 ERROR frappe Error while inserting deferred Error Log record: Error Log b60o60litj: 'Title' ((1064, "You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM `tabEmployee`\n WHERE department = 'الطب - A'\n GROUP BY employee_name...' at line 8")) will get truncated, as max characters allowed is 140
+Site: HRPU.localhost
+Form Dict: {}
+2025-04-14 01:30:55,728 ERROR frappe Error while inserting deferred Error Log record: Error Log 89hacvvtr9: 'Title' ((1064, "You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM `tabEmployee`\n WHERE department = 'الطب - A'\n GROUP BY employee_name...' at line 8")) will get truncated, as max characters allowed is 140
+Site: HRPU.localhost
+Form Dict: {}
+2025-04-14 01:31:50,524 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'report_name': 'attendance_and_department_report', 'filters': '{}', 'ignore_prepared_report': 'false', 'are_default_filters': 'true', 'cmd': 'frappe.desk.query_report.run'}
+2025-04-14 01:33:51,359 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'report_name': 'attendance_and_department_report', 'filters': '{}', 'ignore_prepared_report': 'false', 'are_default_filters': 'true', 'cmd': 'frappe.desk.query_report.run'}
+2025-04-14 01:33:55,150 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'report_name': 'attendance_and_department_report', 'filters': '{"designation":"Security job"}', 'ignore_prepared_report': 'false', 'are_default_filters': 'false', 'cmd': 'frappe.desk.query_report.run'}
+2025-04-14 01:34:53,893 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'report_name': 'attendance_and_department_report', 'filters': '{"designation":"President"}', 'ignore_prepared_report': 'false', 'are_default_filters': 'false', 'cmd': 'frappe.desk.query_report.run'}
+2025-04-14 01:34:57,315 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'report_name': 'attendance_and_department_report', 'filters': '{"department":"IT DepartMent","designation":"President"}', 'ignore_prepared_report': 'false', 'are_default_filters': 'false', 'cmd': 'frappe.desk.query_report.run'}
+2025-04-14 02:23:17,250 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'report_name': 'attendance_and_department_report', 'filters': '{"department":"IT DepartMent","designation":"Software Developer"}', 'ignore_prepared_report': 'false', 'are_default_filters': 'false', 'cmd': 'frappe.desk.query_report.run'}
+2025-04-14 02:23:22,034 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'report_name': 'attendance_and_department_report', 'filters': '{"department":"IT DepartMent"}', 'ignore_prepared_report': 'false', 'are_default_filters': 'false', 'cmd': 'frappe.desk.query_report.run'}
+2025-04-14 02:23:25,957 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'report_name': 'attendance_and_department_report', 'filters': '{"department":"الاقسام الادارية - A"}', 'ignore_prepared_report': 'false', 'are_default_filters': 'false', 'cmd': 'frappe.desk.query_report.run'}
+2025-04-14 02:23:32,258 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'report_name': 'attendance_and_department_report', 'filters': '{}', 'ignore_prepared_report': 'false', 'are_default_filters': 'false', 'cmd': 'frappe.desk.query_report.run'}
+2025-04-14 02:24:05,059 ERROR frappe Error while inserting deferred Error Log record: Error Log 3aj8se9g11: 'Title' ((1064, "You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM `tabEmployee`\n\nWHERE department = 'IT DepartMent' AND 'Software Develope...' at line 7")) will get truncated, as max characters allowed is 140
+Site: HRPU.localhost
+Form Dict: {}
+2025-04-14 02:24:08,823 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'report_name': 'attendance_and_department_report', 'filters': '{"designation":"Secretary"}', 'ignore_prepared_report': 'false', 'are_default_filters': 'false', 'cmd': 'frappe.desk.query_report.run'}
+2025-04-14 02:24:13,613 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'report_name': 'attendance_and_department_report', 'filters': '{}', 'ignore_prepared_report': 'false', 'are_default_filters': 'false', 'cmd': 'frappe.desk.query_report.run'}
+2025-04-14 02:24:17,385 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'report_name': 'attendance_and_department_report', 'filters': '{"department":"اقسام الاكاديمية - A"}', 'ignore_prepared_report': 'false', 'are_default_filters': 'false', 'cmd': 'frappe.desk.query_report.run'}
+2025-04-14 02:24:23,290 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'report_name': 'attendance_and_department_report', 'filters': '{"department":"الطب - A"}', 'ignore_prepared_report': 'false', 'are_default_filters': 'false', 'cmd': 'frappe.desk.query_report.run'}
+2025-04-14 02:24:24,125 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'report_name': 'attendance_and_department_report', 'filters': '{"department":"الطب - A"}', 'ignore_prepared_report': 'false', 'are_default_filters': 'false', 'cmd': 'frappe.desk.query_report.run'}
+2025-04-14 02:26:08,803 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'report_name': 'attendance_and_department_report', 'filters': '{"department":"الطب - A","designation":"Researcher"}', 'ignore_prepared_report': 'false', 'are_default_filters': 'false', 'cmd': 'frappe.desk.query_report.run'}
+2025-04-14 02:27:44,632 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'report_name': 'attendance_and_department_report', 'filters': '{"department":"الطب - A","designation":"Accountant"}', 'ignore_prepared_report': 'false', 'are_default_filters': 'false', 'cmd': 'frappe.desk.query_report.run'}
+2025-04-14 02:27:51,091 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'report_name': 'attendance_and_department_report', 'filters': '{"department":"القسام العامة و الخدمات - A","designation":"Accountant"}', 'ignore_prepared_report': 'false', 'are_default_filters': 'false', 'cmd': 'frappe.desk.query_report.run'}
+2025-04-14 02:27:54,554 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'report_name': 'attendance_and_department_report', 'filters': '{"department":"القسام العامة و الخدمات - A"}', 'ignore_prepared_report': 'false', 'are_default_filters': 'false', 'cmd': 'frappe.desk.query_report.run'}
+2025-04-14 02:28:45,349 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'report_name': 'attendance_and_department_report', 'filters': '{"department":"القسام العامة و الخدمات - A"}', 'ignore_prepared_report': 'false', 'are_default_filters': 'false', 'cmd': 'frappe.desk.query_report.run'}
+2025-04-14 02:29:07,444 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'report_name': 'attendance_and_department_report', 'filters': '{"department":"القسام العامة و الخدمات - A"}', 'ignore_prepared_report': 'false', 'are_default_filters': 'false', 'cmd': 'frappe.desk.query_report.run'}
+2025-04-14 02:29:52,307 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'report_name': 'attendance_and_department_report', 'filters': '{"department":"القسام العامة و الخدمات - A"}', 'ignore_prepared_report': 'false', 'are_default_filters': 'false', 'cmd': 'frappe.desk.query_report.run'}
+2025-04-14 02:30:06,809 ERROR frappe Error while inserting deferred Error Log record: Error Log 1m10m10eh3: 'Title' ((1064, "You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM `tabEmployee`\n\nWHERE department = 'الطب - A' OR designation= 'Resear...' at line 7")) will get truncated, as max characters allowed is 140
+Site: HRPU.localhost
+Form Dict: {}
+2025-04-14 02:30:06,811 ERROR frappe Error while inserting deferred Error Log record: Error Log io3bhghobn: 'Title' ((1064, "You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM `tabEmployee`\n\nWHERE department = 'الطب - A' OR \nWHERE designation= ...' at line 7")) will get truncated, as max characters allowed is 140
+Site: HRPU.localhost
+Form Dict: {}
+2025-04-14 02:30:06,814 ERROR frappe Error while inserting deferred Error Log record: Error Log 6a3op1p9hi: 'Title' ((1064, "You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM `tabEmployee`\n\nWHERE department = 'القسام العامة و الخد...' at line 7")) will get truncated, as max characters allowed is 140
+Site: HRPU.localhost
+Form Dict: {}
+2025-04-14 02:30:06,821 ERROR frappe Error while inserting deferred Error Log record: Error Log s64fo01ago: 'Title' ((1064, "You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM `tabEmployee`\n\nWHERE department = 'القسام العامة و الخد...' at line 7")) will get truncated, as max characters allowed is 140
+Site: HRPU.localhost
+Form Dict: {}
+2025-04-14 02:30:06,825 ERROR frappe Error while inserting deferred Error Log record: Error Log 10su2fi38j: 'Title' ((1064, "You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM `tabEmployee`\nWHERE department = 'القسام العامة و الخد...' at line 7")) will get truncated, as max characters allowed is 140
+Site: HRPU.localhost
+Form Dict: {}
+2025-04-14 02:30:06,828 ERROR frappe Error while inserting deferred Error Log record: Error Log cc5su9va6e: 'Title' ((1064, "You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM `tabEmployee`\nWHERE department = 'القسام العامة و الخد...' at line 6")) will get truncated, as max characters allowed is 140
+Site: HRPU.localhost
+Form Dict: {}
+2025-04-14 02:30:31,887 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'report_name': 'attendance_and_department_report', 'filters': '{"department":"القسام العامة و الخدمات - A"}', 'ignore_prepared_report': 'false', 'are_default_filters': 'false', 'cmd': 'frappe.desk.query_report.run'}
+2025-04-14 02:31:35,250 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'report_name': 'attendance_and_department_report', 'filters': '{"department":"الطب - A"}', 'ignore_prepared_report': 'false', 'are_default_filters': 'false', 'cmd': 'frappe.desk.query_report.run'}
+2025-04-14 02:32:13,565 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'report_name': 'attendance_and_department_report', 'filters': '{}', 'ignore_prepared_report': 'false', 'are_default_filters': 'true', 'cmd': 'frappe.desk.query_report.run'}
+2025-04-14 02:34:31,903 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'doc': '{"name":"HR-EMP-00001","owner":"ba0936129@gmail.com","creation":"2025-02-09 06:19:32.913892","modified":"2025-03-31 21:37:37.885306","modified_by":"ba0936129@gmail.com","docstatus":0,"idx":95,"employee":"HR-EMP-00001","naming_series":"HR-EMP-","first_name":"عبد  ","middle_name":"الرحمن","employee_name":"عبد   الرحمن","gender":"Male","date_of_birth":"2000-12-14","date_of_joining":"2025-02-09","image":"/files/BBDF6469.JPG","status":"Active","job_category":"اكاديمي","create_user_permission":1,"company":"Al-Saeeda-University","department":"الطب - A","branch":"Sanna","grade":"درجة فئة المطورين","lft":1,"rgt":4,"is_group":0,"old_parent":"","payroll_cost_center":"Main - A","doctype":"Employee","education_table":[],"_user_tags":",Collection","__last_sync_on":"2025-04-13T23:34:18.496Z","designation":"Analyst","__unsaved":1}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-04-14 02:34:43,763 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'doc': '{"name":"HR-EMP-00001","owner":"ba0936129@gmail.com","creation":"2025-02-09 06:19:32.913892","modified":"2025-03-31 21:37:37.885306","modified_by":"ba0936129@gmail.com","docstatus":0,"idx":95,"employee":"HR-EMP-00001","naming_series":"HR-EMP-","first_name":"عبد  ","middle_name":"الرحمن","employee_name":"عبد   الرحمن","gender":"Male","date_of_birth":"2000-12-14","date_of_joining":"2025-02-09","image":"/files/BBDF6469.JPG","status":"Active","job_category":"اكاديمي","create_user_permission":1,"company":"Al-Saeeda-University","department":"الطب - A","branch":"Sanna","grade":"درجة فئة المطورين","lft":1,"rgt":4,"is_group":0,"old_parent":"","payroll_cost_center":"Main - A","doctype":"Employee","education_table":[],"_user_tags":",Collection","__last_sync_on":"2025-04-13T23:34:18.496Z","designation":"Analyst","__unsaved":1}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-04-14 02:35:19,556 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'doc': '{"name":"HR-EMP-00001","owner":"ba0936129@gmail.com","creation":"2025-02-09 06:19:32.913892","modified":"2025-03-31 21:37:37.885306","modified_by":"ba0936129@gmail.com","docstatus":0,"idx":95,"employee":"HR-EMP-00001","naming_series":"HR-EMP-","first_name":"عبد  ","middle_name":"الرحمن","employee_name":"عبد   الرحمن","gender":"Male","date_of_birth":"2000-12-14","date_of_joining":"2025-02-09","image":"/files/BBDF6469.JPG","status":"Active","job_category":"اكاديمي","create_user_permission":1,"company":"Al-Saeeda-University","department":"الطب - A","branch":"Sanna","grade":"درجة فئة المطورين","lft":1,"rgt":4,"is_group":0,"old_parent":"","payroll_cost_center":"Main - A","doctype":"Employee","education_table":[],"_user_tags":",Collection","__last_sync_on":"2025-04-13T23:34:18.496Z","designation":"Analyst","__unsaved":1}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-04-14 05:38:15,060 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'user': 'ba0936129@gmail.com', 'cmd': 'frappe.core.doctype.user.user.reset_password'}
+2025-04-14 06:57:04,912 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'report_name': 'attendance_and_department_report', 'filters': '{}', 'ignore_prepared_report': 'false', 'are_default_filters': 'true', 'cmd': 'frappe.desk.query_report.run'}
+2025-04-14 08:24:35,791 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'doc': '{"name":"خصم غياب","owner":"Administrator","creation":"2025-03-28 08:45:08.834961","modified":"2025-04-11 21:23:33.478463","modified_by":"ba0936129@gmail.com","docstatus":0,"idx":7,"salary_component":"خصم غياب","salary_component_abbr":"AD","type":"Deduction","depends_on_payment_days":1,"deduct_full_tax_on_selected_payroll_date":0,"do_not_include_in_total":0,"condition":"absent_days > 0 ","amount_based_on_formula":1,"formula":"absent_days*(BS/payment_days)\\n\\n\\n\\n\\n","amount":"","doctype":"Salary Component","accounts":[{"name":"iht9dr630r","owner":"ba0936129@gmail.com","creation":"2025-03-28 08:45:08.834961","modified":"2025-04-11 21:23:33.478463","modified_by":"ba0936129@gmail.com","docstatus":0,"idx":1,"company":"Al-Saeeda-University","account":"خصم الغياب - A","parent":"خصم غياب","parentfield":"accounts","parenttype":"Salary Component","doctype":"Salary Component Account"}],"__last_sync_on":"2025-04-14T05:23:47.450Z","__unsaved":1}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-04-14 08:24:42,240 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'doc': '{"name":"خصم غياب","owner":"Administrator","creation":"2025-03-28 08:45:08.834961","modified":"2025-04-11 21:23:33.478463","modified_by":"ba0936129@gmail.com","docstatus":0,"idx":7,"salary_component":"خصم غياب","salary_component_abbr":"AD","type":"Deduction","depends_on_payment_days":1,"deduct_full_tax_on_selected_payroll_date":0,"do_not_include_in_total":0,"condition":"absent_days > 0 ","amount_based_on_formula":1,"formula":"absent_days*(BS/payment_days)\\n\\n\\n\\n\\n","amount":"","doctype":"Salary Component","accounts":[{"name":"iht9dr630r","owner":"ba0936129@gmail.com","creation":"2025-03-28 08:45:08.834961","modified":"2025-04-11 21:23:33.478463","modified_by":"ba0936129@gmail.com","docstatus":0,"idx":1,"company":"Al-Saeeda-University","account":"خصم الغياب - A","parent":"خصم غياب","parentfield":"accounts","parenttype":"Salary Component","doctype":"Salary Component Account"}],"__last_sync_on":"2025-04-14T05:23:47.450Z","__unsaved":1}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-04-14 08:25:12,076 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'doc': '{"name":"خصم غياب","owner":"Administrator","creation":"2025-03-28 08:45:08.834961","modified":"2025-04-11 21:23:33.478463","modified_by":"ba0936129@gmail.com","docstatus":0,"idx":7,"salary_component":"خصم غياب","salary_component_abbr":"AD","type":"Deduction","depends_on_payment_days":1,"deduct_full_tax_on_selected_payroll_date":0,"do_not_include_in_total":0,"condition":"absent_days > 0 ","amount_based_on_formula":1,"formula":"absent_days*(BS/payment_days)\\n\\n\\n\\n\\n","amount":"","doctype":"Salary Component","accounts":[{"name":"iht9dr630r","owner":"ba0936129@gmail.com","creation":"2025-03-28 08:45:08.834961","modified":"2025-04-11 21:23:33.478463","modified_by":"ba0936129@gmail.com","docstatus":0,"idx":1,"company":"Al-Saeeda-University","account":"خصم الغياب - A","parent":"خصم غياب","parentfield":"accounts","parenttype":"Salary Component","doctype":"Salary Component Account"}],"__last_sync_on":"2025-04-14T05:24:51.271Z","__unsaved":1}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-04-14 08:26:20,720 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'doc': '{"name":"خصم غياب","owner":"Administrator","creation":"2025-03-28 08:45:08.834961","modified":"2025-04-11 21:23:33.478463","modified_by":"ba0936129@gmail.com","docstatus":0,"idx":7,"salary_component":"خصم غياب","salary_component_abbr":"AD","type":"Deduction","depends_on_payment_days":1,"deduct_full_tax_on_selected_payroll_date":0,"do_not_include_in_total":0,"condition":"absent_days > 1","amount_based_on_formula":1,"formula":"(BS/payment_days)*absent_days\\n\\n\\n\\n\\n","amount":"","doctype":"Salary Component","accounts":[{"name":"iht9dr630r","owner":"ba0936129@gmail.com","creation":"2025-03-28 08:45:08.834961","modified":"2025-04-11 21:23:33.478463","modified_by":"ba0936129@gmail.com","docstatus":0,"idx":1,"company":"Al-Saeeda-University","account":"خصم الغياب - A","parent":"خصم غياب","parentfield":"accounts","parenttype":"Salary Component","doctype":"Salary Component Account"}],"__last_sync_on":"2025-04-14T05:26:13.636Z","__unsaved":1}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-04-15 02:21:40,096 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'doc': '{"name":"HR-EMP-00003","owner":"Administrator","creation":"2025-03-08 05:03:34.597780","modified":"2025-04-07 02:26:00.671037","modified_by":"ba0936129@gmail.com","docstatus":0,"idx":75,"employee":"HR-EMP-00003","naming_series":"HR-EMP-","first_name":"محمد ","middle_name":"عبد السلام","last_name":"الفقية","employee_name":"محمد  عبد السلام الفقية","gender":"Male","date_of_birth":"2000-05-03","job_code":"103456","degree_level":"بكالوريوس","salutation":"Master","date_of_joining":"2025-02-08","status":"Active","job_category":"اداري","create_user_permission":1,"company":"Al-Saeeda-University","department":"القسام العامة و الخدمات - A","branch":"Sanna","reports_to":"HR-EMP-00001","lft":2,"rgt":3,"is_group":0,"old_parent":"HR-EMP-00001","payroll_cost_center":"Main - A","doctype":"Employee","education_table":[],"experience_table":[],"__last_sync_on":"2025-04-14T23:20:23.724Z","designation":"Accountant","__unsaved":1}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-04-15 08:02:52,225 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'user': 'ba0936129@gmail.com', 'cmd': 'frappe.core.doctype.user.user.reset_password'}
+2025-04-15 08:12:15,926 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'user': 'ba0936129@gmail.com', 'cmd': 'frappe.core.doctype.user.user.reset_password'}
+2025-04-16 01:53:14,122 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'doc': '{"name":"HR-EMP-00001","owner":"ba0936129@gmail.com","creation":"2025-02-09 06:19:32.913892","modified":"2025-03-31 21:37:37.885306","modified_by":"ba0936129@gmail.com","docstatus":0,"idx":108,"employee":"HR-EMP-00001","naming_series":"HR-EMP-","first_name":"عبد  ","middle_name":"الرحمن","employee_name":"عبد   الرحمن","gender":"Male","date_of_birth":"2000-12-14","date_of_joining":"2025-02-09","image":"/files/BBDF6469.JPG","status":"Active","job_category":"اكاديمي","create_user_permission":1,"company":"Al-Saeeda-University","department":"الطب - A","branch":"Sanna","grade":"درجة فئة المطورين","lft":1,"rgt":4,"is_group":0,"old_parent":"","payroll_cost_center":"Main - A","doctype":"Employee","education_table":[],"experience_table":[],"_user_tags":",Collection","__last_sync_on":"2025-04-15T22:50:54.439Z","personal_email":"abd@gmail.com","__unsaved":1}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-04-16 01:53:35,024 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'doc': '{"name":"HR-EMP-00001","owner":"ba0936129@gmail.com","creation":"2025-02-09 06:19:32.913892","modified":"2025-03-31 21:37:37.885306","modified_by":"ba0936129@gmail.com","docstatus":0,"idx":108,"employee":"HR-EMP-00001","naming_series":"HR-EMP-","first_name":"عبد  ","middle_name":"الرحمن","employee_name":"عبد   الرحمن","gender":"Male","date_of_birth":"2000-12-14","date_of_joining":"2025-02-09","image":"/files/BBDF6469.JPG","status":"Active","job_category":"اكاديمي","create_user_permission":1,"company":"Al-Saeeda-University","department":"الطب - A","branch":"Sanna","grade":"درجة فئة المطورين","lft":1,"rgt":4,"is_group":0,"old_parent":"","payroll_cost_center":"Main - A","doctype":"Employee","education_table":[],"experience_table":[],"_user_tags":",Collection","__last_sync_on":"2025-04-15T22:50:54.439Z","personal_email":"abd@gmail.com","__unsaved":1}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-04-16 01:57:52,357 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'doctype': 'Employee', 'name': 'HR-EMP-00003', 'format': 'Standard', 'no_letterhead': '0', 'letterhead': 'ASSESTS ACCOUNTS', 'settings': '{}', 'cmd': 'frappe.utils.print_format.download_pdf'}
+2025-04-16 02:00:35,944 ERROR frappe Error while inserting deferred Error Log record: Error Log 9m4brt4q3g: 'Title' (wkhtmltopdf reported an error:
+The switch --print-media-type, is not support using unpatched qt, and will be ignored.The switch --header-html, is not support using unpatched qt, and will be ignored.The switch --footer-html, is not support using unpatched qt, and will be ignored.The switch --disable-smart-shrinking, is not support using unpatched qt, and will be ignored.QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-macro'
+Exit with code 1 due to network error: HostNotFoundError
+) will get truncated, as max characters allowed is 140
+Site: HRPU.localhost
+Form Dict: {}
+2025-04-16 03:05:38,994 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'doc': '{"name":"Sal Slip/HR-EMP-00001/00002","owner":"Administrator","creation":"2025-04-16 01:49:16.509845","modified":"2025-04-16 01:49:50.817407","modified_by":"Administrator","docstatus":1,"idx":4,"employee":"HR-EMP-00001","employee_name":"عبد   الرحمن","company":"Al-Saeeda-University","department":"الطب - A","branch":"Sanna","posting_date":"2025-04-16","letter_head":"ASSESTS ACCOUNTS","currency":"YER","exchange_rate":1,"payroll_frequency":"Monthly","start_date":"2025-04-01","end_date":"2025-04-30","salary_structure":"الهيكل راتب الاداريين","mode_of_payment":"","salary_slip_based_on_timesheet":0,"total_working_days":30,"unmarked_days":0,"leave_without_pay":0,"absent_days":14,"payment_days":16,"advance_amount":0,"total_working_hours":0,"hour_rate":0,"base_hour_rate":0,"gross_pay":30000,"base_gross_pay":30000,"gross_year_to_date":30000,"base_gross_year_to_date":0,"total_deduction":14000,"base_total_deduction":14000,"net_pay":16000,"base_net_pay":16000,"rounded_total":16000,"base_rounded_total":16000,"year_to_date":16000,"base_year_to_date":0,"month_to_date":16000,"base_month_to_date":0,"total_in_words":"YER ستة عشر ألف فقط.","base_total_in_words":"YER ستة عشر ألف فقط.","ctc":0,"income_from_other_sources":0,"total_earnings":0,"non_taxable_earnings":0,"standard_tax_exemption_amount":0,"tax_exemption_declaration":0,"deductions_before_tax_calculation":0,"annual_taxable_amount":0,"income_tax_deducted_till_date":0,"current_month_income_tax":0,"future_income_tax_deductions":0,"total_income_tax":0,"doctype":"Salary Slip","deductions":[{"name":"jmc1tsbf0m","owner":"Administrator","creation":"2025-04-16 01:49:16.509845","modified":"2025-04-16 01:49:50.817407","modified_by":"Administrator","docstatus":1,"idx":1,"salary_component":"خصم غياب","abbr":"AD","amount":14000,"year_to_date":14000,"is_recurring_additional_salary":0,"statistical_component":0,"depends_on_payment_days":1,"exempted_from_income_tax":0,"is_tax_applicable":0,"is_flexible_benefit":0,"variable_based_on_taxable_salary":0,"do_not_include_in_total":0,"deduct_full_tax_on_selected_payroll_date":0,"amount_based_on_formula":0,"default_amount":26250,"additional_amount":0,"tax_on_flexible_benefit":0,"tax_on_additional_salary":0,"parent":"Sal Slip/HR-EMP-00001/00002","parentfield":"deductions","parenttype":"Salary Slip","doctype":"Salary Detail"}],"earnings":[{"name":"cqmn1m992h","owner":"Administrator","creation":"2025-04-16 01:49:16.509845","modified":"2025-04-16 01:49:50.817407","modified_by":"Administrator","docstatus":1,"idx":1,"salary_component":"الراتب الاساسي","abbr":"BS","amount":30000,"year_to_date":30000,"is_recurring_additional_salary":0,"statistical_component":0,"depends_on_payment_days":0,"exempted_from_income_tax":0,"is_tax_applicable":1,"is_flexible_benefit":0,"variable_based_on_taxable_salary":0,"do_not_include_in_total":0,"deduct_full_tax_on_selected_payroll_date":0,"amount_based_on_formula":0,"default_amount":30000,"additional_amount":0,"tax_on_flexible_benefit":0,"tax_on_additional_salary":0,"parent":"Sal Slip/HR-EMP-00001/00002","parentfield":"earnings","parenttype":"Salary Slip","doctype":"Salary Detail"}],"timesheets":[],"leave_details":[{"name":"m6lsahctml","owner":"Administrator","creation":"2025-04-16 01:49:50.968179","modified":"2025-04-16 01:49:50.968179","modified_by":"Administrator","docstatus":1,"idx":1,"leave_type":"Mental Health Leave","total_allocated_leaves":4,"expired_leaves":0,"used_leaves":0,"pending_leaves":0,"available_leaves":4,"parent":"Sal Slip/HR-EMP-00001/00002","parentfield":"leave_details","parenttype":"Salary Slip","doctype":"Salary Slip Leave"}],"__last_sync_on":"2025-04-16T00:04:33.980Z"}', 'print_format': 'Standard', 'no_letterhead': '0', 'letterhead': 'main header', 'settings': '{}', '_lang': 'ar', 'cmd': 'frappe.www.printview.get_html_and_style'}
+2025-04-16 03:05:40,171 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'doc': '{"name":"Sal Slip/HR-EMP-00001/00002","owner":"Administrator","creation":"2025-04-16 01:49:16.509845","modified":"2025-04-16 01:49:50.817407","modified_by":"Administrator","docstatus":1,"idx":4,"employee":"HR-EMP-00001","employee_name":"عبد   الرحمن","company":"Al-Saeeda-University","department":"الطب - A","branch":"Sanna","posting_date":"2025-04-16","letter_head":"ASSESTS ACCOUNTS","currency":"YER","exchange_rate":1,"payroll_frequency":"Monthly","start_date":"2025-04-01","end_date":"2025-04-30","salary_structure":"الهيكل راتب الاداريين","mode_of_payment":"","salary_slip_based_on_timesheet":0,"total_working_days":30,"unmarked_days":0,"leave_without_pay":0,"absent_days":14,"payment_days":16,"advance_amount":0,"total_working_hours":0,"hour_rate":0,"base_hour_rate":0,"gross_pay":30000,"base_gross_pay":30000,"gross_year_to_date":30000,"base_gross_year_to_date":0,"total_deduction":14000,"base_total_deduction":14000,"net_pay":16000,"base_net_pay":16000,"rounded_total":16000,"base_rounded_total":16000,"year_to_date":16000,"base_year_to_date":0,"month_to_date":16000,"base_month_to_date":0,"total_in_words":"YER ستة عشر ألف فقط.","base_total_in_words":"YER ستة عشر ألف فقط.","ctc":0,"income_from_other_sources":0,"total_earnings":0,"non_taxable_earnings":0,"standard_tax_exemption_amount":0,"tax_exemption_declaration":0,"deductions_before_tax_calculation":0,"annual_taxable_amount":0,"income_tax_deducted_till_date":0,"current_month_income_tax":0,"future_income_tax_deductions":0,"total_income_tax":0,"doctype":"Salary Slip","deductions":[{"name":"jmc1tsbf0m","owner":"Administrator","creation":"2025-04-16 01:49:16.509845","modified":"2025-04-16 01:49:50.817407","modified_by":"Administrator","docstatus":1,"idx":1,"salary_component":"خصم غياب","abbr":"AD","amount":14000,"year_to_date":14000,"is_recurring_additional_salary":0,"statistical_component":0,"depends_on_payment_days":1,"exempted_from_income_tax":0,"is_tax_applicable":0,"is_flexible_benefit":0,"variable_based_on_taxable_salary":0,"do_not_include_in_total":0,"deduct_full_tax_on_selected_payroll_date":0,"amount_based_on_formula":0,"default_amount":26250,"additional_amount":0,"tax_on_flexible_benefit":0,"tax_on_additional_salary":0,"parent":"Sal Slip/HR-EMP-00001/00002","parentfield":"deductions","parenttype":"Salary Slip","doctype":"Salary Detail"}],"earnings":[{"name":"cqmn1m992h","owner":"Administrator","creation":"2025-04-16 01:49:16.509845","modified":"2025-04-16 01:49:50.817407","modified_by":"Administrator","docstatus":1,"idx":1,"salary_component":"الراتب الاساسي","abbr":"BS","amount":30000,"year_to_date":30000,"is_recurring_additional_salary":0,"statistical_component":0,"depends_on_payment_days":0,"exempted_from_income_tax":0,"is_tax_applicable":1,"is_flexible_benefit":0,"variable_based_on_taxable_salary":0,"do_not_include_in_total":0,"deduct_full_tax_on_selected_payroll_date":0,"amount_based_on_formula":0,"default_amount":30000,"additional_amount":0,"tax_on_flexible_benefit":0,"tax_on_additional_salary":0,"parent":"Sal Slip/HR-EMP-00001/00002","parentfield":"earnings","parenttype":"Salary Slip","doctype":"Salary Detail"}],"timesheets":[],"leave_details":[{"name":"m6lsahctml","owner":"Administrator","creation":"2025-04-16 01:49:50.968179","modified":"2025-04-16 01:49:50.968179","modified_by":"Administrator","docstatus":1,"idx":1,"leave_type":"Mental Health Leave","total_allocated_leaves":4,"expired_leaves":0,"used_leaves":0,"pending_leaves":0,"available_leaves":4,"parent":"Sal Slip/HR-EMP-00001/00002","parentfield":"leave_details","parenttype":"Salary Slip","doctype":"Salary Slip Leave"}],"__last_sync_on":"2025-04-16T00:04:33.980Z"}', 'print_format': 'Standard', 'no_letterhead': '0', 'letterhead': 'main header', 'settings': '{}', '_lang': 'ar', 'cmd': 'frappe.www.printview.get_html_and_style'}
+2025-04-16 03:06:12,939 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'doc': '{"name":"Sal Slip/HR-EMP-00001/00002","owner":"Administrator","creation":"2025-04-16 01:49:16.509845","modified":"2025-04-16 01:49:50.817407","modified_by":"Administrator","docstatus":1,"idx":4,"employee":"HR-EMP-00001","employee_name":"عبد   الرحمن","company":"Al-Saeeda-University","department":"الطب - A","branch":"Sanna","posting_date":"2025-04-16","letter_head":"ASSESTS ACCOUNTS","currency":"YER","exchange_rate":1,"payroll_frequency":"Monthly","start_date":"2025-04-01","end_date":"2025-04-30","salary_structure":"الهيكل راتب الاداريين","mode_of_payment":"","salary_slip_based_on_timesheet":0,"total_working_days":30,"unmarked_days":0,"leave_without_pay":0,"absent_days":14,"payment_days":16,"advance_amount":0,"total_working_hours":0,"hour_rate":0,"base_hour_rate":0,"gross_pay":30000,"base_gross_pay":30000,"gross_year_to_date":30000,"base_gross_year_to_date":0,"total_deduction":14000,"base_total_deduction":14000,"net_pay":16000,"base_net_pay":16000,"rounded_total":16000,"base_rounded_total":16000,"year_to_date":16000,"base_year_to_date":0,"month_to_date":16000,"base_month_to_date":0,"total_in_words":"YER ستة عشر ألف فقط.","base_total_in_words":"YER ستة عشر ألف فقط.","ctc":0,"income_from_other_sources":0,"total_earnings":0,"non_taxable_earnings":0,"standard_tax_exemption_amount":0,"tax_exemption_declaration":0,"deductions_before_tax_calculation":0,"annual_taxable_amount":0,"income_tax_deducted_till_date":0,"current_month_income_tax":0,"future_income_tax_deductions":0,"total_income_tax":0,"doctype":"Salary Slip","deductions":[{"name":"jmc1tsbf0m","owner":"Administrator","creation":"2025-04-16 01:49:16.509845","modified":"2025-04-16 01:49:50.817407","modified_by":"Administrator","docstatus":1,"idx":1,"salary_component":"خصم غياب","abbr":"AD","amount":14000,"year_to_date":14000,"is_recurring_additional_salary":0,"statistical_component":0,"depends_on_payment_days":1,"exempted_from_income_tax":0,"is_tax_applicable":0,"is_flexible_benefit":0,"variable_based_on_taxable_salary":0,"do_not_include_in_total":0,"deduct_full_tax_on_selected_payroll_date":0,"amount_based_on_formula":0,"default_amount":26250,"additional_amount":0,"tax_on_flexible_benefit":0,"tax_on_additional_salary":0,"parent":"Sal Slip/HR-EMP-00001/00002","parentfield":"deductions","parenttype":"Salary Slip","doctype":"Salary Detail"}],"earnings":[{"name":"cqmn1m992h","owner":"Administrator","creation":"2025-04-16 01:49:16.509845","modified":"2025-04-16 01:49:50.817407","modified_by":"Administrator","docstatus":1,"idx":1,"salary_component":"الراتب الاساسي","abbr":"BS","amount":30000,"year_to_date":30000,"is_recurring_additional_salary":0,"statistical_component":0,"depends_on_payment_days":0,"exempted_from_income_tax":0,"is_tax_applicable":1,"is_flexible_benefit":0,"variable_based_on_taxable_salary":0,"do_not_include_in_total":0,"deduct_full_tax_on_selected_payroll_date":0,"amount_based_on_formula":0,"default_amount":30000,"additional_amount":0,"tax_on_flexible_benefit":0,"tax_on_additional_salary":0,"parent":"Sal Slip/HR-EMP-00001/00002","parentfield":"earnings","parenttype":"Salary Slip","doctype":"Salary Detail"}],"timesheets":[],"leave_details":[{"name":"m6lsahctml","owner":"Administrator","creation":"2025-04-16 01:49:50.968179","modified":"2025-04-16 01:49:50.968179","modified_by":"Administrator","docstatus":1,"idx":1,"leave_type":"Mental Health Leave","total_allocated_leaves":4,"expired_leaves":0,"used_leaves":0,"pending_leaves":0,"available_leaves":4,"parent":"Sal Slip/HR-EMP-00001/00002","parentfield":"leave_details","parenttype":"Salary Slip","doctype":"Salary Slip Leave"}],"__last_sync_on":"2025-04-16T00:04:33.980Z"}', 'print_format': 'Salary Slip based on Timesheet', 'no_letterhead': '0', 'letterhead': 'main header', 'settings': '{}', '_lang': 'ar', 'cmd': 'frappe.www.printview.get_html_and_style'}
+2025-04-16 03:06:13,838 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'doc': '{"name":"Sal Slip/HR-EMP-00001/00002","owner":"Administrator","creation":"2025-04-16 01:49:16.509845","modified":"2025-04-16 01:49:50.817407","modified_by":"Administrator","docstatus":1,"idx":4,"employee":"HR-EMP-00001","employee_name":"عبد   الرحمن","company":"Al-Saeeda-University","department":"الطب - A","branch":"Sanna","posting_date":"2025-04-16","letter_head":"ASSESTS ACCOUNTS","currency":"YER","exchange_rate":1,"payroll_frequency":"Monthly","start_date":"2025-04-01","end_date":"2025-04-30","salary_structure":"الهيكل راتب الاداريين","mode_of_payment":"","salary_slip_based_on_timesheet":0,"total_working_days":30,"unmarked_days":0,"leave_without_pay":0,"absent_days":14,"payment_days":16,"advance_amount":0,"total_working_hours":0,"hour_rate":0,"base_hour_rate":0,"gross_pay":30000,"base_gross_pay":30000,"gross_year_to_date":30000,"base_gross_year_to_date":0,"total_deduction":14000,"base_total_deduction":14000,"net_pay":16000,"base_net_pay":16000,"rounded_total":16000,"base_rounded_total":16000,"year_to_date":16000,"base_year_to_date":0,"month_to_date":16000,"base_month_to_date":0,"total_in_words":"YER ستة عشر ألف فقط.","base_total_in_words":"YER ستة عشر ألف فقط.","ctc":0,"income_from_other_sources":0,"total_earnings":0,"non_taxable_earnings":0,"standard_tax_exemption_amount":0,"tax_exemption_declaration":0,"deductions_before_tax_calculation":0,"annual_taxable_amount":0,"income_tax_deducted_till_date":0,"current_month_income_tax":0,"future_income_tax_deductions":0,"total_income_tax":0,"doctype":"Salary Slip","deductions":[{"name":"jmc1tsbf0m","owner":"Administrator","creation":"2025-04-16 01:49:16.509845","modified":"2025-04-16 01:49:50.817407","modified_by":"Administrator","docstatus":1,"idx":1,"salary_component":"خصم غياب","abbr":"AD","amount":14000,"year_to_date":14000,"is_recurring_additional_salary":0,"statistical_component":0,"depends_on_payment_days":1,"exempted_from_income_tax":0,"is_tax_applicable":0,"is_flexible_benefit":0,"variable_based_on_taxable_salary":0,"do_not_include_in_total":0,"deduct_full_tax_on_selected_payroll_date":0,"amount_based_on_formula":0,"default_amount":26250,"additional_amount":0,"tax_on_flexible_benefit":0,"tax_on_additional_salary":0,"parent":"Sal Slip/HR-EMP-00001/00002","parentfield":"deductions","parenttype":"Salary Slip","doctype":"Salary Detail"}],"earnings":[{"name":"cqmn1m992h","owner":"Administrator","creation":"2025-04-16 01:49:16.509845","modified":"2025-04-16 01:49:50.817407","modified_by":"Administrator","docstatus":1,"idx":1,"salary_component":"الراتب الاساسي","abbr":"BS","amount":30000,"year_to_date":30000,"is_recurring_additional_salary":0,"statistical_component":0,"depends_on_payment_days":0,"exempted_from_income_tax":0,"is_tax_applicable":1,"is_flexible_benefit":0,"variable_based_on_taxable_salary":0,"do_not_include_in_total":0,"deduct_full_tax_on_selected_payroll_date":0,"amount_based_on_formula":0,"default_amount":30000,"additional_amount":0,"tax_on_flexible_benefit":0,"tax_on_additional_salary":0,"parent":"Sal Slip/HR-EMP-00001/00002","parentfield":"earnings","parenttype":"Salary Slip","doctype":"Salary Detail"}],"timesheets":[],"leave_details":[{"name":"m6lsahctml","owner":"Administrator","creation":"2025-04-16 01:49:50.968179","modified":"2025-04-16 01:49:50.968179","modified_by":"Administrator","docstatus":1,"idx":1,"leave_type":"Mental Health Leave","total_allocated_leaves":4,"expired_leaves":0,"used_leaves":0,"pending_leaves":0,"available_leaves":4,"parent":"Sal Slip/HR-EMP-00001/00002","parentfield":"leave_details","parenttype":"Salary Slip","doctype":"Salary Slip Leave"}],"__last_sync_on":"2025-04-16T00:04:33.980Z"}', 'print_format': 'Salary Slip based on Timesheet', 'no_letterhead': '0', 'letterhead': 'main header', 'settings': '{}', '_lang': 'ar', 'cmd': 'frappe.www.printview.get_html_and_style'}
+2025-04-16 03:06:17,838 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'doc': '{"name":"Sal Slip/HR-EMP-00001/00002","owner":"Administrator","creation":"2025-04-16 01:49:16.509845","modified":"2025-04-16 01:49:50.817407","modified_by":"Administrator","docstatus":1,"idx":4,"employee":"HR-EMP-00001","employee_name":"عبد   الرحمن","company":"Al-Saeeda-University","department":"الطب - A","branch":"Sanna","posting_date":"2025-04-16","letter_head":"ASSESTS ACCOUNTS","currency":"YER","exchange_rate":1,"payroll_frequency":"Monthly","start_date":"2025-04-01","end_date":"2025-04-30","salary_structure":"الهيكل راتب الاداريين","mode_of_payment":"","salary_slip_based_on_timesheet":0,"total_working_days":30,"unmarked_days":0,"leave_without_pay":0,"absent_days":14,"payment_days":16,"advance_amount":0,"total_working_hours":0,"hour_rate":0,"base_hour_rate":0,"gross_pay":30000,"base_gross_pay":30000,"gross_year_to_date":30000,"base_gross_year_to_date":0,"total_deduction":14000,"base_total_deduction":14000,"net_pay":16000,"base_net_pay":16000,"rounded_total":16000,"base_rounded_total":16000,"year_to_date":16000,"base_year_to_date":0,"month_to_date":16000,"base_month_to_date":0,"total_in_words":"YER ستة عشر ألف فقط.","base_total_in_words":"YER ستة عشر ألف فقط.","ctc":0,"income_from_other_sources":0,"total_earnings":0,"non_taxable_earnings":0,"standard_tax_exemption_amount":0,"tax_exemption_declaration":0,"deductions_before_tax_calculation":0,"annual_taxable_amount":0,"income_tax_deducted_till_date":0,"current_month_income_tax":0,"future_income_tax_deductions":0,"total_income_tax":0,"doctype":"Salary Slip","deductions":[{"name":"jmc1tsbf0m","owner":"Administrator","creation":"2025-04-16 01:49:16.509845","modified":"2025-04-16 01:49:50.817407","modified_by":"Administrator","docstatus":1,"idx":1,"salary_component":"خصم غياب","abbr":"AD","amount":14000,"year_to_date":14000,"is_recurring_additional_salary":0,"statistical_component":0,"depends_on_payment_days":1,"exempted_from_income_tax":0,"is_tax_applicable":0,"is_flexible_benefit":0,"variable_based_on_taxable_salary":0,"do_not_include_in_total":0,"deduct_full_tax_on_selected_payroll_date":0,"amount_based_on_formula":0,"default_amount":26250,"additional_amount":0,"tax_on_flexible_benefit":0,"tax_on_additional_salary":0,"parent":"Sal Slip/HR-EMP-00001/00002","parentfield":"deductions","parenttype":"Salary Slip","doctype":"Salary Detail"}],"earnings":[{"name":"cqmn1m992h","owner":"Administrator","creation":"2025-04-16 01:49:16.509845","modified":"2025-04-16 01:49:50.817407","modified_by":"Administrator","docstatus":1,"idx":1,"salary_component":"الراتب الاساسي","abbr":"BS","amount":30000,"year_to_date":30000,"is_recurring_additional_salary":0,"statistical_component":0,"depends_on_payment_days":0,"exempted_from_income_tax":0,"is_tax_applicable":1,"is_flexible_benefit":0,"variable_based_on_taxable_salary":0,"do_not_include_in_total":0,"deduct_full_tax_on_selected_payroll_date":0,"amount_based_on_formula":0,"default_amount":30000,"additional_amount":0,"tax_on_flexible_benefit":0,"tax_on_additional_salary":0,"parent":"Sal Slip/HR-EMP-00001/00002","parentfield":"earnings","parenttype":"Salary Slip","doctype":"Salary Detail"}],"timesheets":[],"leave_details":[{"name":"m6lsahctml","owner":"Administrator","creation":"2025-04-16 01:49:50.968179","modified":"2025-04-16 01:49:50.968179","modified_by":"Administrator","docstatus":1,"idx":1,"leave_type":"Mental Health Leave","total_allocated_leaves":4,"expired_leaves":0,"used_leaves":0,"pending_leaves":0,"available_leaves":4,"parent":"Sal Slip/HR-EMP-00001/00002","parentfield":"leave_details","parenttype":"Salary Slip","doctype":"Salary Slip Leave"}],"__last_sync_on":"2025-04-16T00:04:33.980Z"}', 'print_format': 'Salary Slip based on Timesheet', 'no_letterhead': '0', 'letterhead': 'main header', 'settings': '{}', '_lang': 'ar', 'cmd': 'frappe.www.printview.get_html_and_style'}
+2025-04-16 03:07:38,808 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'doc': '{"name":"Sal Slip/HR-EMP-00001/00002","owner":"Administrator","creation":"2025-04-16 01:49:16.509845","modified":"2025-04-16 01:49:50.817407","modified_by":"Administrator","docstatus":1,"idx":4,"employee":"HR-EMP-00001","employee_name":"عبد   الرحمن","company":"Al-Saeeda-University","department":"الطب - A","branch":"Sanna","posting_date":"2025-04-16","letter_head":"ASSESTS ACCOUNTS","currency":"YER","exchange_rate":1,"payroll_frequency":"Monthly","start_date":"2025-04-01","end_date":"2025-04-30","salary_structure":"الهيكل راتب الاداريين","mode_of_payment":"","salary_slip_based_on_timesheet":0,"total_working_days":30,"unmarked_days":0,"leave_without_pay":0,"absent_days":14,"payment_days":16,"advance_amount":0,"total_working_hours":0,"hour_rate":0,"base_hour_rate":0,"gross_pay":30000,"base_gross_pay":30000,"gross_year_to_date":30000,"base_gross_year_to_date":0,"total_deduction":14000,"base_total_deduction":14000,"net_pay":16000,"base_net_pay":16000,"rounded_total":16000,"base_rounded_total":16000,"year_to_date":16000,"base_year_to_date":0,"month_to_date":16000,"base_month_to_date":0,"total_in_words":"YER ستة عشر ألف فقط.","base_total_in_words":"YER ستة عشر ألف فقط.","ctc":0,"income_from_other_sources":0,"total_earnings":0,"non_taxable_earnings":0,"standard_tax_exemption_amount":0,"tax_exemption_declaration":0,"deductions_before_tax_calculation":0,"annual_taxable_amount":0,"income_tax_deducted_till_date":0,"current_month_income_tax":0,"future_income_tax_deductions":0,"total_income_tax":0,"doctype":"Salary Slip","deductions":[{"name":"jmc1tsbf0m","owner":"Administrator","creation":"2025-04-16 01:49:16.509845","modified":"2025-04-16 01:49:50.817407","modified_by":"Administrator","docstatus":1,"idx":1,"salary_component":"خصم غياب","abbr":"AD","amount":14000,"year_to_date":14000,"is_recurring_additional_salary":0,"statistical_component":0,"depends_on_payment_days":1,"exempted_from_income_tax":0,"is_tax_applicable":0,"is_flexible_benefit":0,"variable_based_on_taxable_salary":0,"do_not_include_in_total":0,"deduct_full_tax_on_selected_payroll_date":0,"amount_based_on_formula":0,"default_amount":26250,"additional_amount":0,"tax_on_flexible_benefit":0,"tax_on_additional_salary":0,"parent":"Sal Slip/HR-EMP-00001/00002","parentfield":"deductions","parenttype":"Salary Slip","doctype":"Salary Detail"}],"earnings":[{"name":"cqmn1m992h","owner":"Administrator","creation":"2025-04-16 01:49:16.509845","modified":"2025-04-16 01:49:50.817407","modified_by":"Administrator","docstatus":1,"idx":1,"salary_component":"الراتب الاساسي","abbr":"BS","amount":30000,"year_to_date":30000,"is_recurring_additional_salary":0,"statistical_component":0,"depends_on_payment_days":0,"exempted_from_income_tax":0,"is_tax_applicable":1,"is_flexible_benefit":0,"variable_based_on_taxable_salary":0,"do_not_include_in_total":0,"deduct_full_tax_on_selected_payroll_date":0,"amount_based_on_formula":0,"default_amount":30000,"additional_amount":0,"tax_on_flexible_benefit":0,"tax_on_additional_salary":0,"parent":"Sal Slip/HR-EMP-00001/00002","parentfield":"earnings","parenttype":"Salary Slip","doctype":"Salary Detail"}],"timesheets":[],"leave_details":[{"name":"m6lsahctml","owner":"Administrator","creation":"2025-04-16 01:49:50.968179","modified":"2025-04-16 01:49:50.968179","modified_by":"Administrator","docstatus":1,"idx":1,"leave_type":"Mental Health Leave","total_allocated_leaves":4,"expired_leaves":0,"used_leaves":0,"pending_leaves":0,"available_leaves":4,"parent":"Sal Slip/HR-EMP-00001/00002","parentfield":"leave_details","parenttype":"Salary Slip","doctype":"Salary Slip Leave"}],"__last_sync_on":"2025-04-16T00:06:39.931Z"}', 'print_format': 'Standard', 'no_letterhead': '0', 'letterhead': 'main header', 'settings': '{}', '_lang': 'ar', 'cmd': 'frappe.www.printview.get_html_and_style'}
+2025-04-16 03:07:39,729 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'doc': '{"name":"Sal Slip/HR-EMP-00001/00002","owner":"Administrator","creation":"2025-04-16 01:49:16.509845","modified":"2025-04-16 01:49:50.817407","modified_by":"Administrator","docstatus":1,"idx":4,"employee":"HR-EMP-00001","employee_name":"عبد   الرحمن","company":"Al-Saeeda-University","department":"الطب - A","branch":"Sanna","posting_date":"2025-04-16","letter_head":"ASSESTS ACCOUNTS","currency":"YER","exchange_rate":1,"payroll_frequency":"Monthly","start_date":"2025-04-01","end_date":"2025-04-30","salary_structure":"الهيكل راتب الاداريين","mode_of_payment":"","salary_slip_based_on_timesheet":0,"total_working_days":30,"unmarked_days":0,"leave_without_pay":0,"absent_days":14,"payment_days":16,"advance_amount":0,"total_working_hours":0,"hour_rate":0,"base_hour_rate":0,"gross_pay":30000,"base_gross_pay":30000,"gross_year_to_date":30000,"base_gross_year_to_date":0,"total_deduction":14000,"base_total_deduction":14000,"net_pay":16000,"base_net_pay":16000,"rounded_total":16000,"base_rounded_total":16000,"year_to_date":16000,"base_year_to_date":0,"month_to_date":16000,"base_month_to_date":0,"total_in_words":"YER ستة عشر ألف فقط.","base_total_in_words":"YER ستة عشر ألف فقط.","ctc":0,"income_from_other_sources":0,"total_earnings":0,"non_taxable_earnings":0,"standard_tax_exemption_amount":0,"tax_exemption_declaration":0,"deductions_before_tax_calculation":0,"annual_taxable_amount":0,"income_tax_deducted_till_date":0,"current_month_income_tax":0,"future_income_tax_deductions":0,"total_income_tax":0,"doctype":"Salary Slip","deductions":[{"name":"jmc1tsbf0m","owner":"Administrator","creation":"2025-04-16 01:49:16.509845","modified":"2025-04-16 01:49:50.817407","modified_by":"Administrator","docstatus":1,"idx":1,"salary_component":"خصم غياب","abbr":"AD","amount":14000,"year_to_date":14000,"is_recurring_additional_salary":0,"statistical_component":0,"depends_on_payment_days":1,"exempted_from_income_tax":0,"is_tax_applicable":0,"is_flexible_benefit":0,"variable_based_on_taxable_salary":0,"do_not_include_in_total":0,"deduct_full_tax_on_selected_payroll_date":0,"amount_based_on_formula":0,"default_amount":26250,"additional_amount":0,"tax_on_flexible_benefit":0,"tax_on_additional_salary":0,"parent":"Sal Slip/HR-EMP-00001/00002","parentfield":"deductions","parenttype":"Salary Slip","doctype":"Salary Detail"}],"earnings":[{"name":"cqmn1m992h","owner":"Administrator","creation":"2025-04-16 01:49:16.509845","modified":"2025-04-16 01:49:50.817407","modified_by":"Administrator","docstatus":1,"idx":1,"salary_component":"الراتب الاساسي","abbr":"BS","amount":30000,"year_to_date":30000,"is_recurring_additional_salary":0,"statistical_component":0,"depends_on_payment_days":0,"exempted_from_income_tax":0,"is_tax_applicable":1,"is_flexible_benefit":0,"variable_based_on_taxable_salary":0,"do_not_include_in_total":0,"deduct_full_tax_on_selected_payroll_date":0,"amount_based_on_formula":0,"default_amount":30000,"additional_amount":0,"tax_on_flexible_benefit":0,"tax_on_additional_salary":0,"parent":"Sal Slip/HR-EMP-00001/00002","parentfield":"earnings","parenttype":"Salary Slip","doctype":"Salary Detail"}],"timesheets":[],"leave_details":[{"name":"m6lsahctml","owner":"Administrator","creation":"2025-04-16 01:49:50.968179","modified":"2025-04-16 01:49:50.968179","modified_by":"Administrator","docstatus":1,"idx":1,"leave_type":"Mental Health Leave","total_allocated_leaves":4,"expired_leaves":0,"used_leaves":0,"pending_leaves":0,"available_leaves":4,"parent":"Sal Slip/HR-EMP-00001/00002","parentfield":"leave_details","parenttype":"Salary Slip","doctype":"Salary Slip Leave"}],"__last_sync_on":"2025-04-16T00:06:39.931Z"}', 'print_format': 'Standard', 'no_letterhead': '0', 'letterhead': 'main header', 'settings': '{}', '_lang': 'ar', 'cmd': 'frappe.www.printview.get_html_and_style'}
+2025-04-16 05:29:25,789 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Employee","name":"new-employee-djfrphuphp","__islocal":1,"__unsaved":1,"owner":"Administrator","naming_series":"HR-EMP-","degree_level":"بكالوريوس","status":"Active","job_category":"اكاديمي","create_user_permission":1,"company":"Al-Saeeda-University","education_table":[],"experience_table":[],"first_name":"حبيب ","middle_name":"محمد ","last_name":"عبدة","gender":"Male","date_of_birth":"2000-01-12","date_of_joining":"2025-04-16","payroll_cost_center":null,"department":"قسم الاستقبال - A"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-04-17 01:04:02,180 ERROR frappe New Exception collected in error log
+Site: HRPU.localhost
+Form Dict: {'doc': '{"name":"email@gmail.com","owner":"Administrator","creation":"2025-04-16 23:50:32.783939","modified":"2025-04-17 00:59:47.833901","modified_by":"Administrator","docstatus":0,"idx":0,"enabled":1,"email":"email@gmail.com","first_name":"hashim","full_name":"hashim","username":"hashim","language":"ar","time_zone":"Asia/Aden","send_welcome_email":1,"unsubscribed":0,"role_profile_name":"هاشم","mute_sounds":0,"desk_theme":"Light","search_bar":1,"notifications":1,"list_sidebar":1,"bulk_actions":1,"view_switcher":1,"form_sidebar":1,"timeline":1,"dashboard":1,"new_password":"","logout_all_sessions":0,"reset_password_key":"e77f9ccd1d4678eae051f3c278182246e894afbb74cede78f5b367edc4b170fc","last_reset_password_key_generated_on":"2025-04-16 23:50:33.999216","document_follow_notify":0,"document_follow_frequency":"Daily","follow_created_documents":0,"follow_commented_documents":0,"follow_liked_documents":0,"follow_assigned_documents":0,"follow_shared_documents":0,"thread_notify":1,"send_me_a_copy":0,"allowed_in_mentions":1,"simultaneous_sessions":2,"last_ip":"127.0.0.1","login_after":0,"user_type":"System User","last_active":"2025-04-17 00:47:34.983505","login_before":0,"bypass_restrict_ip_check_if_2fa_enabled":0,"last_login":"2025-04-17 00:03:36.608554","last_known_versions":"{\\"frappe\\": {\\"title\\": \\"Frappe Framework\\", \\"description\\": \\"Full stack web framework with Python, Javascript, MariaDB, Redis, Node\\", \\"branch\\": \\"version-15\\", \\"version\\": \\"15.55.2\\"}, \\"erpnext\\": {\\"title\\": \\"ERPNext\\", \\"description\\": \\"ERP made simple\\", \\"branch\\": \\"version-15\\", \\"version\\": \\"15.51.1\\"}, \\"hrms\\": {\\"title\\": \\"Frappe HR\\", \\"description\\": \\"Modern HR and Payroll Software\\", \\"branch\\": \\"develop\\", \\"version\\": \\"16.0.0-dev\\"}}","onboarding_status":"{}","doctype":"User","block_modules":[],"user_emails":[],"defaults":[],"roles":[{"docstatus":0,"doctype":"Has Role","name":"new-has-role-pxrjeezicu","__islocal":1,"__unsaved":1,"owner":"Administrator","parent":"email@gmail.com","parentfield":"roles","parenttype":"User","idx":1,"role":"Employee"}],"social_logins":[{"name":"ni1gik2ve3","owner":"Administrator","creation":"2025-04-16 23:50:33.121283","modified":"2025-04-17 00:59:47.833901","modified_by":"Administrator","docstatus":0,"idx":1,"provider":"frappe","userid":"d0170adece75914cc50608500e01fb84b49fbac","parent":"email@gmail.com","parentfield":"social_logins","parenttype":"User","doctype":"User Social Login"}],"__onload":{"all_modules":["Accounts","Assets","Automation","Bulk Transaction","Buying","CRM","Communication","Contacts","Core","Custom","Desk","EDI","ERPNext Integrations","Email","Geo","HR","Integrations","Maintenance","Manufacturing","Payroll","Portal","Printing","Projects","Quality Management","Regional","Selling","Setup","Social","Stock","Subcontracting","Support","Telephony","Utilities","Website","Workflow"]},"_liked_by":"[]","__last_sync_on":"2025-04-16T22:03:38.263Z","__unsaved":1}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}

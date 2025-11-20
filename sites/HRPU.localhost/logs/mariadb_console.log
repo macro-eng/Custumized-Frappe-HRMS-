@@ -1,0 +1,5 @@
+CREATE USER 'frappe_user'@'%' IDENTIFIED BY '120413581' ;
+SELECT * FROM users
+;
+SELECT * FROM user;
+ls

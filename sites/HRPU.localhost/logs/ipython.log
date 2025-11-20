@@ -1,0 +1,259 @@
+2025-04-14 23:59:48,922 INFO ipython === bench console session ===
+2025-04-14 23:59:48,922 INFO ipython import frappe.custom.doctype.custom_field.custom_field import create_custom_field
+2025-04-14 23:59:48,922 INFO ipython from frappe.custom.doctype.custom_field.custom_field import create_custom_field
+2025-04-14 23:59:48,922 INFO ipython from frappe.custom.doctype.custom_field.custom_field import create_custom_fields
+2025-04-14 23:59:48,922 INFO ipython create_custom_fields({
+"Accounts Settings":[ dict (
+fieldname='over_billing_allowance',
+label='Over Billing Allowance',
+fieldtype='Float',
+insert_after='credit_limit',
+default=0, 
+)]
+})
+2025-04-14 23:59:48,922 INFO ipython === session end ===
+2025-04-15 00:04:10,074 INFO ipython === bench console session ===
+2025-04-15 00:04:10,074 INFO ipython from frappe.custom.doctype.custom_field.custom_field import create_custom_fields
+2025-04-15 00:04:10,074 INFO ipython create_custom_fields({
+"Accounts Settings":[ dict (
+fieldname='over_billing_allowance',
+label='Over Billing Allowance',
+fieldtype='Float',
+insert_after='credit_limit',
+default=0, 
+)]
+})
+2025-04-15 00:04:10,074 INFO ipython create_custom_fields({
+"Accounts Settings":[ dict (
+fieldname='over_billing_allowance',
+label='Over Billing Allowance',
+fieldtype='Float',
+insert_after='credit_limit',
+default=0, 
+)]
+})
+2025-04-15 00:04:10,074 INFO ipython === session end ===
+2025-06-21 01:03:46,069 INFO ipython === bench console session ===
+2025-06-21 01:03:46,083 INFO ipython frappe.db.get_list("user")
+2025-06-21 01:03:46,083 INFO ipython frappe.db.get_list("users")
+2025-06-21 01:03:46,083 INFO ipython frappe.db.get_list("Users")
+2025-06-21 01:03:46,083 INFO ipython frappe.db.get_list("User")
+2025-06-21 01:03:46,083 INFO ipython frappe.db.get_list("User",["id"])
+2025-06-21 01:03:46,083 INFO ipython frappe.db.get_list("User",["idx"])
+2025-06-21 01:03:46,083 INFO ipython frappe.db.get_list("User",["*"])
+2025-06-21 01:03:46,083 INFO ipython frappe.db.get_list("User")
+2025-06-21 01:03:46,084 INFO ipython === session end ===
+2025-06-23 01:53:56,779 INFO ipython === bench console session ===
+2025-06-23 01:53:56,785 INFO ipython frappe.db.get_list("User")
+2025-06-23 01:53:56,785 INFO ipython frappe.db.get_list("User",fields=["*"])
+2025-06-23 01:53:56,785 INFO ipython from frappe.utils import now
+2025-06-23 01:53:56,785 INFO ipython now()
+2025-06-23 01:53:56,785 INFO ipython from frappe.utils import *
+2025-06-23 01:53:56,785 INFO ipython get_date()
+2025-06-23 01:53:56,786 INFO ipython now()
+2025-06-23 01:53:56,786 INFO ipython getdate()
+2025-06-23 01:53:56,786 INFO ipython today
+2025-06-23 01:53:56,786 INFO ipython today()
+2025-06-23 01:53:56,786 INFO ipython pretty_date(now())
+2025-06-23 01:53:56,786 INFO ipython pretty_date(now())
+2025-06-23 01:53:56,786 INFO ipython pretty_date('2000'))
+2025-06-23 01:53:56,786 INFO ipython pretty_date('2000')
+2025-06-23 01:53:56,786 INFO ipython pretty_date('2000-03-04')
+2025-06-23 01:53:56,786 INFO ipython pretty_date('2000/03/04')
+2025-06-23 01:53:56,786 INFO ipython pretty_date('2035-03-04')
+2025-06-23 01:53:56,786 INFO ipython pretty_date('2035-03-04 10:32:44')
+2025-06-23 01:53:56,786 INFO ipython pretty_date('2035-3-4 10:32:44')
+2025-06-23 01:53:56,787 INFO ipython today()
+2025-06-23 01:53:56,787 INFO ipython pretty_date(today())
+2025-06-23 01:53:56,787 INFO ipython pretty_date()
+2025-06-23 01:53:56,787 INFO ipython now()
+2025-06-23 01:53:56,787 INFO ipython pretty_date('2035-03-04 10:32:44.00000')
+2025-06-23 01:53:56,787 INFO ipython pretty_date('2015-03-04 10:32:44.00000')
+2025-06-23 01:53:56,787 INFO ipython pretty_date('2025-03-04 10:32:44.00000')
+2025-06-23 01:53:56,787 INFO ipython frappe.set_value("Employee","HR-EMP-00001","user_id":1)
+2025-06-23 01:53:56,787 INFO ipython frappe.db.set_value("Employee","HR-EMP-00001","user_id":1)
+2025-06-23 01:53:56,787 INFO ipython frappe.db.set_value("Employee","HR-EMP-00001","user_id",1)
+2025-06-23 01:53:56,787 INFO ipython frappe.db.get_list("Employee",fields=["user_id"])
+2025-06-23 01:53:56,787 INFO ipython frappe.db.get_list("User")
+2025-06-23 01:53:56,787 INFO ipython frappe.db.get_list("Employee",fields=["name","user_id"])
+2025-06-23 01:53:56,787 INFO ipython frappe.db.set_value("Employee","HR-EMP-00001","user_id",2)
+2025-06-23 01:53:56,788 INFO ipython frappe.db.get_list("Employee",fields=["name","user_id"])
+2025-06-23 01:53:56,788 INFO ipython frappe.db.get_list("Employee",fields=["name","user_id"])
+2025-06-23 01:53:56,788 INFO ipython frappe.db.get_list("User")
+2025-06-23 01:53:56,788 INFO ipython frappe.db.set_value("Employee","HR-EMP-00001","user_id",2)
+2025-06-23 01:53:56,788 INFO ipython frappe.db.get_list("Employee",fields=["name","user_id","email"])
+2025-06-23 01:53:56,788 INFO ipython frappe.db.get_list("Employee",fields=["name","user_id","email"])
+2025-06-23 01:53:56,788 INFO ipython frappe.db.set_value("Employee","HR-EMP-00001","user_id","ba0936129@gmail.com")
+2025-06-23 01:53:56,788 INFO ipython frappe.db.get_list("Employee",fields=["name","user_id","email"])
+2025-06-23 01:53:56,788 INFO ipython frappe.db.get_list("Employee",fields=["name","user_id"])
+2025-06-23 01:53:56,788 INFO ipython frappe.db.get_list("Employee",fields=["name","user_id"])
+2025-06-23 01:53:56,788 INFO ipython frappe.set_user_roles("ba0936129@gmail.com",["Employee ":"HR User"])
+2025-06-23 01:53:56,788 INFO ipython frappe.set_user_roles("ba0936129@gmail.com",["Employee":"HR User"])
+2025-06-23 01:53:56,788 INFO ipython frappe.set_user_roles("ba0936129@gmail.com",["Employee":"HR User"])
+2025-06-23 01:53:56,788 INFO ipython frappe.set_user_roles("ba0936129@gmail.com",["Employee":"HR User"])
+2025-06-23 01:53:56,788 INFO ipython frappe.set_user_roles("ba0936129@gmail.com",["Employee","HR User"])
+2025-06-23 01:53:56,788 INFO ipython frappe.set_user_roles("ba0936129@gmail.com",["Employee","HR User"])
+2025-06-23 01:53:56,788 INFO ipython user =frappe.get_doc("User","ba0936129@gmail.com")
+2025-06-23 01:53:56,788 INFO ipython user.set("roles",[{"role":"Employee"},{"role":"HR User"}])
+2025-06-23 01:53:56,789 INFO ipython user.save()
+2025-06-23 01:53:56,789 INFO ipython frappe.db.get_list("User")
+2025-06-23 01:53:56,789 INFO ipython frappe.db.get_list("User",fields=["name","role"])
+2025-06-23 01:53:56,789 INFO ipython frappe.db.get_list("User",fields=["name","roles"])
+2025-06-23 01:53:56,789 INFO ipython frappe.db.get_list("User",fields=["name","role"])
+2025-06-23 01:53:56,789 INFO ipython frappe.db.get_list("Employee",fields=["name","user_id","email"])
+2025-06-23 01:53:56,789 INFO ipython === session end ===
+2025-08-30 23:49:58,099 INFO ipython === bench console session ===
+2025-08-30 23:49:58,103 INFO ipython frappe.db.get_list("Salary Slip",fields=["*"])
+2025-08-30 23:49:58,104 INFO ipython frappe.db.get_list("Salary Slip",fields=["*"],filter={""})
+2025-08-30 23:49:58,104 INFO ipython frappe.db.get_list("Salary Slip",fields=["*"],filter={"start_date":"2025-04-01"})
+2025-08-30 23:49:58,104 INFO ipython frappe.db.get_list("Salary Slip",fields=["*"],filters={"start_date":"2025-04-01"})
+2025-08-30 23:49:58,104 INFO ipython frappe.db.get_list("Salary Slip",fields=["*"],filters={"start_date":"2025-05-01"})
+2025-08-30 23:49:58,104 INFO ipython from frappe.utils import * 
+2025-08-30 23:49:58,104 INFO ipython now()
+2025-08-30 23:49:58,104 INFO ipython getdate()
+2025-08-30 23:49:58,105 INFO ipython pretty_date(now())
+2025-08-30 23:49:58,105 INFO ipython pretty_date(now())
+2025-08-30 23:49:58,105 INFO ipython pretty_date(now(),months=2)
+2025-08-30 23:49:58,105 INFO ipython add_to_date(now(),months=2)
+2025-08-30 23:49:58,105 INFO ipython add_to_date(now(),months=-2)
+2025-08-30 23:49:58,105 INFO ipython add_to_date(now(),months=-2,days=4)
+2025-08-30 23:49:58,106 INFO ipython format_duration(50)
+2025-08-30 23:49:58,106 INFO ipython format_duration(500)
+2025-08-30 23:49:58,106 INFO ipython format_duration(100)0
+2025-08-30 23:49:58,106 INFO ipython format_duration(1000)
+2025-08-30 23:49:58,106 INFO ipython format_duration(100)
+2025-08-30 23:49:58,107 INFO ipython format_duration(10000)
+2025-08-30 23:49:58,107 INFO ipython format_duration(10000,hide_hours=True)
+2025-08-30 23:49:58,107 INFO ipython format_duration(1000000,hide_days=True)
+2025-08-30 23:49:58,107 INFO ipython format_duration(1000000
+)
+2025-08-30 23:49:58,108 INFO ipython format_duration(1000000,hide_days=True)
+2025-08-30 23:49:58,108 INFO ipython random_string(5)
+2025-08-30 23:49:58,108 INFO ipython random_string(51)
+2025-08-30 23:49:58,108 INFO ipython random_string(51)
+2025-08-30 23:49:58,108 INFO ipython frappe.db.get_list("Salary Slip")
+2025-08-30 23:49:58,109 INFO ipython frappe.db.get_list("Employee")
+2025-08-30 23:49:58,109 INFO ipython frappe.db.get_list("Employee",pluck="name")
+2025-08-30 23:49:58,109 INFO ipython frappe.db.get_list("Employee",pluck="full_name")
+2025-08-30 23:49:58,109 INFO ipython frappe.db.get_list("Employee",pluck="name")
+2025-08-30 23:49:58,109 INFO ipython frappe.db.get_list("Employee",pluck="name",order_b="name")
+2025-08-30 23:49:58,110 INFO ipython frappe.db.get_list("Employee",pluck="name",order_by="name")
+2025-08-30 23:49:58,110 INFO ipython frappe.db.get_list("Employee",pluck="name",order_by="name",as_dict=1)
+2025-08-30 23:49:58,110 INFO ipython frappe.db.get_list("Employee",pluck="name",order_by="name",as_dict=True)
+2025-08-30 23:49:58,111 INFO ipython frappe.db.get_list("Employee",pluck="name",order_by="name",as_list=True)
+2025-08-30 23:49:58,111 INFO ipython frappe.db.get_list("Employee",order_by="name",as_list=True)
+2025-08-30 23:49:58,111 INFO ipython frappe.db.get_list("Employee",order_by="name",as_list=True)[0]
+2025-08-30 23:49:58,112 INFO ipython frappe.db.get_list("Employee",order_by="name",as_list=True)[2]
+2025-08-30 23:49:58,112 INFO ipython frappe.db.get_list("Employee",fields="*",order_by="name",as_list=True)[2]
+2025-08-30 23:49:58,112 INFO ipython frappe.db.get_list("Employee",order_by="name",filters=[['date','between',['2025-03-19','2025-05-01']]])
+2025-08-30 23:49:58,112 INFO ipython frappe.db.get_list("Employee",filters=[['date','between',['2025-03-19','2025-05-01']]])
+2025-08-30 23:49:58,112 INFO ipython frappe.db.get_list("Employee",filters=[['date_of_birth','between',['2025-03-19','2025-05-01']]])
+2025-08-30 23:49:58,112 INFO ipython frappe.db.get_list("Employee",filters=[['date_of_birth','between',['2000-03-19','2025-05-01']]])
+2025-08-30 23:49:58,113 INFO ipython frappe.db.get_value("Employee",{"status":"active"},["name"])
+2025-08-30 23:49:58,113 INFO ipython frappe.db.get_value("Employee",{"status":"active"},["name",'email'])
+2025-08-30 23:49:58,113 INFO ipython frappe.db.get_value("Employee",{"status":"active"},["name",'personal_email'])
+2025-08-30 23:49:58,113 INFO ipython frappe.db.get_value("Employee",{"status":"active"},["name",'company'])
+2025-08-30 23:49:58,113 INFO ipython frappe.db.get_value("Employee",{"status":"active"},["name",'company','branch'])
+2025-08-30 23:49:58,114 INFO ipython frappe.db.exists("Employee","HR-EMP-00001")
+2025-08-30 23:49:58,114 INFO ipython frappe.db.count("Employee")
+2025-08-30 23:49:58,114 INFO ipython frappe.db.count("Employee",{'status':'active'})
+2025-08-30 23:49:58,115 INFO ipython frappe.db.count("Employee",{'status':'active'})
+2025-08-30 23:49:58,115 INFO ipython frappe.db.describe("Employee")
+2025-08-30 23:49:58,115 INFO ipython frappe.db.add_unique("Employee",["personal_email"])
+2025-08-30 23:49:58,115 INFO ipython === session end ===
+2025-08-31 02:22:42,172 INFO ipython === bench console session ===
+2025-08-31 02:22:42,186 INFO ipython frappe.db.get_list("Attendance",filters={"status":"present"})
+2025-08-31 02:22:42,187 INFO ipython frappe.qb.from_("Employee).select('id','name','date_of_joining')
+2025-08-31 02:22:42,187 INFO ipython frappe.qb.from_("Employee").select('id','name','date_of_joining')
+2025-08-31 02:22:42,187 INFO ipython frappe.qb.from_("tabEmployee").select('id','name','date_of_joining')
+2025-08-31 02:22:42,187 INFO ipython frappe.qb.from_("Employee").select('id','name','date_of_joining')
+2025-08-31 02:22:42,187 INFO ipython from pypika import Table
+2025-08-31 02:22:42,187 INFO ipython employees = Table("Employee")
+2025-08-31 02:22:42,187 INFO ipython from pypika import Query 
+2025-08-31 02:22:42,187 INFO ipython Query.from_("Employee").select('id','name','date_of_birth')
+2025-08-31 02:22:42,187 INFO ipython Query.from_("Employee").select('id','name','date_of_joining')
+2025-08-31 02:22:42,187 INFO ipython frappe.qb.from_("Employee").select('id','name','date_of_joining')
+2025-08-31 02:22:42,187 INFO ipython frappe.qb.from_("Employee").select('id','name','date_of_joining').walk()
+2025-08-31 02:22:42,187 INFO ipython frappe.qb.from_("Employee").select('id','name','date_of_joining').run()
+2025-08-31 02:22:42,187 INFO ipython frappe.qb.from_("Employee").select('name','date_of_joining').run()
+2025-08-31 02:22:42,188 INFO ipython frappe.qb.from_("Employee").select('name','date_of_joining').walk()
+2025-08-31 02:22:42,188 INFO ipython frappe.qb.from_("Employee").select('name','date_of_joining').where('name','HR-EMP-00001').walk()
+2025-08-31 02:22:42,188 INFO ipython frappe.qb.from_("Employee").select('name','date_of_joining').where('name'==='HR-EMP-00001').walk()
+2025-08-31 02:22:42,188 INFO ipython frappe.qb.from_("Employee").select('name','date_of_joining').where('name'=='HR-EMP-00001').walk()
+2025-08-31 02:22:42,188 INFO ipython frappe.qb.from_("Employee").select('name','date_of_joining').where('name'=="HR-EMP-00001").walk()
+2025-08-31 02:22:42,188 INFO ipython frappe.qb.from_("Employee").select('name','date_of_joining').where('name'=="HR-EMP-00001").run(debug=True)
+2025-08-31 02:22:42,188 INFO ipython frappe.qb.from_("Employee").select('name','date_of_joining').run(debug=True)
+2025-08-31 02:22:42,188 INFO ipython frappe.qb.from_("Employee").select('name','date_of_joining').run(as_dict=True)
+2025-08-31 02:22:42,188 INFO ipython att = frappe.qb.docType("Attendance")
+2025-08-31 02:22:42,188 INFO ipython att = frappe.qb.doctype("Attendance")
+2025-08-31 02:22:42,188 INFO ipython att = frappe.qb.docType('Attendance')
+2025-08-31 02:22:42,188 INFO ipython att = Table("Attendance")
+2025-08-31 02:22:42,188 INFO ipython att
+2025-08-31 02:22:42,188 INFO ipython emp = Table("Employee")
+2025-08-31 02:22:42,188 INFO ipython frappe.qb.from_(att).select("employee","employee_name").where("employee"=="HR-EMP-00001").run()
+2025-08-31 02:22:42,188 INFO ipython frappe.qb.from_(att).select("employee","employee_name").where("employee"=="HR-EMP-00001").run(as_dict=True)
+2025-08-31 02:22:42,188 INFO ipython frappe.qb.from_("Attendance").select("employee","employee_name").where("employee"=="HR-EMP-00001").run(as_dict=True)
+2025-08-31 02:22:42,188 INFO ipython frappe.qb.from_("Employee").select("employee","employee_name").where("employee"=="HR-EMP-00001").run(as_dict=True)
+2025-08-31 02:22:42,189 INFO ipython att = frappe.qb.DocType('Attendance')
+2025-08-31 02:22:42,189 INFO ipython frappe.qb.from_(att).select("employee","employee_name").where("employee"=="HR-EMP-00001").run(as_dict=True)
+2025-08-31 02:22:42,189 INFO ipython frappe.qb.from_(att).select("employee","employee_name").run(as_dict=True)
+2025-08-31 02:22:42,189 INFO ipython frappe.qb.from_(att).select("employee","employee_name").where("employee"=="HR-EMP-00001").run(as_dict=True)
+2025-08-31 02:22:42,189 INFO ipython frappe.qb.from_(att).select("employee","employee_name").run(as_dict=True)
+2025-08-31 02:22:42,189 INFO ipython frappe.qb.from_(att).select("employee","employee_name").where('employee'=='HR-EMP-00001').run(as_dict=True)
+2025-08-31 02:22:42,189 INFO ipython frappe.qb.from_(att).select("employee","employee_name").where('employee'==='HR-EMP-00001').run(as_dict=True)
+2025-08-31 02:22:42,189 INFO ipython frappe.qb.from_(att).select("employee","employee_name").where('employee' == 'HR-EMP-00001').run(as_dict=True)
+2025-08-31 02:22:42,189 INFO ipython frappe.qb.from_(att).select("employee","employee_name").where('employee' == 'HR-EMP-00001').run(as_dict=True)
+2025-08-31 02:22:42,189 INFO ipython === session end ===
+2025-09-03 02:51:33,791 INFO ipython === bench console session ===
+2025-09-03 02:51:33,794 INFO ipython getdate()
+2025-09-03 02:51:33,794 INFO ipython from frappe.utils import *
+2025-09-03 02:51:33,794 INFO ipython getdate()
+2025-09-03 02:51:33,794 INFO ipython getdate("2000-10-21")< getdate()
+2025-09-03 02:51:33,794 INFO ipython getdate("2000-10-21")> getdate()
+2025-09-03 02:51:33,794 INFO ipython getdate("2000-10-21")
+2025-09-03 02:51:33,794 INFO ipython frappe.session.user
+2025-09-03 02:51:33,794 INFO ipython frappe.get_doc("User", frappe.session.user)
+2025-09-03 02:51:33,795 INFO ipython user=frappe.get_doc("User", frappe.session.user)
+2025-09-03 02:51:33,795 INFO ipython user
+2025-09-03 02:51:33,795 INFO ipython user.roles
+2025-09-03 02:51:33,795 INFO ipython user=frappe.get_doc("User", frappe.session.user)
+2025-09-03 02:51:33,795 INFO ipython user
+2025-09-03 02:51:33,795 INFO ipython user=frappe.get_doc("User", "ss)
+2025-09-03 02:51:33,795 INFO ipython user=frappe.get_doc("User", "ss")
+2025-09-03 02:51:33,795 INFO ipython user=frappe.get_doc("User", frappe.session.user)
+2025-09-03 02:51:33,795 INFO ipython user 
+2025-09-03 02:51:33,795 INFO ipython user.roles
+2025-09-03 02:51:33,795 INFO ipython "Employee" in frappe.get_roles()
+2025-09-03 02:51:33,795 INFO ipython frappe.get_roles()
+2025-09-03 02:51:33,795 INFO ipython frappe.get_all("roles")
+2025-09-03 02:51:33,795 INFO ipython frappe.get_all("Roles")
+2025-09-03 02:51:33,795 INFO ipython frappe.get_all("Role")
+2025-09-03 02:51:33,795 INFO ipython frappe.get_all("Role",fields=["*"])
+2025-09-03 02:51:33,795 INFO ipython frappe.get_all("Role",fields=["disabled","desk_access","name","role_name"])
+2025-09-03 02:51:33,796 INFO ipython frappe.get_value("Role","Newsletter Manager")
+2025-09-03 02:51:33,796 INFO ipython frappe.get_value("Role","Newsletter Manager").delete
+2025-09-03 02:51:33,796 INFO ipython frappe.get_value("Role","Newsletter Manager").delete()
+2025-09-03 02:51:33,796 INFO ipython s= frappe.get_value("Role","Newsletter Manager")
+2025-09-03 02:51:33,796 INFO ipython s.delete()
+2025-09-03 02:51:33,796 INFO ipython frappe.get_all("Role",fields=["disabled","desk_access","name","role_name"])
+2025-09-03 02:51:33,796 INFO ipython s= frappe.get_doc("Role","Newsletter Manager")
+2025-09-03 02:51:33,796 INFO ipython s.disabled = 1
+2025-09-03 02:51:33,796 INFO ipython frappe.get_all("Role",fields=["disabled","desk_access","name","role_name"])
+2025-09-03 02:51:33,796 INFO ipython s.disabled = 1
+2025-09-03 02:51:33,796 INFO ipython s.save
+2025-09-03 02:51:33,796 INFO ipython s.save()
+2025-09-03 02:51:33,796 INFO ipython frappe.get_all("Role",fields=["disabled","desk_access","name","role_name"])
+2025-09-03 02:51:33,796 INFO ipython s= frappe.get_doc("Role","Newsletter Manager")
+2025-09-03 02:51:33,796 INFO ipython s.disabled
+2025-09-03 02:51:33,796 INFO ipython s= frappe.get_doc("Role","")
+2025-09-03 02:51:33,796 INFO ipython Interviewer
+2025-09-03 02:51:33,796 INFO ipython s= frappe.get_doc("Role","")
+2025-09-03 02:51:33,796 INFO ipython Interviewer
+2025-09-03 02:51:33,796 INFO ipython s= frappe.get_doc("Role","Interviewer")
+2025-09-03 02:51:33,797 INFO ipython s
+2025-09-03 02:51:33,797 INFO ipython s.disabled
+2025-09-03 02:51:33,797 INFO ipython s.disabled = 1
+2025-09-03 02:51:33,797 INFO ipython s.save()
+2025-09-03 02:51:33,797 INFO ipython s.delete()
+2025-09-03 02:51:33,797 INFO ipython s.disabled
+2025-09-03 02:51:33,797 INFO ipython === session end ===

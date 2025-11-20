@@ -1,0 +1,1225 @@
+2025-09-02 00:55:38,560 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 124, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 137, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
+2025-09-02 00:56:38,860 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 124, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 137, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
+2025-09-02 00:57:39,292 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 124, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 137, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
+2025-09-02 00:58:39,323 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 124, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 137, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
+2025-09-02 00:59:39,583 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 124, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 137, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
+2025-09-02 01:00:40,015 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 124, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 137, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
+2025-09-02 01:01:40,123 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 124, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 137, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
+2025-09-02 01:02:40,353 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 124, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 137, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
+2025-09-02 01:03:40,861 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 124, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 137, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
+2025-09-02 01:04:41,104 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 124, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 137, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
+2025-09-02 01:05:41,306 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 124, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 137, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
+2025-09-02 01:06:41,371 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 124, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 137, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
+2025-09-02 01:07:41,638 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 124, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 137, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
+2025-09-02 01:08:42,024 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 124, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 137, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
+2025-09-02 01:09:42,126 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 124, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 137, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
+2025-09-02 01:10:42,549 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 124, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 137, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
+2025-09-02 01:11:42,630 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 124, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 137, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
+2025-09-02 01:12:43,148 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 124, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 137, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
+2025-09-02 01:13:43,428 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 124, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 137, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
+2025-09-02 01:14:43,531 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 124, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 137, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
+2025-09-02 01:15:43,992 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 124, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 137, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
+2025-09-02 01:16:44,123 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 124, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 137, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
+2025-09-02 01:17:44,453 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 124, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 137, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
+2025-09-02 01:18:44,795 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 124, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 137, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
+2025-09-02 01:19:45,112 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 124, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 137, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
+2025-09-02 01:20:45,644 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 124, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 137, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
+2025-09-02 01:21:45,754 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 124, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 137, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
+2025-09-02 01:22:46,264 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 124, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 137, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
+2025-09-02 01:23:46,349 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 124, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 137, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
+2025-09-02 01:24:46,824 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 124, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 137, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
+2025-09-02 01:25:47,092 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 124, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 137, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
+2025-09-02 01:26:47,127 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 124, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 137, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
+2025-09-02 01:27:47,570 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 124, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 137, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
+2025-09-02 01:28:47,601 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 124, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 137, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
+2025-09-02 01:29:48,005 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 124, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 137, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")

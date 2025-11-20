@@ -1,0 +1,1422 @@
+2025-05-20 22:51:48,963 ERROR frappe Could not take error snapshot: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+Site: HRPU.localhost
+Form Dict: {}
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 649, in connect
+    sock = socket.create_connection(
+  File "/usr/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/usr/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/serve.py", line 19, in get_response
+    endpoint, renderer_instance = path_resolver.resolve()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/path_resolver.py", line 38, in resolve
+    resolve_redirect(self.path, request.query_string)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/path_resolver.py", line 118, in resolve_redirect
+    redirects += frappe.get_all(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 2015, in get_all
+    return get_list(doctype, *args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 1990, in get_list
+    return frappe.model.db_query.DatabaseQuery(doctype).execute(*args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/db_query.py", line 192, in execute
+    result = self.build_and_run()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/db_query.py", line 233, in build_and_run
+    return frappe.db.sql(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 716, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 649, in connect
+    sock = socket.create_connection(
+  File "/usr/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/usr/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/app.py", line 124, in application
+    response = get_response()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/serve.py", line 28, in get_response
+    response = ErrorPage(exception=e).render()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/page_renderers/template_page.py", line 84, in render
+    html = self.get_html()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/utils.py", line 531, in cache_html_decorator
+    html = func(*args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/page_renderers/template_page.py", line 92, in get_html
+    self.init_context()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/page_renderers/error_page.py", line 14, in init_context
+    super().init_context()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/page_renderers/base_template_page.py", line 15, in init_context
+    self.context.update(get_website_settings())
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/doctype/website_settings/website_settings.py", line 263, in get_website_settings
+    context.boot = get_boot_data()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/utils.py", line 169, in get_boot_data
+    apps = get_apps() or []
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/typing_validations.py", line 31, in wrapper
+    return func(*args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/apps.py", line 15, in get_apps
+    allowed_workspaces = get_workspace_sidebar_items().get("pages")
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/typing_validations.py", line 31, in wrapper
+    return func(*args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/desk/desktop.py", line 451, in get_workspace_sidebar_items
+    all_pages = frappe.get_all(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 2015, in get_all
+    return get_list(doctype, *args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 1990, in get_list
+    return frappe.model.db_query.DatabaseQuery(doctype).execute(*args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/db_query.py", line 192, in execute
+    result = self.build_and_run()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/db_query.py", line 233, in build_and_run
+    return frappe.db.sql(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 716, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 649, in connect
+    sock = socket.create_connection(
+  File "/usr/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/usr/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/error.py", line 86, in log_error_snapshot
+    log_error(title=str(exception), defer_insert=True)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/error.py", line 61, in log_error
+    error_log = frappe.get_doc(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 1291, in get_doc
+    doc = frappe.model.document.get_doc(*args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 83, in get_doc
+    controller = get_controller(doctype)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/base_document.py", line 67, in get_controller
+    return import_controller(doctype)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/base_document.py", line 82, in import_controller
+    doctype_info = frappe.db.get_value("DocType", doctype, fieldname="*")
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 515, in get_value
+    result = self.get_values(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 619, in get_values
+    out = self._get_values_from_table(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 892, in _get_values_from_table
+    return query.run(as_dict=as_dict, debug=debug, update=update, run=run, pluck=pluck)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 716, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+2025-05-20 22:52:01,624 ERROR frappe Could not take error snapshot: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+Site: HRPU.localhost
+Form Dict: {}
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 649, in connect
+    sock = socket.create_connection(
+  File "/usr/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/usr/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/serve.py", line 19, in get_response
+    endpoint, renderer_instance = path_resolver.resolve()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/path_resolver.py", line 38, in resolve
+    resolve_redirect(self.path, request.query_string)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/path_resolver.py", line 118, in resolve_redirect
+    redirects += frappe.get_all(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 2015, in get_all
+    return get_list(doctype, *args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 1990, in get_list
+    return frappe.model.db_query.DatabaseQuery(doctype).execute(*args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/db_query.py", line 192, in execute
+    result = self.build_and_run()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/db_query.py", line 233, in build_and_run
+    return frappe.db.sql(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 716, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 649, in connect
+    sock = socket.create_connection(
+  File "/usr/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/usr/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/app.py", line 124, in application
+    response = get_response()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/serve.py", line 28, in get_response
+    response = ErrorPage(exception=e).render()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/page_renderers/template_page.py", line 84, in render
+    html = self.get_html()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/utils.py", line 531, in cache_html_decorator
+    html = func(*args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/page_renderers/template_page.py", line 92, in get_html
+    self.init_context()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/page_renderers/error_page.py", line 14, in init_context
+    super().init_context()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/page_renderers/base_template_page.py", line 15, in init_context
+    self.context.update(get_website_settings())
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/doctype/website_settings/website_settings.py", line 263, in get_website_settings
+    context.boot = get_boot_data()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/utils.py", line 169, in get_boot_data
+    apps = get_apps() or []
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/typing_validations.py", line 31, in wrapper
+    return func(*args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/apps.py", line 15, in get_apps
+    allowed_workspaces = get_workspace_sidebar_items().get("pages")
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/typing_validations.py", line 31, in wrapper
+    return func(*args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/desk/desktop.py", line 451, in get_workspace_sidebar_items
+    all_pages = frappe.get_all(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 2015, in get_all
+    return get_list(doctype, *args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 1990, in get_list
+    return frappe.model.db_query.DatabaseQuery(doctype).execute(*args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/db_query.py", line 192, in execute
+    result = self.build_and_run()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/db_query.py", line 233, in build_and_run
+    return frappe.db.sql(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 716, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 649, in connect
+    sock = socket.create_connection(
+  File "/usr/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/usr/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/error.py", line 86, in log_error_snapshot
+    log_error(title=str(exception), defer_insert=True)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/error.py", line 61, in log_error
+    error_log = frappe.get_doc(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 1291, in get_doc
+    doc = frappe.model.document.get_doc(*args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 83, in get_doc
+    controller = get_controller(doctype)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/base_document.py", line 67, in get_controller
+    return import_controller(doctype)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/base_document.py", line 82, in import_controller
+    doctype_info = frappe.db.get_value("DocType", doctype, fieldname="*")
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 515, in get_value
+    result = self.get_values(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 619, in get_values
+    out = self._get_values_from_table(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 892, in _get_values_from_table
+    return query.run(as_dict=as_dict, debug=debug, update=update, run=run, pluck=pluck)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 716, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+2025-05-20 22:52:02,751 ERROR frappe Could not take error snapshot: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+Site: HRPU.localhost
+Form Dict: {}
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 649, in connect
+    sock = socket.create_connection(
+  File "/usr/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/usr/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/serve.py", line 19, in get_response
+    endpoint, renderer_instance = path_resolver.resolve()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/path_resolver.py", line 38, in resolve
+    resolve_redirect(self.path, request.query_string)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/path_resolver.py", line 118, in resolve_redirect
+    redirects += frappe.get_all(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 2015, in get_all
+    return get_list(doctype, *args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 1990, in get_list
+    return frappe.model.db_query.DatabaseQuery(doctype).execute(*args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/db_query.py", line 192, in execute
+    result = self.build_and_run()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/db_query.py", line 233, in build_and_run
+    return frappe.db.sql(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 716, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 649, in connect
+    sock = socket.create_connection(
+  File "/usr/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/usr/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/app.py", line 124, in application
+    response = get_response()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/serve.py", line 28, in get_response
+    response = ErrorPage(exception=e).render()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/page_renderers/template_page.py", line 84, in render
+    html = self.get_html()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/utils.py", line 531, in cache_html_decorator
+    html = func(*args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/page_renderers/template_page.py", line 92, in get_html
+    self.init_context()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/page_renderers/error_page.py", line 14, in init_context
+    super().init_context()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/page_renderers/base_template_page.py", line 15, in init_context
+    self.context.update(get_website_settings())
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/doctype/website_settings/website_settings.py", line 263, in get_website_settings
+    context.boot = get_boot_data()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/utils.py", line 169, in get_boot_data
+    apps = get_apps() or []
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/typing_validations.py", line 31, in wrapper
+    return func(*args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/apps.py", line 15, in get_apps
+    allowed_workspaces = get_workspace_sidebar_items().get("pages")
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/typing_validations.py", line 31, in wrapper
+    return func(*args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/desk/desktop.py", line 451, in get_workspace_sidebar_items
+    all_pages = frappe.get_all(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 2015, in get_all
+    return get_list(doctype, *args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 1990, in get_list
+    return frappe.model.db_query.DatabaseQuery(doctype).execute(*args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/db_query.py", line 192, in execute
+    result = self.build_and_run()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/db_query.py", line 233, in build_and_run
+    return frappe.db.sql(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 716, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 649, in connect
+    sock = socket.create_connection(
+  File "/usr/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/usr/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/error.py", line 86, in log_error_snapshot
+    log_error(title=str(exception), defer_insert=True)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/error.py", line 61, in log_error
+    error_log = frappe.get_doc(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 1291, in get_doc
+    doc = frappe.model.document.get_doc(*args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 83, in get_doc
+    controller = get_controller(doctype)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/base_document.py", line 67, in get_controller
+    return import_controller(doctype)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/base_document.py", line 82, in import_controller
+    doctype_info = frappe.db.get_value("DocType", doctype, fieldname="*")
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 515, in get_value
+    result = self.get_values(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 619, in get_values
+    out = self._get_values_from_table(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 892, in _get_values_from_table
+    return query.run(as_dict=as_dict, debug=debug, update=update, run=run, pluck=pluck)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 716, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+2025-05-20 22:52:03,147 ERROR frappe Could not take error snapshot: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+Site: HRPU.localhost
+Form Dict: {}
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 649, in connect
+    sock = socket.create_connection(
+  File "/usr/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/usr/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/serve.py", line 19, in get_response
+    endpoint, renderer_instance = path_resolver.resolve()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/path_resolver.py", line 38, in resolve
+    resolve_redirect(self.path, request.query_string)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/path_resolver.py", line 118, in resolve_redirect
+    redirects += frappe.get_all(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 2015, in get_all
+    return get_list(doctype, *args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 1990, in get_list
+    return frappe.model.db_query.DatabaseQuery(doctype).execute(*args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/db_query.py", line 192, in execute
+    result = self.build_and_run()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/db_query.py", line 233, in build_and_run
+    return frappe.db.sql(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 716, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 649, in connect
+    sock = socket.create_connection(
+  File "/usr/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/usr/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/app.py", line 124, in application
+    response = get_response()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/serve.py", line 28, in get_response
+    response = ErrorPage(exception=e).render()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/page_renderers/template_page.py", line 84, in render
+    html = self.get_html()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/utils.py", line 531, in cache_html_decorator
+    html = func(*args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/page_renderers/template_page.py", line 92, in get_html
+    self.init_context()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/page_renderers/error_page.py", line 14, in init_context
+    super().init_context()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/page_renderers/base_template_page.py", line 15, in init_context
+    self.context.update(get_website_settings())
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/doctype/website_settings/website_settings.py", line 263, in get_website_settings
+    context.boot = get_boot_data()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/utils.py", line 169, in get_boot_data
+    apps = get_apps() or []
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/typing_validations.py", line 31, in wrapper
+    return func(*args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/apps.py", line 15, in get_apps
+    allowed_workspaces = get_workspace_sidebar_items().get("pages")
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/typing_validations.py", line 31, in wrapper
+    return func(*args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/desk/desktop.py", line 451, in get_workspace_sidebar_items
+    all_pages = frappe.get_all(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 2015, in get_all
+    return get_list(doctype, *args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 1990, in get_list
+    return frappe.model.db_query.DatabaseQuery(doctype).execute(*args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/db_query.py", line 192, in execute
+    result = self.build_and_run()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/db_query.py", line 233, in build_and_run
+    return frappe.db.sql(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 716, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 649, in connect
+    sock = socket.create_connection(
+  File "/usr/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/usr/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/error.py", line 86, in log_error_snapshot
+    log_error(title=str(exception), defer_insert=True)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/error.py", line 61, in log_error
+    error_log = frappe.get_doc(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 1291, in get_doc
+    doc = frappe.model.document.get_doc(*args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 83, in get_doc
+    controller = get_controller(doctype)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/base_document.py", line 67, in get_controller
+    return import_controller(doctype)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/base_document.py", line 82, in import_controller
+    doctype_info = frappe.db.get_value("DocType", doctype, fieldname="*")
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 515, in get_value
+    result = self.get_values(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 619, in get_values
+    out = self._get_values_from_table(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 892, in _get_values_from_table
+    return query.run(as_dict=as_dict, debug=debug, update=update, run=run, pluck=pluck)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 716, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+2025-05-20 22:53:27,786 ERROR frappe Could not take error snapshot: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+Site: HRPU.localhost
+Form Dict: {}
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 649, in connect
+    sock = socket.create_connection(
+  File "/usr/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/usr/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/serve.py", line 19, in get_response
+    endpoint, renderer_instance = path_resolver.resolve()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/path_resolver.py", line 38, in resolve
+    resolve_redirect(self.path, request.query_string)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/path_resolver.py", line 118, in resolve_redirect
+    redirects += frappe.get_all(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 2015, in get_all
+    return get_list(doctype, *args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 1990, in get_list
+    return frappe.model.db_query.DatabaseQuery(doctype).execute(*args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/db_query.py", line 192, in execute
+    result = self.build_and_run()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/db_query.py", line 233, in build_and_run
+    return frappe.db.sql(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 716, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 649, in connect
+    sock = socket.create_connection(
+  File "/usr/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/usr/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/app.py", line 124, in application
+    response = get_response()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/serve.py", line 28, in get_response
+    response = ErrorPage(exception=e).render()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/page_renderers/template_page.py", line 84, in render
+    html = self.get_html()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/utils.py", line 531, in cache_html_decorator
+    html = func(*args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/page_renderers/template_page.py", line 92, in get_html
+    self.init_context()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/page_renderers/error_page.py", line 14, in init_context
+    super().init_context()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/page_renderers/base_template_page.py", line 15, in init_context
+    self.context.update(get_website_settings())
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/doctype/website_settings/website_settings.py", line 263, in get_website_settings
+    context.boot = get_boot_data()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/utils.py", line 169, in get_boot_data
+    apps = get_apps() or []
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/typing_validations.py", line 31, in wrapper
+    return func(*args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/apps.py", line 15, in get_apps
+    allowed_workspaces = get_workspace_sidebar_items().get("pages")
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/typing_validations.py", line 31, in wrapper
+    return func(*args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/desk/desktop.py", line 451, in get_workspace_sidebar_items
+    all_pages = frappe.get_all(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 2015, in get_all
+    return get_list(doctype, *args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 1990, in get_list
+    return frappe.model.db_query.DatabaseQuery(doctype).execute(*args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/db_query.py", line 192, in execute
+    result = self.build_and_run()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/db_query.py", line 233, in build_and_run
+    return frappe.db.sql(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 716, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 649, in connect
+    sock = socket.create_connection(
+  File "/usr/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/usr/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/error.py", line 86, in log_error_snapshot
+    log_error(title=str(exception), defer_insert=True)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/error.py", line 61, in log_error
+    error_log = frappe.get_doc(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 1291, in get_doc
+    doc = frappe.model.document.get_doc(*args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 83, in get_doc
+    controller = get_controller(doctype)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/base_document.py", line 67, in get_controller
+    return import_controller(doctype)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/base_document.py", line 82, in import_controller
+    doctype_info = frappe.db.get_value("DocType", doctype, fieldname="*")
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 515, in get_value
+    result = self.get_values(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 619, in get_values
+    out = self._get_values_from_table(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 892, in _get_values_from_table
+    return query.run(as_dict=as_dict, debug=debug, update=update, run=run, pluck=pluck)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 716, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+2025-05-20 22:53:29,138 ERROR frappe Could not take error snapshot: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+Site: HRPU.localhost
+Form Dict: {}
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 649, in connect
+    sock = socket.create_connection(
+  File "/usr/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/usr/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/serve.py", line 19, in get_response
+    endpoint, renderer_instance = path_resolver.resolve()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/path_resolver.py", line 38, in resolve
+    resolve_redirect(self.path, request.query_string)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/path_resolver.py", line 118, in resolve_redirect
+    redirects += frappe.get_all(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 2015, in get_all
+    return get_list(doctype, *args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 1990, in get_list
+    return frappe.model.db_query.DatabaseQuery(doctype).execute(*args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/db_query.py", line 192, in execute
+    result = self.build_and_run()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/db_query.py", line 233, in build_and_run
+    return frappe.db.sql(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 716, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 649, in connect
+    sock = socket.create_connection(
+  File "/usr/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/usr/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/app.py", line 124, in application
+    response = get_response()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/serve.py", line 28, in get_response
+    response = ErrorPage(exception=e).render()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/page_renderers/template_page.py", line 84, in render
+    html = self.get_html()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/utils.py", line 531, in cache_html_decorator
+    html = func(*args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/page_renderers/template_page.py", line 92, in get_html
+    self.init_context()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/page_renderers/error_page.py", line 14, in init_context
+    super().init_context()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/page_renderers/base_template_page.py", line 15, in init_context
+    self.context.update(get_website_settings())
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/doctype/website_settings/website_settings.py", line 263, in get_website_settings
+    context.boot = get_boot_data()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/utils.py", line 169, in get_boot_data
+    apps = get_apps() or []
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/typing_validations.py", line 31, in wrapper
+    return func(*args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/apps.py", line 15, in get_apps
+    allowed_workspaces = get_workspace_sidebar_items().get("pages")
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/typing_validations.py", line 31, in wrapper
+    return func(*args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/desk/desktop.py", line 451, in get_workspace_sidebar_items
+    all_pages = frappe.get_all(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 2015, in get_all
+    return get_list(doctype, *args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 1990, in get_list
+    return frappe.model.db_query.DatabaseQuery(doctype).execute(*args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/db_query.py", line 192, in execute
+    result = self.build_and_run()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/db_query.py", line 233, in build_and_run
+    return frappe.db.sql(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 716, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 649, in connect
+    sock = socket.create_connection(
+  File "/usr/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/usr/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/error.py", line 86, in log_error_snapshot
+    log_error(title=str(exception), defer_insert=True)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/error.py", line 61, in log_error
+    error_log = frappe.get_doc(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 1291, in get_doc
+    doc = frappe.model.document.get_doc(*args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 83, in get_doc
+    controller = get_controller(doctype)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/base_document.py", line 67, in get_controller
+    return import_controller(doctype)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/base_document.py", line 82, in import_controller
+    doctype_info = frappe.db.get_value("DocType", doctype, fieldname="*")
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 515, in get_value
+    result = self.get_values(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 619, in get_values
+    out = self._get_values_from_table(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 892, in _get_values_from_table
+    return query.run(as_dict=as_dict, debug=debug, update=update, run=run, pluck=pluck)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 716, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+2025-05-20 22:53:30,192 ERROR frappe Could not take error snapshot: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+Site: HRPU.localhost
+Form Dict: {}
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 649, in connect
+    sock = socket.create_connection(
+  File "/usr/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/usr/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/serve.py", line 19, in get_response
+    endpoint, renderer_instance = path_resolver.resolve()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/path_resolver.py", line 38, in resolve
+    resolve_redirect(self.path, request.query_string)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/path_resolver.py", line 118, in resolve_redirect
+    redirects += frappe.get_all(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 2015, in get_all
+    return get_list(doctype, *args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 1990, in get_list
+    return frappe.model.db_query.DatabaseQuery(doctype).execute(*args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/db_query.py", line 192, in execute
+    result = self.build_and_run()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/db_query.py", line 233, in build_and_run
+    return frappe.db.sql(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 716, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 649, in connect
+    sock = socket.create_connection(
+  File "/usr/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/usr/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/app.py", line 124, in application
+    response = get_response()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/serve.py", line 28, in get_response
+    response = ErrorPage(exception=e).render()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/page_renderers/template_page.py", line 84, in render
+    html = self.get_html()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/utils.py", line 531, in cache_html_decorator
+    html = func(*args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/page_renderers/template_page.py", line 92, in get_html
+    self.init_context()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/page_renderers/error_page.py", line 14, in init_context
+    super().init_context()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/page_renderers/base_template_page.py", line 15, in init_context
+    self.context.update(get_website_settings())
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/doctype/website_settings/website_settings.py", line 263, in get_website_settings
+    context.boot = get_boot_data()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/utils.py", line 169, in get_boot_data
+    apps = get_apps() or []
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/typing_validations.py", line 31, in wrapper
+    return func(*args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/apps.py", line 15, in get_apps
+    allowed_workspaces = get_workspace_sidebar_items().get("pages")
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/typing_validations.py", line 31, in wrapper
+    return func(*args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/desk/desktop.py", line 451, in get_workspace_sidebar_items
+    all_pages = frappe.get_all(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 2015, in get_all
+    return get_list(doctype, *args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 1990, in get_list
+    return frappe.model.db_query.DatabaseQuery(doctype).execute(*args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/db_query.py", line 192, in execute
+    result = self.build_and_run()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/db_query.py", line 233, in build_and_run
+    return frappe.db.sql(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 716, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 649, in connect
+    sock = socket.create_connection(
+  File "/usr/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/usr/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/error.py", line 86, in log_error_snapshot
+    log_error(title=str(exception), defer_insert=True)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/error.py", line 61, in log_error
+    error_log = frappe.get_doc(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 1291, in get_doc
+    doc = frappe.model.document.get_doc(*args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 83, in get_doc
+    controller = get_controller(doctype)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/base_document.py", line 67, in get_controller
+    return import_controller(doctype)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/base_document.py", line 82, in import_controller
+    doctype_info = frappe.db.get_value("DocType", doctype, fieldname="*")
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 515, in get_value
+    result = self.get_values(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 619, in get_values
+    out = self._get_values_from_table(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 892, in _get_values_from_table
+    return query.run(as_dict=as_dict, debug=debug, update=update, run=run, pluck=pluck)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 716, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+2025-05-20 22:54:23,185 ERROR frappe Could not take error snapshot: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+Site: HRPU.localhost
+Form Dict: {}
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 649, in connect
+    sock = socket.create_connection(
+  File "/usr/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/usr/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/serve.py", line 19, in get_response
+    endpoint, renderer_instance = path_resolver.resolve()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/path_resolver.py", line 38, in resolve
+    resolve_redirect(self.path, request.query_string)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/path_resolver.py", line 118, in resolve_redirect
+    redirects += frappe.get_all(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 2015, in get_all
+    return get_list(doctype, *args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 1990, in get_list
+    return frappe.model.db_query.DatabaseQuery(doctype).execute(*args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/db_query.py", line 192, in execute
+    result = self.build_and_run()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/db_query.py", line 233, in build_and_run
+    return frappe.db.sql(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 716, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 649, in connect
+    sock = socket.create_connection(
+  File "/usr/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/usr/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/app.py", line 124, in application
+    response = get_response()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/serve.py", line 28, in get_response
+    response = ErrorPage(exception=e).render()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/page_renderers/template_page.py", line 84, in render
+    html = self.get_html()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/utils.py", line 531, in cache_html_decorator
+    html = func(*args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/page_renderers/template_page.py", line 92, in get_html
+    self.init_context()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/page_renderers/error_page.py", line 14, in init_context
+    super().init_context()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/page_renderers/base_template_page.py", line 15, in init_context
+    self.context.update(get_website_settings())
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/doctype/website_settings/website_settings.py", line 263, in get_website_settings
+    context.boot = get_boot_data()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/utils.py", line 169, in get_boot_data
+    apps = get_apps() or []
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/typing_validations.py", line 31, in wrapper
+    return func(*args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/apps.py", line 15, in get_apps
+    allowed_workspaces = get_workspace_sidebar_items().get("pages")
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/typing_validations.py", line 31, in wrapper
+    return func(*args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/desk/desktop.py", line 451, in get_workspace_sidebar_items
+    all_pages = frappe.get_all(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 2015, in get_all
+    return get_list(doctype, *args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 1990, in get_list
+    return frappe.model.db_query.DatabaseQuery(doctype).execute(*args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/db_query.py", line 192, in execute
+    result = self.build_and_run()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/db_query.py", line 233, in build_and_run
+    return frappe.db.sql(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 716, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 649, in connect
+    sock = socket.create_connection(
+  File "/usr/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/usr/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/error.py", line 86, in log_error_snapshot
+    log_error(title=str(exception), defer_insert=True)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/error.py", line 61, in log_error
+    error_log = frappe.get_doc(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 1291, in get_doc
+    doc = frappe.model.document.get_doc(*args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 83, in get_doc
+    controller = get_controller(doctype)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/base_document.py", line 67, in get_controller
+    return import_controller(doctype)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/base_document.py", line 82, in import_controller
+    doctype_info = frappe.db.get_value("DocType", doctype, fieldname="*")
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 515, in get_value
+    result = self.get_values(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 619, in get_values
+    out = self._get_values_from_table(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 892, in _get_values_from_table
+    return query.run(as_dict=as_dict, debug=debug, update=update, run=run, pluck=pluck)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 716, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+2025-05-20 22:54:23,868 ERROR frappe Could not take error snapshot: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+Site: HRPU.localhost
+Form Dict: {}
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 649, in connect
+    sock = socket.create_connection(
+  File "/usr/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/usr/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/serve.py", line 19, in get_response
+    endpoint, renderer_instance = path_resolver.resolve()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/path_resolver.py", line 38, in resolve
+    resolve_redirect(self.path, request.query_string)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/path_resolver.py", line 118, in resolve_redirect
+    redirects += frappe.get_all(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 2015, in get_all
+    return get_list(doctype, *args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 1990, in get_list
+    return frappe.model.db_query.DatabaseQuery(doctype).execute(*args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/db_query.py", line 192, in execute
+    result = self.build_and_run()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/db_query.py", line 233, in build_and_run
+    return frappe.db.sql(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 716, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 649, in connect
+    sock = socket.create_connection(
+  File "/usr/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/usr/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/app.py", line 124, in application
+    response = get_response()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/serve.py", line 28, in get_response
+    response = ErrorPage(exception=e).render()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/page_renderers/template_page.py", line 84, in render
+    html = self.get_html()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/utils.py", line 531, in cache_html_decorator
+    html = func(*args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/page_renderers/template_page.py", line 92, in get_html
+    self.init_context()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/page_renderers/error_page.py", line 14, in init_context
+    super().init_context()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/page_renderers/base_template_page.py", line 15, in init_context
+    self.context.update(get_website_settings())
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/doctype/website_settings/website_settings.py", line 263, in get_website_settings
+    context.boot = get_boot_data()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/website/utils.py", line 169, in get_boot_data
+    apps = get_apps() or []
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/typing_validations.py", line 31, in wrapper
+    return func(*args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/apps.py", line 15, in get_apps
+    allowed_workspaces = get_workspace_sidebar_items().get("pages")
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/typing_validations.py", line 31, in wrapper
+    return func(*args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/desk/desktop.py", line 451, in get_workspace_sidebar_items
+    all_pages = frappe.get_all(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 2015, in get_all
+    return get_list(doctype, *args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 1990, in get_list
+    return frappe.model.db_query.DatabaseQuery(doctype).execute(*args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/db_query.py", line 192, in execute
+    result = self.build_and_run()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/db_query.py", line 233, in build_and_run
+    return frappe.db.sql(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 716, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 649, in connect
+    sock = socket.create_connection(
+  File "/usr/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/usr/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/error.py", line 86, in log_error_snapshot
+    log_error(title=str(exception), defer_insert=True)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/error.py", line 61, in log_error
+    error_log = frappe.get_doc(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/__init__.py", line 1291, in get_doc
+    doc = frappe.model.document.get_doc(*args, **kwargs)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/document.py", line 83, in get_doc
+    controller = get_controller(doctype)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/base_document.py", line 67, in get_controller
+    return import_controller(doctype)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/model/base_document.py", line 82, in import_controller
+    doctype_info = frappe.db.get_value("DocType", doctype, fieldname="*")
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 515, in get_value
+    result = self.get_values(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 619, in get_values
+    out = self._get_values_from_table(
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 892, in _get_values_from_table
+    return query.run(as_dict=as_dict, debug=debug, update=update, run=run, pluck=pluck)
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
+    conn = self._get_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
+    return self.create_connection()
+  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 716, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 111] Connection refused)")
