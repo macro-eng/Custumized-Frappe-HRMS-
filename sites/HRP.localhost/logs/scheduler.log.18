@@ -1,4 +1,4 @@
-2025-09-01 21:04:28,925 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+2025-09-02 01:46:02,601 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
 Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
     if is_scheduler_inactive():
@@ -33,7 +33,7 @@ Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
     raise errorclass(errno, errval)
 pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-01 21:05:29,045 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+2025-09-02 01:47:03,135 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
 Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
     if is_scheduler_inactive():
@@ -68,7 +68,7 @@ Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
     raise errorclass(errno, errval)
 pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-01 21:06:29,317 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+2025-09-02 01:48:03,235 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
 Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
     if is_scheduler_inactive():
@@ -103,7 +103,7 @@ Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
     raise errorclass(errno, errval)
 pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-01 21:07:29,521 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+2025-09-02 01:49:03,506 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
 Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
     if is_scheduler_inactive():
@@ -138,7 +138,7 @@ Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
     raise errorclass(errno, errval)
 pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-01 21:08:30,214 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+2025-09-02 01:50:04,105 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
 Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
     if is_scheduler_inactive():
@@ -173,7 +173,7 @@ Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
     raise errorclass(errno, errval)
 pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-01 21:09:30,473 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+2025-09-02 01:51:04,318 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
 Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
     if is_scheduler_inactive():
@@ -208,7 +208,7 @@ Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
     raise errorclass(errno, errval)
 pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-01 21:10:30,816 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+2025-09-02 01:52:04,357 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
 Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
     if is_scheduler_inactive():
@@ -243,7 +243,7 @@ Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
     raise errorclass(errno, errval)
 pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-01 21:11:31,115 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+2025-09-02 01:53:04,878 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
 Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
     if is_scheduler_inactive():
@@ -278,7 +278,7 @@ Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
     raise errorclass(errno, errval)
 pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-01 21:12:31,211 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+2025-09-02 01:54:05,167 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
 Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
     if is_scheduler_inactive():
@@ -313,7 +313,7 @@ Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
     raise errorclass(errno, errval)
 pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-01 21:13:31,627 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+2025-09-02 01:55:05,273 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
 Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
     if is_scheduler_inactive():
@@ -348,7 +348,7 @@ Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
     raise errorclass(errno, errval)
 pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-01 21:14:31,726 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+2025-09-02 01:56:05,906 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
 Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
     if is_scheduler_inactive():
@@ -383,7 +383,7 @@ Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
     raise errorclass(errno, errval)
 pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-01 21:15:32,029 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+2025-09-02 01:57:06,267 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
 Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
     if is_scheduler_inactive():
@@ -418,7 +418,7 @@ Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
     raise errorclass(errno, errval)
 pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-01 21:16:32,333 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+2025-09-02 01:58:06,349 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
 Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
     if is_scheduler_inactive():
@@ -453,7 +453,7 @@ Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
     raise errorclass(errno, errval)
 pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-01 21:17:32,766 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+2025-09-02 01:59:06,815 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
 Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
     if is_scheduler_inactive():
@@ -488,7 +488,7 @@ Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
     raise errorclass(errno, errval)
 pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-01 21:18:32,789 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+2025-09-02 02:00:06,923 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
 Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
     if is_scheduler_inactive():
@@ -523,7 +523,7 @@ Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
     raise errorclass(errno, errval)
 pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-01 21:19:33,059 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+2025-09-02 02:01:07,331 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
 Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
     if is_scheduler_inactive():
@@ -558,7 +558,7 @@ Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
     raise errorclass(errno, errval)
 pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-01 21:20:33,500 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+2025-09-02 02:02:07,587 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
 Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
     if is_scheduler_inactive():
@@ -593,7 +593,7 @@ Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
     raise errorclass(errno, errval)
 pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-01 21:21:33,747 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+2025-09-02 02:03:07,959 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
 Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
     if is_scheduler_inactive():
@@ -628,7 +628,7 @@ Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
     raise errorclass(errno, errval)
 pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-01 21:22:34,013 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+2025-09-02 02:04:08,230 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
 Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
     if is_scheduler_inactive():
@@ -663,7 +663,7 @@ Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
     raise errorclass(errno, errval)
 pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-01 21:23:34,317 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+2025-09-02 02:05:08,560 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
 Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
     if is_scheduler_inactive():
@@ -698,7 +698,7 @@ Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
     raise errorclass(errno, errval)
 pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-01 21:24:34,589 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+2025-09-02 02:06:09,043 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
 Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
     if is_scheduler_inactive():
@@ -733,7 +733,7 @@ Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
     raise errorclass(errno, errval)
 pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-01 21:25:34,663 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+2025-09-02 02:07:09,111 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
 Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
     if is_scheduler_inactive():
@@ -768,7 +768,7 @@ Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
     raise errorclass(errno, errval)
 pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-01 21:26:35,003 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+2025-09-02 02:08:09,617 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
 Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
     if is_scheduler_inactive():
@@ -803,7 +803,7 @@ Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
     raise errorclass(errno, errval)
 pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-01 21:27:35,391 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+2025-09-02 02:09:09,904 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
 Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
     if is_scheduler_inactive():
@@ -838,7 +838,7 @@ Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
     raise errorclass(errno, errval)
 pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-01 21:28:35,496 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+2025-09-02 02:10:10,002 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
 Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
     if is_scheduler_inactive():
@@ -873,7 +873,7 @@ Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
     raise errorclass(errno, errval)
 pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-01 21:29:35,754 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+2025-09-02 02:11:10,212 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
 Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
     if is_scheduler_inactive():
@@ -908,7 +908,7 @@ Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
     raise errorclass(errno, errval)
 pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-01 21:30:36,188 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+2025-09-02 02:12:10,500 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
 Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
     if is_scheduler_inactive():
@@ -943,7 +943,7 @@ Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
     raise errorclass(errno, errval)
 pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-01 21:31:36,408 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+2025-09-02 02:13:10,781 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
 Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
     if is_scheduler_inactive():
@@ -978,7 +978,7 @@ Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
     raise errorclass(errno, errval)
 pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-01 21:32:36,497 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+2025-09-02 02:14:11,293 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
 Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
     if is_scheduler_inactive():
@@ -1013,7 +1013,7 @@ Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
     raise errorclass(errno, errval)
 pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-01 21:33:36,772 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+2025-09-02 02:15:11,627 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
 Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
     if is_scheduler_inactive():
@@ -1048,7 +1048,7 @@ Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
     raise errorclass(errno, errval)
 pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-01 21:34:37,205 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+2025-09-02 02:16:11,906 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
 Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
     if is_scheduler_inactive():
@@ -1083,7 +1083,7 @@ Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
     raise errorclass(errno, errval)
 pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-01 21:35:37,309 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+2025-09-02 02:17:12,009 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
 Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
     if is_scheduler_inactive():
@@ -1118,7 +1118,7 @@ Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
     raise errorclass(errno, errval)
 pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-01 21:36:37,726 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+2025-09-02 02:18:12,314 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
 Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
     if is_scheduler_inactive():
@@ -1153,7 +1153,7 @@ Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
     raise errorclass(errno, errval)
 pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-01 21:42:59,493 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+2025-09-02 02:19:12,589 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
 Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
     if is_scheduler_inactive():
@@ -1188,7 +1188,7 @@ Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
     raise errorclass(errno, errval)
 pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-01 21:44:00,049 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+2025-09-02 02:20:13,128 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
 Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
     if is_scheduler_inactive():

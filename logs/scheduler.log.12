@@ -1,4 +1,21 @@
-2025-09-02 02:41:20,186 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+2025-09-04 21:32:41,999 ERROR scheduler Skipped queueing erpnext.utilities.bulk_transaction.retry because it was found in queue for HRPU.localhost
+2025-09-04 21:32:42,404 ERROR scheduler Skipped queueing frappe.deferred_insert.save_to_db because it was found in queue for HRPU.localhost
+2025-09-04 21:32:42,408 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.pull because it was found in queue for HRPU.localhost
+2025-09-04 21:32:42,431 ERROR scheduler Skipped queueing hrms.hr.doctype.shift_schedule_assignment.shift_schedule_assignment.process_auto_shift_creation because it was found in queue for HRPU.localhost
+2025-09-04 21:32:42,437 ERROR scheduler Skipped queueing frappe.automation.doctype.reminder.reminder.send_reminders because it was found in queue for HRPU.localhost
+2025-09-04 21:32:42,440 ERROR scheduler Skipped queueing frappe.model.utils.link_count.update_link_count because it was found in queue for HRPU.localhost
+2025-09-04 21:32:42,455 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.notify_unreplied because it was found in queue for HRPU.localhost
+2025-09-04 21:32:42,460 ERROR scheduler Skipped queueing frappe.utils.global_search.sync_global_search because it was found in queue for HRPU.localhost
+2025-09-04 21:32:42,464 ERROR scheduler Skipped queueing hrms.hr.doctype.interview.interview.send_interview_reminder because it was found in queue for HRPU.localhost
+2025-09-04 21:32:42,485 ERROR scheduler Skipped queueing frappe.twofactor.delete_all_barcodes_for_users because it was found in queue for HRPU.localhost
+2025-09-04 21:32:42,488 ERROR scheduler Skipped queueing frappe.model.utils.user_settings.sync_user_settings because it was found in queue for HRPU.localhost
+2025-09-04 21:32:42,497 ERROR scheduler Skipped queueing hrms.hr.doctype.shift_type.shift_type.process_auto_attendance_for_all_shifts because it was found in queue for HRPU.localhost
+2025-09-04 21:32:42,517 ERROR scheduler Skipped queueing frappe.oauth.delete_oauth2_data because it was found in queue for HRPU.localhost
+2025-09-04 21:32:42,522 ERROR scheduler Skipped queueing frappe.email.queue.flush because it was found in queue for HRPU.localhost
+2025-09-04 21:32:42,541 ERROR scheduler Skipped queueing erpnext.erpnext_integrations.doctype.plaid_settings.plaid_settings.automatic_synchronization because it was found in queue for HRPU.localhost
+2025-09-04 21:32:42,544 ERROR scheduler Skipped queueing hrms.hr.doctype.daily_work_summary_group.daily_work_summary_group.trigger_emails because it was found in queue for HRPU.localhost
+2025-09-04 21:32:42,547 ERROR scheduler Skipped queueing frappe.core.doctype.prepared_report.prepared_report.expire_stalled_report because it was found in queue for HRPU.localhost
+2025-09-05 01:54:04,004 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
 Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
     if is_scheduler_inactive():
@@ -33,7 +50,7 @@ Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
     raise errorclass(errno, errval)
 pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-02 02:42:20,482 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+2025-09-05 01:55:08,725 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
 Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
     if is_scheduler_inactive():
@@ -68,7 +85,85 @@ Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
     raise errorclass(errno, errval)
 pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-02 02:43:21,076 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+2025-09-05 01:55:11,439 ERROR scheduler Skipped queueing frappe.automation.doctype.auto_repeat.auto_repeat.set_auto_repeat_as_completed because it was found in queue for HRPU.localhost
+2025-09-05 01:55:11,493 ERROR scheduler Skipped queueing erpnext.stock.doctype.serial_no.serial_no.update_maintenance_status because it was found in queue for HRPU.localhost
+2025-09-05 01:55:11,497 ERROR scheduler Skipped queueing frappe.deferred_insert.save_to_db because it was found in queue for HRPU.localhost
+2025-09-05 01:55:11,501 ERROR scheduler Skipped queueing erpnext.accounts.doctype.fiscal_year.fiscal_year.auto_create_fiscal_year because it was found in queue for HRPU.localhost
+2025-09-05 01:55:11,514 ERROR scheduler Skipped queueing frappe.twofactor.delete_all_barcodes_for_users because it was found in queue for HRPU.localhost
+2025-09-05 01:55:11,526 ERROR scheduler Skipped queueing erpnext.crm.doctype.email_campaign.email_campaign.set_email_campaign_status because it was found in queue for HRPU.localhost
+2025-09-05 01:55:11,530 ERROR scheduler Skipped queueing hrms.hr.doctype.daily_work_summary_group.daily_work_summary_group.trigger_emails because it was found in queue for HRPU.localhost
+2025-09-05 01:55:11,542 ERROR scheduler Skipped queueing erpnext.crm.doctype.contract.contract.update_status_for_contracts because it was found in queue for HRPU.localhost
+2025-09-05 01:55:11,545 ERROR scheduler Skipped queueing erpnext.manufacturing.doctype.bom_update_log.bom_update_log.resume_bom_cost_update_jobs because it was found in queue for HRPU.localhost
+2025-09-05 01:55:11,560 ERROR scheduler Skipped queueing hrms.hr.utils.allocate_earned_leaves because it was found in queue for HRPU.localhost
+2025-09-05 01:55:11,573 ERROR scheduler Skipped queueing hrms.controllers.employee_reminders.send_work_anniversary_reminders because it was found in queue for HRPU.localhost
+2025-09-05 01:55:11,577 ERROR scheduler Skipped queueing frappe.sessions.clear_expired_sessions because it was found in queue for HRPU.localhost
+2025-09-05 01:55:11,590 ERROR scheduler Skipped queueing frappe.desk.form.document_follow.send_daily_updates because it was found in queue for HRPU.localhost
+2025-09-05 01:55:11,595 ERROR scheduler Skipped queueing erpnext.accounts.utils.run_ledger_health_checks because it was found in queue for HRPU.localhost
+2025-09-05 01:55:11,642 ERROR scheduler Skipped queueing erpnext.stock.doctype.repost_item_valuation.repost_item_valuation.repost_entries because it was found in queue for HRPU.localhost
+2025-09-05 01:55:11,645 ERROR scheduler Skipped queueing erpnext.controllers.accounts_controller.update_invoice_status because it was found in queue for HRPU.localhost
+2025-09-05 01:55:11,648 ERROR scheduler Skipped queueing erpnext.accounts.utils.auto_create_exchange_rate_revaluation_daily because it was found in queue for HRPU.localhost
+2025-09-05 01:55:11,655 ERROR scheduler Skipped queueing erpnext.accounts.doctype.process_statement_of_accounts.process_statement_of_accounts.send_auto_email because it was found in queue for HRPU.localhost
+2025-09-05 01:55:11,663 ERROR scheduler Skipped queueing erpnext.projects.doctype.task.task.set_tasks_as_overdue because it was found in queue for HRPU.localhost
+2025-09-05 01:55:11,673 ERROR scheduler Skipped queueing erpnext.quality_management.doctype.quality_review.quality_review.review because it was found in queue for HRPU.localhost
+2025-09-05 01:55:11,678 ERROR scheduler Skipped queueing frappe.email.doctype.newsletter.newsletter.send_scheduled_email because it was found in queue for HRPU.localhost
+2025-09-05 01:55:11,681 ERROR scheduler Skipped queueing erpnext.buying.doctype.supplier_quotation.supplier_quotation.set_expired_status because it was found in queue for HRPU.localhost
+2025-09-05 01:55:11,685 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_contacts.google_contacts.sync because it was found in queue for HRPU.localhost
+2025-09-05 01:55:12,901 ERROR scheduler Skipped queueing frappe.core.doctype.prepared_report.prepared_report.expire_stalled_report because it was found in queue for HRPU.localhost
+2025-09-05 01:55:12,908 ERROR scheduler Skipped queueing hrms.hr.utils.generate_leave_encashment because it was found in queue for HRPU.localhost
+2025-09-05 01:55:12,917 ERROR scheduler Skipped queueing frappe.email.doctype.notification.notification.trigger_daily_alerts because it was found in queue for HRPU.localhost
+2025-09-05 01:55:12,921 ERROR scheduler Skipped queueing erpnext.utilities.doctype.video.video.update_youtube_data because it was found in queue for HRPU.localhost
+2025-09-05 01:55:12,925 ERROR scheduler Skipped queueing frappe.automation.doctype.auto_repeat.auto_repeat.make_auto_repeat_entry because it was found in queue for HRPU.localhost
+2025-09-05 01:55:12,930 ERROR scheduler Skipped queueing frappe.model.utils.user_settings.sync_user_settings because it was found in queue for HRPU.localhost
+2025-09-05 01:55:12,937 ERROR scheduler Skipped queueing erpnext.utilities.bulk_transaction.retry because it was found in queue for HRPU.localhost
+2025-09-05 01:55:12,945 ERROR scheduler Skipped queueing frappe.social.doctype.energy_point_settings.energy_point_settings.allocate_review_points because it was found in queue for HRPU.localhost
+2025-09-05 01:55:12,954 ERROR scheduler Skipped queueing erpnext.erpnext_integrations.doctype.plaid_settings.plaid_settings.automatic_synchronization because it was found in queue for HRPU.localhost
+2025-09-05 01:55:12,962 ERROR scheduler Skipped queueing erpnext.selling.doctype.quotation.quotation.set_expired_status because it was found in queue for HRPU.localhost
+2025-09-05 01:55:12,966 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.pull because it was found in queue for HRPU.localhost
+2025-09-05 01:55:12,977 ERROR scheduler Skipped queueing erpnext.assets.doctype.asset.depreciation.post_depreciation_entries because it was found in queue for HRPU.localhost
+2025-09-05 01:55:12,982 ERROR scheduler Skipped queueing erpnext.setup.doctype.company.company.cache_companies_monthly_sales_history because it was found in queue for HRPU.localhost
+2025-09-05 01:55:12,986 ERROR scheduler Skipped queueing erpnext.accounts.doctype.gl_entry.gl_entry.rename_gle_sle_docs because it was found in queue for HRPU.localhost
+2025-09-05 01:55:12,992 ERROR scheduler Skipped queueing hrms.hr.doctype.interview.interview.send_interview_reminder because it was found in queue for HRPU.localhost
+2025-09-05 01:55:13,004 ERROR scheduler Skipped queueing hrms.hr.doctype.interview.interview.send_daily_feedback_reminder because it was found in queue for HRPU.localhost
+2025-09-05 01:55:13,009 ERROR scheduler Skipped queueing erpnext.projects.doctype.project.project.collect_project_status because it was found in queue for HRPU.localhost
+2025-09-05 01:55:13,023 ERROR scheduler Skipped queueing hrms.hr.doctype.leave_ledger_entry.leave_ledger_entry.process_expired_allocation because it was found in queue for HRPU.localhost
+2025-09-05 01:55:13,036 ERROR scheduler Skipped queueing frappe.automation.doctype.reminder.reminder.send_reminders because it was found in queue for HRPU.localhost
+2025-09-05 01:55:13,047 ERROR scheduler Skipped queueing hrms.hr.doctype.job_opening.job_opening.close_expired_job_openings because it was found in queue for HRPU.localhost
+2025-09-05 01:55:13,054 ERROR scheduler Skipped queueing frappe.desk.doctype.event.event.send_event_digest because it was found in queue for HRPU.localhost
+2025-09-05 01:55:13,059 ERROR scheduler Skipped queueing erpnext.projects.doctype.project.project.update_project_sales_billing because it was found in queue for HRPU.localhost
+2025-09-05 01:55:13,063 ERROR scheduler Skipped queueing erpnext.support.doctype.issue.issue.auto_close_tickets because it was found in queue for HRPU.localhost
+2025-09-05 01:55:13,072 ERROR scheduler Skipped queueing erpnext.crm.utils.open_leads_opportunities_based_on_todays_event because it was found in queue for HRPU.localhost
+2025-09-05 01:55:13,077 ERROR scheduler Skipped queueing frappe.email.queue.flush because it was found in queue for HRPU.localhost
+2025-09-05 01:55:13,083 ERROR scheduler Skipped queueing hrms.hr.doctype.shift_type.shift_type.process_auto_attendance_for_all_shifts because it was found in queue for HRPU.localhost
+2025-09-05 01:55:13,094 ERROR scheduler Skipped queueing erpnext.crm.doctype.email_campaign.email_campaign.send_email_to_leads_or_contacts because it was found in queue for HRPU.localhost
+2025-09-05 01:55:13,099 ERROR scheduler Skipped queueing erpnext.projects.doctype.project.project.hourly_reminder because it was found in queue for HRPU.localhost
+2025-09-05 01:55:13,103 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for HRPU.localhost
+2025-09-05 01:55:13,108 ERROR scheduler Skipped queueing erpnext.accounts.doctype.process_subscription.process_subscription.create_subscription_process because it was found in queue for HRPU.localhost
+2025-09-05 01:55:13,118 ERROR scheduler Skipped queueing hrms.controllers.employee_reminders.send_birthday_reminders because it was found in queue for HRPU.localhost
+2025-09-05 01:55:13,128 ERROR scheduler Skipped queueing frappe.website.doctype.personal_data_deletion_request.personal_data_deletion_request.process_data_deletion_request because it was found in queue for HRPU.localhost
+2025-09-05 01:55:13,134 ERROR scheduler Skipped queueing erpnext.crm.doctype.opportunity.opportunity.auto_close_opportunity because it was found in queue for HRPU.localhost
+2025-09-05 01:55:13,140 ERROR scheduler Skipped queueing erpnext.buying.doctype.supplier_scorecard.supplier_scorecard.refresh_scorecards because it was found in queue for HRPU.localhost
+2025-09-05 01:55:13,146 ERROR scheduler Skipped queueing frappe.oauth.delete_oauth2_data because it was found in queue for HRPU.localhost
+2025-09-05 01:55:13,153 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.notify_unreplied because it was found in queue for HRPU.localhost
+2025-09-05 01:55:13,161 ERROR scheduler Skipped queueing frappe.monitor.flush because it was found in queue for HRPU.localhost
+2025-09-05 01:55:13,175 ERROR scheduler Skipped queueing erpnext.assets.doctype.asset_maintenance_log.asset_maintenance_log.update_asset_maintenance_log_status because it was found in queue for HRPU.localhost
+2025-09-05 01:55:13,181 ERROR scheduler Skipped queueing erpnext.projects.doctype.project.project.project_status_update_reminder because it was found in queue for HRPU.localhost
+2025-09-05 01:55:13,190 ERROR scheduler Skipped queueing frappe.desk.notifications.clear_notifications because it was found in queue for HRPU.localhost
+2025-09-05 01:55:13,217 ERROR scheduler Skipped queueing frappe.email.doctype.auto_email_report.auto_email_report.send_daily because it was found in queue for HRPU.localhost
+2025-09-05 01:55:13,223 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_drive.google_drive.daily_backup because it was found in queue for HRPU.localhost
+2025-09-05 01:55:13,228 ERROR scheduler Skipped queueing frappe.integrations.doctype.dropbox_settings.dropbox_settings.take_backups_daily because it was found in queue for HRPU.localhost
+2025-09-05 01:55:13,232 ERROR scheduler Skipped queueing erpnext.projects.doctype.project.project.send_project_status_email_to_users because it was found in queue for HRPU.localhost
+2025-09-05 01:55:13,236 ERROR scheduler Skipped queueing erpnext.assets.doctype.asset.asset.update_maintenance_status because it was found in queue for HRPU.localhost
+2025-09-05 01:55:13,244 ERROR scheduler Skipped queueing hrms.hr.doctype.daily_work_summary_group.daily_work_summary_group.send_summary because it was found in queue for HRPU.localhost
+2025-09-05 01:55:13,249 ERROR scheduler Skipped queueing hrms.hr.doctype.shift_schedule_assignment.shift_schedule_assignment.process_auto_shift_creation because it was found in queue for HRPU.localhost
+2025-09-05 01:55:13,253 ERROR scheduler Skipped queueing erpnext.stock.reorder_item.reorder_item because it was found in queue for HRPU.localhost
+2025-09-05 01:55:13,259 ERROR scheduler Skipped queueing frappe.utils.global_search.sync_global_search because it was found in queue for HRPU.localhost
+2025-09-05 01:55:13,265 ERROR scheduler Skipped queueing erpnext.support.doctype.service_level_agreement.service_level_agreement.check_agreement_status because it was found in queue for HRPU.localhost
+2025-09-05 01:55:13,270 ERROR scheduler Skipped queueing erpnext.manufacturing.doctype.bom_update_tool.bom_update_tool.auto_update_latest_price_in_all_boms because it was found in queue for HRPU.localhost
+2025-09-05 01:55:13,278 ERROR scheduler Skipped queueing frappe.desk.form.document_follow.send_hourly_updates because it was found in queue for HRPU.localhost
+2025-09-05 01:55:13,286 ERROR scheduler Skipped queueing erpnext.setup.doctype.email_digest.email_digest.send because it was found in queue for HRPU.localhost
+2025-09-05 01:55:13,295 ERROR scheduler Skipped queueing frappe.integrations.doctype.s3_backup_settings.s3_backup_settings.take_backups_daily because it was found in queue for HRPU.localhost
+2025-09-05 01:55:13,300 ERROR scheduler Skipped queueing erpnext.assets.doctype.asset.asset.make_post_gl_entry because it was found in queue for HRPU.localhost
+2025-09-05 01:59:54,752 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
 Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
     if is_scheduler_inactive():
@@ -103,7 +198,82 @@ Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
     raise errorclass(errno, errval)
 pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-02 02:44:21,416 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+2025-09-05 02:01:04,346 ERROR scheduler Skipped queueing erpnext.quality_management.doctype.quality_review.quality_review.review because it was found in queue for HRPU.localhost
+2025-09-05 02:01:04,360 ERROR scheduler Skipped queueing erpnext.crm.doctype.opportunity.opportunity.auto_close_opportunity because it was found in queue for HRPU.localhost
+2025-09-05 02:01:04,389 ERROR scheduler Skipped queueing erpnext.support.doctype.issue.issue.auto_close_tickets because it was found in queue for HRPU.localhost
+2025-09-05 02:01:04,405 ERROR scheduler Skipped queueing erpnext.projects.doctype.project.project.send_project_status_email_to_users because it was found in queue for HRPU.localhost
+2025-09-05 02:01:04,422 ERROR scheduler Skipped queueing erpnext.assets.doctype.asset.asset.make_post_gl_entry because it was found in queue for HRPU.localhost
+2025-09-05 02:01:04,438 ERROR scheduler Skipped queueing hrms.hr.doctype.leave_ledger_entry.leave_ledger_entry.process_expired_allocation because it was found in queue for HRPU.localhost
+2025-09-05 02:01:04,453 ERROR scheduler Skipped queueing erpnext.accounts.doctype.fiscal_year.fiscal_year.auto_create_fiscal_year because it was found in queue for HRPU.localhost
+2025-09-05 02:01:04,471 ERROR scheduler Skipped queueing frappe.deferred_insert.save_to_db because it was found in queue for HRPU.localhost
+2025-09-05 02:01:04,503 ERROR scheduler Skipped queueing frappe.core.doctype.prepared_report.prepared_report.expire_stalled_report because it was found in queue for HRPU.localhost
+2025-09-05 02:01:04,520 ERROR scheduler Skipped queueing erpnext.setup.doctype.email_digest.email_digest.send because it was found in queue for HRPU.localhost
+2025-09-05 02:01:04,534 ERROR scheduler Skipped queueing erpnext.projects.doctype.project.project.hourly_reminder because it was found in queue for HRPU.localhost
+2025-09-05 02:01:04,539 ERROR scheduler Skipped queueing erpnext.stock.reorder_item.reorder_item because it was found in queue for HRPU.localhost
+2025-09-05 02:01:04,553 ERROR scheduler Skipped queueing erpnext.accounts.doctype.process_subscription.process_subscription.create_subscription_process because it was found in queue for HRPU.localhost
+2025-09-05 02:01:04,562 ERROR scheduler Skipped queueing erpnext.accounts.utils.run_ledger_health_checks because it was found in queue for HRPU.localhost
+2025-09-05 02:01:04,582 ERROR scheduler Skipped queueing erpnext.crm.doctype.email_campaign.email_campaign.send_email_to_leads_or_contacts because it was found in queue for HRPU.localhost
+2025-09-05 02:01:04,591 ERROR scheduler Skipped queueing erpnext.accounts.doctype.gl_entry.gl_entry.rename_gle_sle_docs because it was found in queue for HRPU.localhost
+2025-09-05 02:01:04,595 ERROR scheduler Skipped queueing erpnext.assets.doctype.asset_maintenance_log.asset_maintenance_log.update_asset_maintenance_log_status because it was found in queue for HRPU.localhost
+2025-09-05 02:01:04,615 ERROR scheduler Skipped queueing erpnext.assets.doctype.asset.depreciation.post_depreciation_entries because it was found in queue for HRPU.localhost
+2025-09-05 02:01:04,624 ERROR scheduler Skipped queueing hrms.hr.utils.allocate_earned_leaves because it was found in queue for HRPU.localhost
+2025-09-05 02:01:04,633 ERROR scheduler Skipped queueing hrms.hr.doctype.job_opening.job_opening.close_expired_job_openings because it was found in queue for HRPU.localhost
+2025-09-05 02:01:04,636 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for HRPU.localhost
+2025-09-05 02:01:04,645 ERROR scheduler Skipped queueing frappe.automation.doctype.auto_repeat.auto_repeat.make_auto_repeat_entry because it was found in queue for HRPU.localhost
+2025-09-05 02:01:04,650 ERROR scheduler Skipped queueing erpnext.stock.doctype.repost_item_valuation.repost_item_valuation.repost_entries because it was found in queue for HRPU.localhost
+2025-09-05 02:01:04,658 ERROR scheduler Skipped queueing frappe.desk.doctype.event.event.send_event_digest because it was found in queue for HRPU.localhost
+2025-09-05 02:01:04,662 ERROR scheduler Skipped queueing hrms.hr.doctype.shift_schedule_assignment.shift_schedule_assignment.process_auto_shift_creation because it was found in queue for HRPU.localhost
+2025-09-05 02:01:04,669 ERROR scheduler Skipped queueing erpnext.assets.doctype.asset.asset.update_maintenance_status because it was found in queue for HRPU.localhost
+2025-09-05 02:01:04,673 ERROR scheduler Skipped queueing hrms.controllers.employee_reminders.send_birthday_reminders because it was found in queue for HRPU.localhost
+2025-09-05 02:01:04,677 ERROR scheduler Skipped queueing frappe.email.doctype.notification.notification.trigger_daily_alerts because it was found in queue for HRPU.localhost
+2025-09-05 02:01:05,074 ERROR scheduler Skipped queueing frappe.oauth.delete_oauth2_data because it was found in queue for HRPU.localhost
+2025-09-05 02:01:05,085 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_drive.google_drive.daily_backup because it was found in queue for HRPU.localhost
+2025-09-05 02:01:05,090 ERROR scheduler Skipped queueing erpnext.crm.doctype.contract.contract.update_status_for_contracts because it was found in queue for HRPU.localhost
+2025-09-05 02:01:05,094 ERROR scheduler Skipped queueing frappe.sessions.clear_expired_sessions because it was found in queue for HRPU.localhost
+2025-09-05 02:01:05,098 ERROR scheduler Skipped queueing erpnext.projects.doctype.project.project.update_project_sales_billing because it was found in queue for HRPU.localhost
+2025-09-05 02:01:05,104 ERROR scheduler Skipped queueing erpnext.buying.doctype.supplier_scorecard.supplier_scorecard.refresh_scorecards because it was found in queue for HRPU.localhost
+2025-09-05 02:01:05,108 ERROR scheduler Skipped queueing erpnext.crm.utils.open_leads_opportunities_based_on_todays_event because it was found in queue for HRPU.localhost
+2025-09-05 02:01:05,112 ERROR scheduler Skipped queueing frappe.desk.form.document_follow.send_daily_updates because it was found in queue for HRPU.localhost
+2025-09-05 02:01:05,116 ERROR scheduler Skipped queueing frappe.twofactor.delete_all_barcodes_for_users because it was found in queue for HRPU.localhost
+2025-09-05 02:01:05,134 ERROR scheduler Skipped queueing frappe.automation.doctype.auto_repeat.auto_repeat.set_auto_repeat_as_completed because it was found in queue for HRPU.localhost
+2025-09-05 02:01:05,150 ERROR scheduler Skipped queueing erpnext.manufacturing.doctype.bom_update_tool.bom_update_tool.auto_update_latest_price_in_all_boms because it was found in queue for HRPU.localhost
+2025-09-05 02:01:05,179 ERROR scheduler Skipped queueing erpnext.manufacturing.doctype.bom_update_log.bom_update_log.resume_bom_cost_update_jobs because it was found in queue for HRPU.localhost
+2025-09-05 02:01:05,185 ERROR scheduler Skipped queueing erpnext.utilities.doctype.video.video.update_youtube_data because it was found in queue for HRPU.localhost
+2025-09-05 02:01:05,211 ERROR scheduler Skipped queueing hrms.hr.doctype.shift_type.shift_type.process_auto_attendance_for_all_shifts because it was found in queue for HRPU.localhost
+2025-09-05 02:01:05,228 ERROR scheduler Skipped queueing frappe.social.doctype.energy_point_settings.energy_point_settings.allocate_review_points because it was found in queue for HRPU.localhost
+2025-09-05 02:01:05,244 ERROR scheduler Skipped queueing hrms.hr.doctype.interview.interview.send_daily_feedback_reminder because it was found in queue for HRPU.localhost
+2025-09-05 02:01:05,261 ERROR scheduler Skipped queueing erpnext.stock.doctype.serial_no.serial_no.update_maintenance_status because it was found in queue for HRPU.localhost
+2025-09-05 02:01:05,278 ERROR scheduler Skipped queueing hrms.hr.doctype.daily_work_summary_group.daily_work_summary_group.trigger_emails because it was found in queue for HRPU.localhost
+2025-09-05 02:01:05,294 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_contacts.google_contacts.sync because it was found in queue for HRPU.localhost
+2025-09-05 02:01:05,310 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.pull because it was found in queue for HRPU.localhost
+2025-09-05 02:01:05,343 ERROR scheduler Skipped queueing erpnext.setup.doctype.company.company.cache_companies_monthly_sales_history because it was found in queue for HRPU.localhost
+2025-09-05 02:01:05,371 ERROR scheduler Skipped queueing frappe.automation.doctype.reminder.reminder.send_reminders because it was found in queue for HRPU.localhost
+2025-09-05 02:01:05,390 ERROR scheduler Skipped queueing hrms.controllers.employee_reminders.send_work_anniversary_reminders because it was found in queue for HRPU.localhost
+2025-09-05 02:01:05,402 ERROR scheduler Skipped queueing frappe.desk.notifications.clear_notifications because it was found in queue for HRPU.localhost
+2025-09-05 02:01:05,409 ERROR scheduler Skipped queueing frappe.utils.global_search.sync_global_search because it was found in queue for HRPU.localhost
+2025-09-05 02:01:05,439 ERROR scheduler Skipped queueing erpnext.controllers.accounts_controller.update_invoice_status because it was found in queue for HRPU.localhost
+2025-09-05 02:01:05,455 ERROR scheduler Skipped queueing erpnext.accounts.utils.auto_create_exchange_rate_revaluation_daily because it was found in queue for HRPU.localhost
+2025-09-05 02:01:05,461 ERROR scheduler Skipped queueing frappe.email.doctype.auto_email_report.auto_email_report.send_daily because it was found in queue for HRPU.localhost
+2025-09-05 02:01:05,479 ERROR scheduler Skipped queueing frappe.model.utils.user_settings.sync_user_settings because it was found in queue for HRPU.localhost
+2025-09-05 02:01:05,487 ERROR scheduler Skipped queueing erpnext.erpnext_integrations.doctype.plaid_settings.plaid_settings.automatic_synchronization because it was found in queue for HRPU.localhost
+2025-09-05 02:01:05,495 ERROR scheduler Skipped queueing frappe.website.doctype.personal_data_deletion_request.personal_data_deletion_request.process_data_deletion_request because it was found in queue for HRPU.localhost
+2025-09-05 02:01:05,507 ERROR scheduler Skipped queueing frappe.email.queue.flush because it was found in queue for HRPU.localhost
+2025-09-05 02:01:05,516 ERROR scheduler Skipped queueing erpnext.utilities.bulk_transaction.retry because it was found in queue for HRPU.localhost
+2025-09-05 02:01:05,529 ERROR scheduler Skipped queueing frappe.monitor.flush because it was found in queue for HRPU.localhost
+2025-09-05 02:01:05,546 ERROR scheduler Skipped queueing frappe.integrations.doctype.dropbox_settings.dropbox_settings.take_backups_daily because it was found in queue for HRPU.localhost
+2025-09-05 02:01:05,568 ERROR scheduler Skipped queueing erpnext.projects.doctype.project.project.collect_project_status because it was found in queue for HRPU.localhost
+2025-09-05 02:01:05,575 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.notify_unreplied because it was found in queue for HRPU.localhost
+2025-09-05 02:01:05,585 ERROR scheduler Skipped queueing frappe.email.doctype.newsletter.newsletter.send_scheduled_email because it was found in queue for HRPU.localhost
+2025-09-05 02:01:05,591 ERROR scheduler Skipped queueing erpnext.projects.doctype.task.task.set_tasks_as_overdue because it was found in queue for HRPU.localhost
+2025-09-05 02:01:05,604 ERROR scheduler Skipped queueing frappe.desk.form.document_follow.send_hourly_updates because it was found in queue for HRPU.localhost
+2025-09-05 02:01:05,611 ERROR scheduler Skipped queueing erpnext.projects.doctype.project.project.project_status_update_reminder because it was found in queue for HRPU.localhost
+2025-09-05 02:01:05,636 ERROR scheduler Skipped queueing hrms.hr.utils.generate_leave_encashment because it was found in queue for HRPU.localhost
+2025-09-05 02:01:05,642 ERROR scheduler Skipped queueing erpnext.crm.doctype.email_campaign.email_campaign.set_email_campaign_status because it was found in queue for HRPU.localhost
+2025-09-05 02:01:05,648 ERROR scheduler Skipped queueing erpnext.accounts.doctype.process_statement_of_accounts.process_statement_of_accounts.send_auto_email because it was found in queue for HRPU.localhost
+2025-09-05 02:01:05,667 ERROR scheduler Skipped queueing hrms.hr.doctype.interview.interview.send_interview_reminder because it was found in queue for HRPU.localhost
+2025-09-05 02:01:07,332 ERROR scheduler Skipped queueing frappe.integrations.doctype.s3_backup_settings.s3_backup_settings.take_backups_daily because it was found in queue for HRPU.localhost
+2025-09-05 02:01:07,336 ERROR scheduler Skipped queueing erpnext.support.doctype.service_level_agreement.service_level_agreement.check_agreement_status because it was found in queue for HRPU.localhost
+2025-09-05 02:01:10,070 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
 Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
     if is_scheduler_inactive():
@@ -138,7 +308,84 @@ Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
     raise errorclass(errno, errval)
 pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-02 02:45:21,681 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+2025-09-05 02:02:39,229 ERROR scheduler Skipped queueing erpnext.assets.doctype.asset_maintenance_log.asset_maintenance_log.update_asset_maintenance_log_status because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,234 ERROR scheduler Skipped queueing erpnext.erpnext_integrations.doctype.plaid_settings.plaid_settings.automatic_synchronization because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,243 ERROR scheduler Skipped queueing erpnext.stock.doctype.serial_no.serial_no.update_maintenance_status because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,249 ERROR scheduler Skipped queueing hrms.hr.doctype.interview.interview.send_daily_feedback_reminder because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,256 ERROR scheduler Skipped queueing erpnext.assets.doctype.asset.asset.make_post_gl_entry because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,268 ERROR scheduler Skipped queueing erpnext.crm.doctype.contract.contract.update_status_for_contracts because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,273 ERROR scheduler Skipped queueing erpnext.crm.doctype.email_campaign.email_campaign.set_email_campaign_status because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,280 ERROR scheduler Skipped queueing erpnext.utilities.doctype.video.video.update_youtube_data because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,294 ERROR scheduler Skipped queueing frappe.desk.notifications.clear_notifications because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,300 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_drive.google_drive.daily_backup because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,306 ERROR scheduler Skipped queueing frappe.twofactor.delete_all_barcodes_for_users because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,320 ERROR scheduler Skipped queueing hrms.controllers.employee_reminders.send_work_anniversary_reminders because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,333 ERROR scheduler Skipped queueing frappe.deferred_insert.save_to_db because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,339 ERROR scheduler Skipped queueing frappe.email.doctype.notification.notification.trigger_daily_alerts because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,375 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.pull because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,380 ERROR scheduler Skipped queueing frappe.monitor.flush because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,385 ERROR scheduler Skipped queueing hrms.hr.doctype.daily_work_summary_group.daily_work_summary_group.trigger_emails because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,397 ERROR scheduler Skipped queueing frappe.integrations.doctype.s3_backup_settings.s3_backup_settings.take_backups_daily because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,401 ERROR scheduler Skipped queueing erpnext.assets.doctype.asset.asset.update_maintenance_status because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,407 ERROR scheduler Skipped queueing frappe.oauth.delete_oauth2_data because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,411 ERROR scheduler Skipped queueing hrms.hr.doctype.leave_ledger_entry.leave_ledger_entry.process_expired_allocation because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,427 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,444 ERROR scheduler Skipped queueing frappe.website.doctype.web_page.web_page.check_publish_status because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,448 ERROR scheduler Skipped queueing erpnext.projects.doctype.project.project.project_status_update_reminder because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,458 ERROR scheduler Skipped queueing frappe.email.doctype.auto_email_report.auto_email_report.send_daily because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,463 ERROR scheduler Skipped queueing frappe.automation.doctype.auto_repeat.auto_repeat.make_auto_repeat_entry because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,467 ERROR scheduler Skipped queueing frappe.website.doctype.personal_data_deletion_request.personal_data_deletion_request.process_data_deletion_request because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,477 ERROR scheduler Skipped queueing frappe.model.utils.link_count.update_link_count because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,481 ERROR scheduler Skipped queueing hrms.hr.utils.generate_leave_encashment because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,490 ERROR scheduler Skipped queueing erpnext.manufacturing.doctype.bom_update_log.bom_update_log.resume_bom_cost_update_jobs because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,498 ERROR scheduler Skipped queueing hrms.hr.doctype.shift_type.shift_type.process_auto_attendance_for_all_shifts because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,507 ERROR scheduler Skipped queueing erpnext.support.doctype.service_level_agreement.service_level_agreement.check_agreement_status because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,511 ERROR scheduler Skipped queueing erpnext.support.doctype.issue.issue.auto_close_tickets because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,524 ERROR scheduler Skipped queueing frappe.core.doctype.prepared_report.prepared_report.expire_stalled_report because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,529 ERROR scheduler Skipped queueing erpnext.crm.utils.open_leads_opportunities_based_on_todays_event because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,533 ERROR scheduler Skipped queueing frappe.desk.doctype.event.event.send_event_digest because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,541 ERROR scheduler Skipped queueing erpnext.crm.doctype.email_campaign.email_campaign.send_email_to_leads_or_contacts because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,545 ERROR scheduler Skipped queueing erpnext.projects.doctype.project.project.send_project_status_email_to_users because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,556 ERROR scheduler Skipped queueing erpnext.accounts.doctype.process_subscription.process_subscription.create_subscription_process because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,564 ERROR scheduler Skipped queueing hrms.controllers.employee_reminders.send_birthday_reminders because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,574 ERROR scheduler Skipped queueing frappe.automation.doctype.reminder.reminder.send_reminders because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,579 ERROR scheduler Skipped queueing erpnext.assets.doctype.asset.depreciation.post_depreciation_entries because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,585 ERROR scheduler Skipped queueing hrms.hr.doctype.shift_schedule_assignment.shift_schedule_assignment.process_auto_shift_creation because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,615 ERROR scheduler Skipped queueing frappe.email.queue.flush because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,626 ERROR scheduler Skipped queueing erpnext.stock.reorder_item.reorder_item because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,643 ERROR scheduler Skipped queueing erpnext.projects.doctype.project.project.update_project_sales_billing because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,647 ERROR scheduler Skipped queueing frappe.model.utils.user_settings.sync_user_settings because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,652 ERROR scheduler Skipped queueing hrms.hr.utils.allocate_earned_leaves because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,665 ERROR scheduler Skipped queueing erpnext.projects.doctype.project.project.collect_project_status because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,671 ERROR scheduler Skipped queueing erpnext.accounts.doctype.process_statement_of_accounts.process_statement_of_accounts.send_auto_email because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,683 ERROR scheduler Skipped queueing frappe.desk.page.backups.backups.delete_downloadable_backups because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,689 ERROR scheduler Skipped queueing frappe.desk.form.document_follow.send_hourly_updates because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,697 ERROR scheduler Skipped queueing frappe.email.doctype.newsletter.newsletter.send_scheduled_email because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,712 ERROR scheduler Skipped queueing erpnext.accounts.utils.auto_create_exchange_rate_revaluation_daily because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,726 ERROR scheduler Skipped queueing erpnext.stock.doctype.repost_item_valuation.repost_item_valuation.repost_entries because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,730 ERROR scheduler Skipped queueing erpnext.projects.doctype.project.project.hourly_reminder because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,745 ERROR scheduler Skipped queueing erpnext.utilities.bulk_transaction.retry because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,760 ERROR scheduler Skipped queueing frappe.integrations.doctype.dropbox_settings.dropbox_settings.take_backups_daily because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,775 ERROR scheduler Skipped queueing frappe.desk.form.document_follow.send_daily_updates because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,798 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.notify_unreplied because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,814 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_contacts.google_contacts.sync because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,818 ERROR scheduler Skipped queueing frappe.sessions.clear_expired_sessions because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,825 ERROR scheduler Skipped queueing frappe.utils.global_search.sync_global_search because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,830 ERROR scheduler Skipped queueing erpnext.quality_management.doctype.quality_review.quality_review.review because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,840 ERROR scheduler Skipped queueing erpnext.accounts.doctype.fiscal_year.fiscal_year.auto_create_fiscal_year because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,846 ERROR scheduler Skipped queueing hrms.hr.doctype.interview.interview.send_interview_reminder because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,850 ERROR scheduler Skipped queueing hrms.hr.doctype.job_opening.job_opening.close_expired_job_openings because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,865 ERROR scheduler Skipped queueing erpnext.projects.doctype.task.task.set_tasks_as_overdue because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,880 ERROR scheduler Skipped queueing erpnext.crm.doctype.opportunity.opportunity.auto_close_opportunity because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,896 ERROR scheduler Skipped queueing frappe.automation.doctype.auto_repeat.auto_repeat.set_auto_repeat_as_completed because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,916 ERROR scheduler Skipped queueing erpnext.setup.doctype.email_digest.email_digest.send because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,931 ERROR scheduler Skipped queueing erpnext.buying.doctype.supplier_scorecard.supplier_scorecard.refresh_scorecards because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,939 ERROR scheduler Skipped queueing erpnext.accounts.utils.run_ledger_health_checks because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,945 ERROR scheduler Skipped queueing erpnext.accounts.doctype.gl_entry.gl_entry.rename_gle_sle_docs because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,950 ERROR scheduler Skipped queueing frappe.social.doctype.energy_point_settings.energy_point_settings.allocate_review_points because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,959 ERROR scheduler Skipped queueing erpnext.manufacturing.doctype.bom_update_tool.bom_update_tool.auto_update_latest_price_in_all_boms because it was found in queue for HRPU.localhost
+2025-09-05 02:02:39,964 ERROR scheduler Skipped queueing erpnext.controllers.accounts_controller.update_invoice_status because it was found in queue for HRPU.localhost
+2025-09-05 02:02:40,005 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
 Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
     if is_scheduler_inactive():
@@ -173,7 +420,81 @@ Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
     raise errorclass(errno, errval)
 pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-02 02:46:21,909 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+2025-09-05 02:03:41,384 ERROR scheduler Skipped queueing hrms.hr.doctype.leave_ledger_entry.leave_ledger_entry.process_expired_allocation because it was found in queue for HRPU.localhost
+2025-09-05 02:03:41,392 ERROR scheduler Skipped queueing frappe.deferred_insert.save_to_db because it was found in queue for HRPU.localhost
+2025-09-05 02:03:41,398 ERROR scheduler Skipped queueing frappe.desk.page.backups.backups.delete_downloadable_backups because it was found in queue for HRPU.localhost
+2025-09-05 02:03:41,403 ERROR scheduler Skipped queueing erpnext.crm.doctype.contract.contract.update_status_for_contracts because it was found in queue for HRPU.localhost
+2025-09-05 02:03:41,413 ERROR scheduler Skipped queueing erpnext.crm.doctype.email_campaign.email_campaign.set_email_campaign_status because it was found in queue for HRPU.localhost
+2025-09-05 02:03:41,418 ERROR scheduler Skipped queueing frappe.desk.form.document_follow.send_hourly_updates because it was found in queue for HRPU.localhost
+2025-09-05 02:03:41,423 ERROR scheduler Skipped queueing erpnext.stock.doctype.serial_no.serial_no.update_maintenance_status because it was found in queue for HRPU.localhost
+2025-09-05 02:03:41,431 ERROR scheduler Skipped queueing erpnext.assets.doctype.asset.depreciation.post_depreciation_entries because it was found in queue for HRPU.localhost
+2025-09-05 02:03:41,442 ERROR scheduler Skipped queueing erpnext.support.doctype.service_level_agreement.service_level_agreement.check_agreement_status because it was found in queue for HRPU.localhost
+2025-09-05 02:03:41,450 ERROR scheduler Skipped queueing erpnext.accounts.doctype.gl_entry.gl_entry.rename_gle_sle_docs because it was found in queue for HRPU.localhost
+2025-09-05 02:03:41,467 ERROR scheduler Skipped queueing frappe.desk.doctype.event.event.send_event_digest because it was found in queue for HRPU.localhost
+2025-09-05 02:03:41,480 ERROR scheduler Skipped queueing frappe.utils.global_search.sync_global_search because it was found in queue for HRPU.localhost
+2025-09-05 02:03:41,494 ERROR scheduler Skipped queueing erpnext.erpnext_integrations.doctype.plaid_settings.plaid_settings.automatic_synchronization because it was found in queue for HRPU.localhost
+2025-09-05 02:03:41,503 ERROR scheduler Skipped queueing hrms.controllers.employee_reminders.send_birthday_reminders because it was found in queue for HRPU.localhost
+2025-09-05 02:03:41,524 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_drive.google_drive.daily_backup because it was found in queue for HRPU.localhost
+2025-09-05 02:03:41,545 ERROR scheduler Skipped queueing erpnext.crm.doctype.opportunity.opportunity.auto_close_opportunity because it was found in queue for HRPU.localhost
+2025-09-05 02:03:41,554 ERROR scheduler Skipped queueing erpnext.crm.doctype.email_campaign.email_campaign.send_email_to_leads_or_contacts because it was found in queue for HRPU.localhost
+2025-09-05 02:03:41,565 ERROR scheduler Skipped queueing hrms.hr.utils.allocate_earned_leaves because it was found in queue for HRPU.localhost
+2025-09-05 02:03:41,587 ERROR scheduler Skipped queueing frappe.monitor.flush because it was found in queue for HRPU.localhost
+2025-09-05 02:03:41,612 ERROR scheduler Skipped queueing erpnext.setup.doctype.email_digest.email_digest.send because it was found in queue for HRPU.localhost
+2025-09-05 02:03:41,668 ERROR scheduler Skipped queueing frappe.model.utils.user_settings.sync_user_settings because it was found in queue for HRPU.localhost
+2025-09-05 02:03:41,678 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_contacts.google_contacts.sync because it was found in queue for HRPU.localhost
+2025-09-05 02:03:41,686 ERROR scheduler Skipped queueing frappe.email.doctype.auto_email_report.auto_email_report.send_daily because it was found in queue for HRPU.localhost
+2025-09-05 02:03:41,704 ERROR scheduler Skipped queueing erpnext.quality_management.doctype.quality_review.quality_review.review because it was found in queue for HRPU.localhost
+2025-09-05 02:03:41,718 ERROR scheduler Skipped queueing erpnext.accounts.doctype.process_statement_of_accounts.process_statement_of_accounts.send_auto_email because it was found in queue for HRPU.localhost
+2025-09-05 02:03:41,729 ERROR scheduler Skipped queueing frappe.social.doctype.energy_point_settings.energy_point_settings.allocate_review_points because it was found in queue for HRPU.localhost
+2025-09-05 02:03:41,758 ERROR scheduler Skipped queueing erpnext.accounts.doctype.process_subscription.process_subscription.create_subscription_process because it was found in queue for HRPU.localhost
+2025-09-05 02:03:41,767 ERROR scheduler Skipped queueing frappe.automation.doctype.auto_repeat.auto_repeat.set_auto_repeat_as_completed because it was found in queue for HRPU.localhost
+2025-09-05 02:03:41,775 ERROR scheduler Skipped queueing erpnext.projects.doctype.project.project.hourly_reminder because it was found in queue for HRPU.localhost
+2025-09-05 02:03:41,781 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for HRPU.localhost
+2025-09-05 02:03:41,795 ERROR scheduler Skipped queueing frappe.desk.form.document_follow.send_daily_updates because it was found in queue for HRPU.localhost
+2025-09-05 02:03:41,802 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.notify_unreplied because it was found in queue for HRPU.localhost
+2025-09-05 02:03:41,826 ERROR scheduler Skipped queueing erpnext.manufacturing.doctype.bom_update_tool.bom_update_tool.auto_update_latest_price_in_all_boms because it was found in queue for HRPU.localhost
+2025-09-05 02:03:41,864 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.pull because it was found in queue for HRPU.localhost
+2025-09-05 02:03:41,881 ERROR scheduler Skipped queueing hrms.hr.doctype.job_opening.job_opening.close_expired_job_openings because it was found in queue for HRPU.localhost
+2025-09-05 02:03:41,888 ERROR scheduler Skipped queueing hrms.controllers.employee_reminders.send_work_anniversary_reminders because it was found in queue for HRPU.localhost
+2025-09-05 02:03:41,942 ERROR scheduler Skipped queueing hrms.hr.doctype.daily_work_summary_group.daily_work_summary_group.trigger_emails because it was found in queue for HRPU.localhost
+2025-09-05 02:03:41,968 ERROR scheduler Skipped queueing erpnext.projects.doctype.project.project.send_project_status_email_to_users because it was found in queue for HRPU.localhost
+2025-09-05 02:03:42,009 ERROR scheduler Skipped queueing erpnext.stock.reorder_item.reorder_item because it was found in queue for HRPU.localhost
+2025-09-05 02:03:42,035 ERROR scheduler Skipped queueing frappe.desk.notifications.clear_notifications because it was found in queue for HRPU.localhost
+2025-09-05 02:03:42,047 ERROR scheduler Skipped queueing hrms.hr.doctype.shift_type.shift_type.process_auto_attendance_for_all_shifts because it was found in queue for HRPU.localhost
+2025-09-05 02:03:42,058 ERROR scheduler Skipped queueing frappe.oauth.delete_oauth2_data because it was found in queue for HRPU.localhost
+2025-09-05 02:03:42,095 ERROR scheduler Skipped queueing erpnext.assets.doctype.asset.asset.make_post_gl_entry because it was found in queue for HRPU.localhost
+2025-09-05 02:03:42,119 ERROR scheduler Skipped queueing frappe.website.doctype.web_page.web_page.check_publish_status because it was found in queue for HRPU.localhost
+2025-09-05 02:03:42,133 ERROR scheduler Skipped queueing frappe.twofactor.delete_all_barcodes_for_users because it was found in queue for HRPU.localhost
+2025-09-05 02:03:42,166 ERROR scheduler Skipped queueing erpnext.projects.doctype.project.project.project_status_update_reminder because it was found in queue for HRPU.localhost
+2025-09-05 02:03:42,171 ERROR scheduler Skipped queueing erpnext.accounts.utils.auto_create_exchange_rate_revaluation_daily because it was found in queue for HRPU.localhost
+2025-09-05 02:03:42,180 ERROR scheduler Skipped queueing erpnext.utilities.bulk_transaction.retry because it was found in queue for HRPU.localhost
+2025-09-05 02:03:42,185 ERROR scheduler Skipped queueing erpnext.projects.doctype.project.project.collect_project_status because it was found in queue for HRPU.localhost
+2025-09-05 02:03:42,196 ERROR scheduler Skipped queueing frappe.automation.doctype.reminder.reminder.send_reminders because it was found in queue for HRPU.localhost
+2025-09-05 02:03:42,598 ERROR scheduler Skipped queueing frappe.email.queue.flush because it was found in queue for HRPU.localhost
+2025-09-05 02:03:42,604 ERROR scheduler Skipped queueing erpnext.projects.doctype.project.project.update_project_sales_billing because it was found in queue for HRPU.localhost
+2025-09-05 02:03:42,642 ERROR scheduler Skipped queueing frappe.core.doctype.prepared_report.prepared_report.expire_stalled_report because it was found in queue for HRPU.localhost
+2025-09-05 02:03:42,663 ERROR scheduler Skipped queueing erpnext.accounts.utils.run_ledger_health_checks because it was found in queue for HRPU.localhost
+2025-09-05 02:03:42,685 ERROR scheduler Skipped queueing erpnext.controllers.accounts_controller.update_invoice_status because it was found in queue for HRPU.localhost
+2025-09-05 02:03:42,695 ERROR scheduler Skipped queueing erpnext.utilities.doctype.video.video.update_youtube_data because it was found in queue for HRPU.localhost
+2025-09-05 02:03:42,701 ERROR scheduler Skipped queueing frappe.website.doctype.personal_data_deletion_request.personal_data_deletion_request.process_data_deletion_request because it was found in queue for HRPU.localhost
+2025-09-05 02:03:42,709 ERROR scheduler Skipped queueing frappe.integrations.doctype.dropbox_settings.dropbox_settings.take_backups_daily because it was found in queue for HRPU.localhost
+2025-09-05 02:03:42,718 ERROR scheduler Skipped queueing erpnext.assets.doctype.asset_maintenance_log.asset_maintenance_log.update_asset_maintenance_log_status because it was found in queue for HRPU.localhost
+2025-09-05 02:03:42,725 ERROR scheduler Skipped queueing hrms.hr.doctype.shift_schedule_assignment.shift_schedule_assignment.process_auto_shift_creation because it was found in queue for HRPU.localhost
+2025-09-05 02:03:42,731 ERROR scheduler Skipped queueing hrms.hr.utils.generate_leave_encashment because it was found in queue for HRPU.localhost
+2025-09-05 02:03:42,737 ERROR scheduler Skipped queueing frappe.automation.doctype.auto_repeat.auto_repeat.make_auto_repeat_entry because it was found in queue for HRPU.localhost
+2025-09-05 02:03:42,745 ERROR scheduler Skipped queueing erpnext.projects.doctype.task.task.set_tasks_as_overdue because it was found in queue for HRPU.localhost
+2025-09-05 02:03:42,759 ERROR scheduler Skipped queueing frappe.sessions.clear_expired_sessions because it was found in queue for HRPU.localhost
+2025-09-05 02:03:42,766 ERROR scheduler Skipped queueing erpnext.buying.doctype.supplier_scorecard.supplier_scorecard.refresh_scorecards because it was found in queue for HRPU.localhost
+2025-09-05 02:03:42,776 ERROR scheduler Skipped queueing frappe.integrations.doctype.s3_backup_settings.s3_backup_settings.take_backups_daily because it was found in queue for HRPU.localhost
+2025-09-05 02:03:42,782 ERROR scheduler Skipped queueing frappe.email.doctype.newsletter.newsletter.send_scheduled_email because it was found in queue for HRPU.localhost
+2025-09-05 02:03:42,794 ERROR scheduler Skipped queueing erpnext.stock.doctype.repost_item_valuation.repost_item_valuation.repost_entries because it was found in queue for HRPU.localhost
+2025-09-05 02:03:42,819 ERROR scheduler Skipped queueing hrms.hr.doctype.interview.interview.send_interview_reminder because it was found in queue for HRPU.localhost
+2025-09-05 02:03:42,827 ERROR scheduler Skipped queueing frappe.model.utils.link_count.update_link_count because it was found in queue for HRPU.localhost
+2025-09-05 02:03:42,835 ERROR scheduler Skipped queueing erpnext.crm.utils.open_leads_opportunities_based_on_todays_event because it was found in queue for HRPU.localhost
+2025-09-05 02:03:42,844 ERROR scheduler Skipped queueing erpnext.support.doctype.issue.issue.auto_close_tickets because it was found in queue for HRPU.localhost
+2025-09-05 02:03:42,850 ERROR scheduler Skipped queueing erpnext.assets.doctype.asset.asset.update_maintenance_status because it was found in queue for HRPU.localhost
+2025-09-05 02:03:42,881 ERROR scheduler Skipped queueing hrms.hr.doctype.interview.interview.send_daily_feedback_reminder because it was found in queue for HRPU.localhost
+2025-09-05 02:03:42,892 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
 Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
     if is_scheduler_inactive():
@@ -208,7 +529,7 @@ Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
     raise errorclass(errno, errval)
 pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-02 02:47:22,221 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+2025-09-05 02:04:58,968 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
 Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
     if is_scheduler_inactive():
@@ -243,7 +564,79 @@ Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
     raise errorclass(errno, errval)
 pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-02 02:48:22,515 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
+2025-09-05 02:05:10,788 ERROR scheduler Skipped queueing erpnext.erpnext_integrations.doctype.plaid_settings.plaid_settings.automatic_synchronization because it was found in queue for HRPU.localhost
+2025-09-05 02:05:10,794 ERROR scheduler Skipped queueing frappe.website.doctype.web_page.web_page.check_publish_status because it was found in queue for HRPU.localhost
+2025-09-05 02:05:10,800 ERROR scheduler Skipped queueing hrms.hr.doctype.interview.interview.send_interview_reminder because it was found in queue for HRPU.localhost
+2025-09-05 02:05:10,806 ERROR scheduler Skipped queueing erpnext.crm.doctype.email_campaign.email_campaign.send_email_to_leads_or_contacts because it was found in queue for HRPU.localhost
+2025-09-05 02:05:10,814 ERROR scheduler Skipped queueing erpnext.assets.doctype.asset.asset.make_post_gl_entry because it was found in queue for HRPU.localhost
+2025-09-05 02:05:10,820 ERROR scheduler Skipped queueing erpnext.support.doctype.issue.issue.auto_close_tickets because it was found in queue for HRPU.localhost
+2025-09-05 02:05:10,823 ERROR scheduler Skipped queueing frappe.desk.page.backups.backups.delete_downloadable_backups because it was found in queue for HRPU.localhost
+2025-09-05 02:05:10,829 ERROR scheduler Skipped queueing erpnext.accounts.doctype.gl_entry.gl_entry.rename_gle_sle_docs because it was found in queue for HRPU.localhost
+2025-09-05 02:05:10,834 ERROR scheduler Skipped queueing frappe.desk.doctype.event.event.send_event_digest because it was found in queue for HRPU.localhost
+2025-09-05 02:05:10,839 ERROR scheduler Skipped queueing hrms.hr.utils.allocate_earned_leaves because it was found in queue for HRPU.localhost
+2025-09-05 02:05:10,845 ERROR scheduler Skipped queueing erpnext.projects.doctype.project.project.send_project_status_email_to_users because it was found in queue for HRPU.localhost
+2025-09-05 02:05:10,850 ERROR scheduler Skipped queueing erpnext.crm.doctype.opportunity.opportunity.auto_close_opportunity because it was found in queue for HRPU.localhost
+2025-09-05 02:05:10,857 ERROR scheduler Skipped queueing hrms.hr.doctype.interview.interview.send_daily_feedback_reminder because it was found in queue for HRPU.localhost
+2025-09-05 02:05:10,864 ERROR scheduler Skipped queueing frappe.email.doctype.auto_email_report.auto_email_report.send_daily because it was found in queue for HRPU.localhost
+2025-09-05 02:05:10,870 ERROR scheduler Skipped queueing erpnext.accounts.doctype.process_statement_of_accounts.process_statement_of_accounts.send_auto_email because it was found in queue for HRPU.localhost
+2025-09-05 02:05:10,876 ERROR scheduler Skipped queueing erpnext.manufacturing.doctype.bom_update_tool.bom_update_tool.auto_update_latest_price_in_all_boms because it was found in queue for HRPU.localhost
+2025-09-05 02:05:10,886 ERROR scheduler Skipped queueing hrms.controllers.employee_reminders.send_birthday_reminders because it was found in queue for HRPU.localhost
+2025-09-05 02:05:10,898 ERROR scheduler Skipped queueing hrms.controllers.employee_reminders.send_work_anniversary_reminders because it was found in queue for HRPU.localhost
+2025-09-05 02:05:10,906 ERROR scheduler Skipped queueing frappe.monitor.flush because it was found in queue for HRPU.localhost
+2025-09-05 02:05:10,911 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.pull because it was found in queue for HRPU.localhost
+2025-09-05 02:05:10,917 ERROR scheduler Skipped queueing erpnext.stock.doctype.serial_no.serial_no.update_maintenance_status because it was found in queue for HRPU.localhost
+2025-09-05 02:05:10,930 ERROR scheduler Skipped queueing frappe.utils.global_search.sync_global_search because it was found in queue for HRPU.localhost
+2025-09-05 02:05:10,945 ERROR scheduler Skipped queueing frappe.model.utils.user_settings.sync_user_settings because it was found in queue for HRPU.localhost
+2025-09-05 02:05:10,961 ERROR scheduler Skipped queueing erpnext.projects.doctype.project.project.project_status_update_reminder because it was found in queue for HRPU.localhost
+2025-09-05 02:05:10,966 ERROR scheduler Skipped queueing erpnext.crm.doctype.contract.contract.update_status_for_contracts because it was found in queue for HRPU.localhost
+2025-09-05 02:05:10,975 ERROR scheduler Skipped queueing erpnext.utilities.bulk_transaction.retry because it was found in queue for HRPU.localhost
+2025-09-05 02:05:10,981 ERROR scheduler Skipped queueing erpnext.accounts.utils.run_ledger_health_checks because it was found in queue for HRPU.localhost
+2025-09-05 02:05:10,987 ERROR scheduler Skipped queueing frappe.website.doctype.personal_data_deletion_request.personal_data_deletion_request.process_data_deletion_request because it was found in queue for HRPU.localhost
+2025-09-05 02:05:10,992 ERROR scheduler Skipped queueing erpnext.stock.doctype.repost_item_valuation.repost_item_valuation.repost_entries because it was found in queue for HRPU.localhost
+2025-09-05 02:05:10,998 ERROR scheduler Skipped queueing frappe.desk.notifications.clear_notifications because it was found in queue for HRPU.localhost
+2025-09-05 02:05:11,005 ERROR scheduler Skipped queueing frappe.automation.doctype.reminder.reminder.send_reminders because it was found in queue for HRPU.localhost
+2025-09-05 02:05:11,013 ERROR scheduler Skipped queueing erpnext.utilities.doctype.video.video.update_youtube_data because it was found in queue for HRPU.localhost
+2025-09-05 02:05:11,027 ERROR scheduler Skipped queueing frappe.oauth.delete_oauth2_data because it was found in queue for HRPU.localhost
+2025-09-05 02:05:11,035 ERROR scheduler Skipped queueing hrms.hr.doctype.daily_work_summary_group.daily_work_summary_group.trigger_emails because it was found in queue for HRPU.localhost
+2025-09-05 02:05:11,046 ERROR scheduler Skipped queueing frappe.core.doctype.prepared_report.prepared_report.expire_stalled_report because it was found in queue for HRPU.localhost
+2025-09-05 02:05:11,051 ERROR scheduler Skipped queueing frappe.integrations.doctype.dropbox_settings.dropbox_settings.take_backups_daily because it was found in queue for HRPU.localhost
+2025-09-05 02:05:11,058 ERROR scheduler Skipped queueing frappe.twofactor.delete_all_barcodes_for_users because it was found in queue for HRPU.localhost
+2025-09-05 02:05:11,064 ERROR scheduler Skipped queueing hrms.hr.doctype.shift_type.shift_type.process_auto_attendance_for_all_shifts because it was found in queue for HRPU.localhost
+2025-09-05 02:05:11,067 ERROR scheduler Skipped queueing erpnext.crm.doctype.email_campaign.email_campaign.set_email_campaign_status because it was found in queue for HRPU.localhost
+2025-09-05 02:05:11,072 ERROR scheduler Skipped queueing frappe.deferred_insert.save_to_db because it was found in queue for HRPU.localhost
+2025-09-05 02:05:11,078 ERROR scheduler Skipped queueing erpnext.assets.doctype.asset_maintenance_log.asset_maintenance_log.update_asset_maintenance_log_status because it was found in queue for HRPU.localhost
+2025-09-05 02:05:11,081 ERROR scheduler Skipped queueing erpnext.support.doctype.service_level_agreement.service_level_agreement.check_agreement_status because it was found in queue for HRPU.localhost
+2025-09-05 02:05:11,085 ERROR scheduler Skipped queueing erpnext.projects.doctype.project.project.hourly_reminder because it was found in queue for HRPU.localhost
+2025-09-05 02:05:11,088 ERROR scheduler Skipped queueing frappe.model.utils.link_count.update_link_count because it was found in queue for HRPU.localhost
+2025-09-05 02:05:11,091 ERROR scheduler Skipped queueing frappe.automation.doctype.auto_repeat.auto_repeat.make_auto_repeat_entry because it was found in queue for HRPU.localhost
+2025-09-05 02:05:11,094 ERROR scheduler Skipped queueing erpnext.assets.doctype.asset.depreciation.post_depreciation_entries because it was found in queue for HRPU.localhost
+2025-09-05 02:05:11,097 ERROR scheduler Skipped queueing erpnext.crm.utils.open_leads_opportunities_based_on_todays_event because it was found in queue for HRPU.localhost
+2025-09-05 02:05:11,105 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for HRPU.localhost
+2025-09-05 02:05:11,113 ERROR scheduler Skipped queueing frappe.email.queue.flush because it was found in queue for HRPU.localhost
+2025-09-05 02:05:11,118 ERROR scheduler Skipped queueing erpnext.projects.doctype.task.task.set_tasks_as_overdue because it was found in queue for HRPU.localhost
+2025-09-05 02:05:11,123 ERROR scheduler Skipped queueing erpnext.quality_management.doctype.quality_review.quality_review.review because it was found in queue for HRPU.localhost
+2025-09-05 02:05:11,128 ERROR scheduler Skipped queueing frappe.automation.doctype.auto_repeat.auto_repeat.set_auto_repeat_as_completed because it was found in queue for HRPU.localhost
+2025-09-05 02:05:11,132 ERROR scheduler Skipped queueing erpnext.setup.doctype.email_digest.email_digest.send because it was found in queue for HRPU.localhost
+2025-09-05 02:05:11,137 ERROR scheduler Skipped queueing erpnext.controllers.accounts_controller.update_invoice_status because it was found in queue for HRPU.localhost
+2025-09-05 02:05:11,140 ERROR scheduler Skipped queueing frappe.sessions.clear_expired_sessions because it was found in queue for HRPU.localhost
+2025-09-05 02:05:11,143 ERROR scheduler Skipped queueing frappe.integrations.doctype.s3_backup_settings.s3_backup_settings.take_backups_daily because it was found in queue for HRPU.localhost
+2025-09-05 02:05:11,148 ERROR scheduler Skipped queueing hrms.hr.utils.generate_leave_encashment because it was found in queue for HRPU.localhost
+2025-09-05 02:05:11,152 ERROR scheduler Skipped queueing erpnext.assets.doctype.asset.asset.update_maintenance_status because it was found in queue for HRPU.localhost
+2025-09-05 02:05:11,157 ERROR scheduler Skipped queueing hrms.hr.doctype.shift_schedule_assignment.shift_schedule_assignment.process_auto_shift_creation because it was found in queue for HRPU.localhost
+2025-09-05 02:05:11,168 ERROR scheduler Skipped queueing erpnext.projects.doctype.project.project.update_project_sales_billing because it was found in queue for HRPU.localhost
+2025-09-05 02:05:11,177 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_contacts.google_contacts.sync because it was found in queue for HRPU.localhost
+2025-09-05 02:05:11,181 ERROR scheduler Skipped queueing hrms.hr.doctype.job_opening.job_opening.close_expired_job_openings because it was found in queue for HRPU.localhost
+2025-09-05 02:05:11,186 ERROR scheduler Skipped queueing erpnext.accounts.utils.auto_create_exchange_rate_revaluation_daily because it was found in queue for HRPU.localhost
+2025-09-05 02:05:11,194 ERROR scheduler Skipped queueing erpnext.projects.doctype.project.project.collect_project_status because it was found in queue for HRPU.localhost
+2025-09-05 02:05:11,201 ERROR scheduler Skipped queueing erpnext.stock.reorder_item.reorder_item because it was found in queue for HRPU.localhost
+2025-09-05 02:05:11,205 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.notify_unreplied because it was found in queue for HRPU.localhost
+2025-09-05 02:05:11,213 ERROR scheduler Skipped queueing frappe.desk.form.document_follow.send_hourly_updates because it was found in queue for HRPU.localhost
+2025-09-05 02:05:11,217 ERROR scheduler Skipped queueing erpnext.accounts.doctype.process_subscription.process_subscription.create_subscription_process because it was found in queue for HRPU.localhost
+2025-09-05 02:05:11,226 ERROR scheduler Skipped queueing hrms.hr.doctype.leave_ledger_entry.leave_ledger_entry.process_expired_allocation because it was found in queue for HRPU.localhost
+2025-09-05 02:05:11,231 ERROR scheduler Skipped queueing frappe.desk.form.document_follow.send_daily_updates because it was found in queue for HRPU.localhost
+2025-09-05 02:05:11,234 ERROR scheduler Skipped queueing erpnext.buying.doctype.supplier_scorecard.supplier_scorecard.refresh_scorecards because it was found in queue for HRPU.localhost
+2025-09-05 02:05:11,239 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_drive.google_drive.daily_backup because it was found in queue for HRPU.localhost
+2025-09-05 02:06:32,936 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
 Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
     if is_scheduler_inactive():
@@ -278,948 +671,64 @@ Traceback (most recent call last):
   File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
     raise errorclass(errno, errval)
 pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-02 02:49:22,795 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
-Traceback (most recent call last):
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
-    if is_scheduler_inactive():
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 124, in is_scheduler_inactive
-    if is_scheduler_disabled(verbose=verbose):
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 137, in is_scheduler_disabled
-    frappe.db.get_single_value("System Settings", "enable_scheduler")
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
-    ).run()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
-    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
-    self.connect()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
-    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
-    conn = self._get_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
-    return self.create_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
-    return pymysql.connect(**self.get_connection_settings())
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
-    self.connect()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
-    self._request_authentication()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
-    auth_packet = self._read_packet()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
-    packet.raise_for_error()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
-    err.raise_mysql_exception(self._data)
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
-    raise errorclass(errno, errval)
-pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-02 02:50:22,898 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
-Traceback (most recent call last):
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
-    if is_scheduler_inactive():
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 124, in is_scheduler_inactive
-    if is_scheduler_disabled(verbose=verbose):
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 137, in is_scheduler_disabled
-    frappe.db.get_single_value("System Settings", "enable_scheduler")
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
-    ).run()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
-    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
-    self.connect()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
-    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
-    conn = self._get_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
-    return self.create_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
-    return pymysql.connect(**self.get_connection_settings())
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
-    self.connect()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
-    self._request_authentication()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
-    auth_packet = self._read_packet()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
-    packet.raise_for_error()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
-    err.raise_mysql_exception(self._data)
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
-    raise errorclass(errno, errval)
-pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-02 02:51:23,325 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
-Traceback (most recent call last):
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
-    if is_scheduler_inactive():
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 124, in is_scheduler_inactive
-    if is_scheduler_disabled(verbose=verbose):
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 137, in is_scheduler_disabled
-    frappe.db.get_single_value("System Settings", "enable_scheduler")
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
-    ).run()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
-    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
-    self.connect()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
-    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
-    conn = self._get_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
-    return self.create_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
-    return pymysql.connect(**self.get_connection_settings())
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
-    self.connect()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
-    self._request_authentication()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
-    auth_packet = self._read_packet()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
-    packet.raise_for_error()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
-    err.raise_mysql_exception(self._data)
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
-    raise errorclass(errno, errval)
-pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-02 02:52:23,610 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
-Traceback (most recent call last):
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
-    if is_scheduler_inactive():
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 124, in is_scheduler_inactive
-    if is_scheduler_disabled(verbose=verbose):
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 137, in is_scheduler_disabled
-    frappe.db.get_single_value("System Settings", "enable_scheduler")
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
-    ).run()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
-    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
-    self.connect()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
-    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
-    conn = self._get_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
-    return self.create_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
-    return pymysql.connect(**self.get_connection_settings())
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
-    self.connect()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
-    self._request_authentication()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
-    auth_packet = self._read_packet()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
-    packet.raise_for_error()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
-    err.raise_mysql_exception(self._data)
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
-    raise errorclass(errno, errval)
-pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-02 02:53:23,943 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
-Traceback (most recent call last):
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
-    if is_scheduler_inactive():
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 124, in is_scheduler_inactive
-    if is_scheduler_disabled(verbose=verbose):
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 137, in is_scheduler_disabled
-    frappe.db.get_single_value("System Settings", "enable_scheduler")
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
-    ).run()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
-    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
-    self.connect()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
-    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
-    conn = self._get_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
-    return self.create_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
-    return pymysql.connect(**self.get_connection_settings())
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
-    self.connect()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
-    self._request_authentication()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
-    auth_packet = self._read_packet()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
-    packet.raise_for_error()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
-    err.raise_mysql_exception(self._data)
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
-    raise errorclass(errno, errval)
-pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-02 02:54:24,419 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
-Traceback (most recent call last):
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
-    if is_scheduler_inactive():
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 124, in is_scheduler_inactive
-    if is_scheduler_disabled(verbose=verbose):
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 137, in is_scheduler_disabled
-    frappe.db.get_single_value("System Settings", "enable_scheduler")
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
-    ).run()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
-    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
-    self.connect()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
-    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
-    conn = self._get_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
-    return self.create_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
-    return pymysql.connect(**self.get_connection_settings())
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
-    self.connect()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
-    self._request_authentication()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
-    auth_packet = self._read_packet()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
-    packet.raise_for_error()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
-    err.raise_mysql_exception(self._data)
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
-    raise errorclass(errno, errval)
-pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-02 02:55:24,512 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
-Traceback (most recent call last):
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
-    if is_scheduler_inactive():
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 124, in is_scheduler_inactive
-    if is_scheduler_disabled(verbose=verbose):
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 137, in is_scheduler_disabled
-    frappe.db.get_single_value("System Settings", "enable_scheduler")
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
-    ).run()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
-    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
-    self.connect()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
-    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
-    conn = self._get_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
-    return self.create_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
-    return pymysql.connect(**self.get_connection_settings())
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
-    self.connect()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
-    self._request_authentication()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
-    auth_packet = self._read_packet()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
-    packet.raise_for_error()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
-    err.raise_mysql_exception(self._data)
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
-    raise errorclass(errno, errval)
-pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-02 02:56:25,021 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
-Traceback (most recent call last):
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
-    if is_scheduler_inactive():
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 124, in is_scheduler_inactive
-    if is_scheduler_disabled(verbose=verbose):
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 137, in is_scheduler_disabled
-    frappe.db.get_single_value("System Settings", "enable_scheduler")
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
-    ).run()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
-    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
-    self.connect()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
-    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
-    conn = self._get_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
-    return self.create_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
-    return pymysql.connect(**self.get_connection_settings())
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
-    self.connect()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
-    self._request_authentication()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
-    auth_packet = self._read_packet()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
-    packet.raise_for_error()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
-    err.raise_mysql_exception(self._data)
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
-    raise errorclass(errno, errval)
-pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-02 02:57:25,108 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
-Traceback (most recent call last):
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
-    if is_scheduler_inactive():
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 124, in is_scheduler_inactive
-    if is_scheduler_disabled(verbose=verbose):
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 137, in is_scheduler_disabled
-    frappe.db.get_single_value("System Settings", "enable_scheduler")
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
-    ).run()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
-    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
-    self.connect()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
-    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
-    conn = self._get_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
-    return self.create_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
-    return pymysql.connect(**self.get_connection_settings())
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
-    self.connect()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
-    self._request_authentication()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
-    auth_packet = self._read_packet()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
-    packet.raise_for_error()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
-    err.raise_mysql_exception(self._data)
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
-    raise errorclass(errno, errval)
-pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-02 02:58:25,612 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
-Traceback (most recent call last):
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
-    if is_scheduler_inactive():
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 124, in is_scheduler_inactive
-    if is_scheduler_disabled(verbose=verbose):
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 137, in is_scheduler_disabled
-    frappe.db.get_single_value("System Settings", "enable_scheduler")
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
-    ).run()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
-    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
-    self.connect()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
-    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
-    conn = self._get_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
-    return self.create_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
-    return pymysql.connect(**self.get_connection_settings())
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
-    self.connect()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
-    self._request_authentication()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
-    auth_packet = self._read_packet()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
-    packet.raise_for_error()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
-    err.raise_mysql_exception(self._data)
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
-    raise errorclass(errno, errval)
-pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-02 02:59:25,711 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
-Traceback (most recent call last):
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
-    if is_scheduler_inactive():
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 124, in is_scheduler_inactive
-    if is_scheduler_disabled(verbose=verbose):
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 137, in is_scheduler_disabled
-    frappe.db.get_single_value("System Settings", "enable_scheduler")
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
-    ).run()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
-    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
-    self.connect()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
-    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
-    conn = self._get_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
-    return self.create_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
-    return pymysql.connect(**self.get_connection_settings())
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
-    self.connect()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
-    self._request_authentication()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
-    auth_packet = self._read_packet()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
-    packet.raise_for_error()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
-    err.raise_mysql_exception(self._data)
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
-    raise errorclass(errno, errval)
-pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-02 03:00:26,173 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
-Traceback (most recent call last):
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
-    if is_scheduler_inactive():
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 124, in is_scheduler_inactive
-    if is_scheduler_disabled(verbose=verbose):
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 137, in is_scheduler_disabled
-    frappe.db.get_single_value("System Settings", "enable_scheduler")
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
-    ).run()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
-    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
-    self.connect()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
-    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
-    conn = self._get_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
-    return self.create_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
-    return pymysql.connect(**self.get_connection_settings())
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
-    self.connect()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
-    self._request_authentication()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
-    auth_packet = self._read_packet()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
-    packet.raise_for_error()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
-    err.raise_mysql_exception(self._data)
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
-    raise errorclass(errno, errval)
-pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-02 03:01:26,387 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
-Traceback (most recent call last):
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
-    if is_scheduler_inactive():
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 124, in is_scheduler_inactive
-    if is_scheduler_disabled(verbose=verbose):
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 137, in is_scheduler_disabled
-    frappe.db.get_single_value("System Settings", "enable_scheduler")
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
-    ).run()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
-    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
-    self.connect()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
-    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
-    conn = self._get_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
-    return self.create_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
-    return pymysql.connect(**self.get_connection_settings())
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
-    self.connect()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
-    self._request_authentication()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
-    auth_packet = self._read_packet()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
-    packet.raise_for_error()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
-    err.raise_mysql_exception(self._data)
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
-    raise errorclass(errno, errval)
-pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-02 03:02:26,443 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
-Traceback (most recent call last):
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
-    if is_scheduler_inactive():
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 124, in is_scheduler_inactive
-    if is_scheduler_disabled(verbose=verbose):
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 137, in is_scheduler_disabled
-    frappe.db.get_single_value("System Settings", "enable_scheduler")
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
-    ).run()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
-    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
-    self.connect()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
-    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
-    conn = self._get_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
-    return self.create_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
-    return pymysql.connect(**self.get_connection_settings())
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
-    self.connect()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
-    self._request_authentication()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
-    auth_packet = self._read_packet()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
-    packet.raise_for_error()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
-    err.raise_mysql_exception(self._data)
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
-    raise errorclass(errno, errval)
-pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-02 03:03:26,917 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
-Traceback (most recent call last):
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
-    if is_scheduler_inactive():
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 124, in is_scheduler_inactive
-    if is_scheduler_disabled(verbose=verbose):
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 137, in is_scheduler_disabled
-    frappe.db.get_single_value("System Settings", "enable_scheduler")
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
-    ).run()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
-    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
-    self.connect()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
-    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
-    conn = self._get_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
-    return self.create_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
-    return pymysql.connect(**self.get_connection_settings())
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
-    self.connect()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
-    self._request_authentication()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
-    auth_packet = self._read_packet()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
-    packet.raise_for_error()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
-    err.raise_mysql_exception(self._data)
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
-    raise errorclass(errno, errval)
-pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-02 03:04:27,275 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
-Traceback (most recent call last):
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
-    if is_scheduler_inactive():
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 124, in is_scheduler_inactive
-    if is_scheduler_disabled(verbose=verbose):
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 137, in is_scheduler_disabled
-    frappe.db.get_single_value("System Settings", "enable_scheduler")
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
-    ).run()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
-    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
-    self.connect()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
-    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
-    conn = self._get_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
-    return self.create_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
-    return pymysql.connect(**self.get_connection_settings())
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
-    self.connect()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
-    self._request_authentication()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
-    auth_packet = self._read_packet()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
-    packet.raise_for_error()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
-    err.raise_mysql_exception(self._data)
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
-    raise errorclass(errno, errval)
-pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-02 03:05:27,368 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
-Traceback (most recent call last):
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
-    if is_scheduler_inactive():
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 124, in is_scheduler_inactive
-    if is_scheduler_disabled(verbose=verbose):
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 137, in is_scheduler_disabled
-    frappe.db.get_single_value("System Settings", "enable_scheduler")
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
-    ).run()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
-    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
-    self.connect()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
-    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
-    conn = self._get_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
-    return self.create_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
-    return pymysql.connect(**self.get_connection_settings())
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
-    self.connect()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
-    self._request_authentication()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
-    auth_packet = self._read_packet()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
-    packet.raise_for_error()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
-    err.raise_mysql_exception(self._data)
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
-    raise errorclass(errno, errval)
-pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-02 03:06:27,584 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
-Traceback (most recent call last):
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
-    if is_scheduler_inactive():
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 124, in is_scheduler_inactive
-    if is_scheduler_disabled(verbose=verbose):
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 137, in is_scheduler_disabled
-    frappe.db.get_single_value("System Settings", "enable_scheduler")
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
-    ).run()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
-    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
-    self.connect()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
-    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
-    conn = self._get_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
-    return self.create_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
-    return pymysql.connect(**self.get_connection_settings())
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
-    self.connect()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
-    self._request_authentication()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
-    auth_packet = self._read_packet()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
-    packet.raise_for_error()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
-    err.raise_mysql_exception(self._data)
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
-    raise errorclass(errno, errval)
-pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-02 03:07:27,985 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
-Traceback (most recent call last):
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
-    if is_scheduler_inactive():
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 124, in is_scheduler_inactive
-    if is_scheduler_disabled(verbose=verbose):
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 137, in is_scheduler_disabled
-    frappe.db.get_single_value("System Settings", "enable_scheduler")
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
-    ).run()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
-    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
-    self.connect()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
-    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
-    conn = self._get_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
-    return self.create_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
-    return pymysql.connect(**self.get_connection_settings())
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
-    self.connect()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
-    self._request_authentication()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
-    auth_packet = self._read_packet()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
-    packet.raise_for_error()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
-    err.raise_mysql_exception(self._data)
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
-    raise errorclass(errno, errval)
-pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-02 04:25:18,776 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
-Traceback (most recent call last):
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
-    if is_scheduler_inactive():
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 124, in is_scheduler_inactive
-    if is_scheduler_disabled(verbose=verbose):
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 137, in is_scheduler_disabled
-    frappe.db.get_single_value("System Settings", "enable_scheduler")
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
-    ).run()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
-    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
-    self.connect()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
-    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
-    conn = self._get_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
-    return self.create_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
-    return pymysql.connect(**self.get_connection_settings())
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
-    self.connect()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
-    self._request_authentication()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
-    auth_packet = self._read_packet()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
-    packet.raise_for_error()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
-    err.raise_mysql_exception(self._data)
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
-    raise errorclass(errno, errval)
-pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-02 04:26:19,101 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
-Traceback (most recent call last):
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
-    if is_scheduler_inactive():
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 124, in is_scheduler_inactive
-    if is_scheduler_disabled(verbose=verbose):
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 137, in is_scheduler_disabled
-    frappe.db.get_single_value("System Settings", "enable_scheduler")
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
-    ).run()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
-    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
-    self.connect()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
-    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
-    conn = self._get_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
-    return self.create_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
-    return pymysql.connect(**self.get_connection_settings())
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
-    self.connect()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
-    self._request_authentication()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
-    auth_packet = self._read_packet()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
-    packet.raise_for_error()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
-    err.raise_mysql_exception(self._data)
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
-    raise errorclass(errno, errval)
-pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-02 04:27:19,209 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
-Traceback (most recent call last):
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
-    if is_scheduler_inactive():
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 124, in is_scheduler_inactive
-    if is_scheduler_disabled(verbose=verbose):
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 137, in is_scheduler_disabled
-    frappe.db.get_single_value("System Settings", "enable_scheduler")
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
-    ).run()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
-    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
-    self.connect()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
-    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
-    conn = self._get_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
-    return self.create_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
-    return pymysql.connect(**self.get_connection_settings())
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
-    self.connect()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
-    self._request_authentication()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
-    auth_packet = self._read_packet()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
-    packet.raise_for_error()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
-    err.raise_mysql_exception(self._data)
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
-    raise errorclass(errno, errval)
-pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-02 04:28:19,748 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
-Traceback (most recent call last):
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
-    if is_scheduler_inactive():
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 124, in is_scheduler_inactive
-    if is_scheduler_disabled(verbose=verbose):
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 137, in is_scheduler_disabled
-    frappe.db.get_single_value("System Settings", "enable_scheduler")
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
-    ).run()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
-    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
-    self.connect()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
-    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
-    conn = self._get_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
-    return self.create_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
-    return pymysql.connect(**self.get_connection_settings())
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
-    self.connect()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
-    self._request_authentication()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
-    auth_packet = self._read_packet()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
-    packet.raise_for_error()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
-    err.raise_mysql_exception(self._data)
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
-    raise errorclass(errno, errval)
-pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-02 04:29:20,088 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
-Traceback (most recent call last):
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
-    if is_scheduler_inactive():
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 124, in is_scheduler_inactive
-    if is_scheduler_disabled(verbose=verbose):
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 137, in is_scheduler_disabled
-    frappe.db.get_single_value("System Settings", "enable_scheduler")
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
-    ).run()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
-    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
-    self.connect()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
-    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
-    conn = self._get_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
-    return self.create_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
-    return pymysql.connect(**self.get_connection_settings())
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
-    self.connect()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
-    self._request_authentication()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
-    auth_packet = self._read_packet()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
-    packet.raise_for_error()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
-    err.raise_mysql_exception(self._data)
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
-    raise errorclass(errno, errval)
-pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-02 04:30:20,194 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
-Traceback (most recent call last):
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
-    if is_scheduler_inactive():
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 124, in is_scheduler_inactive
-    if is_scheduler_disabled(verbose=verbose):
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 137, in is_scheduler_disabled
-    frappe.db.get_single_value("System Settings", "enable_scheduler")
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
-    ).run()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
-    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
-    self.connect()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
-    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
-    conn = self._get_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
-    return self.create_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
-    return pymysql.connect(**self.get_connection_settings())
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
-    self.connect()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
-    self._request_authentication()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
-    auth_packet = self._read_packet()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
-    packet.raise_for_error()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
-    err.raise_mysql_exception(self._data)
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
-    raise errorclass(errno, errval)
-pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-02 04:31:20,733 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
-Traceback (most recent call last):
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
-    if is_scheduler_inactive():
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 124, in is_scheduler_inactive
-    if is_scheduler_disabled(verbose=verbose):
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 137, in is_scheduler_disabled
-    frappe.db.get_single_value("System Settings", "enable_scheduler")
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
-    ).run()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
-    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
-    self.connect()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
-    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
-    conn = self._get_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
-    return self.create_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
-    return pymysql.connect(**self.get_connection_settings())
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
-    self.connect()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
-    self._request_authentication()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
-    auth_packet = self._read_packet()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
-    packet.raise_for_error()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
-    err.raise_mysql_exception(self._data)
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
-    raise errorclass(errno, errval)
-pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
-2025-09-02 04:32:21,164 ERROR scheduler Exception in Enqueue Events for Site HRP.localhost
-Traceback (most recent call last):
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 80, in enqueue_events_for_site
-    if is_scheduler_inactive():
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 124, in is_scheduler_inactive
-    if is_scheduler_disabled(verbose=verbose):
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 137, in is_scheduler_disabled
-    frappe.db.get_single_value("System Settings", "enable_scheduler")
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
-    ).run()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
-    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
-    self.connect()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
-    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 107, in get_connection
-    conn = self._get_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 113, in _get_connection
-    return self.create_connection()
-  File "/home/macro/Frappe/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 116, in create_connection
-    return pymysql.connect(**self.get_connection_settings())
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
-    self.connect()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
-    self._request_authentication()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
-    auth_packet = self._read_packet()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
-    packet.raise_for_error()
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
-    err.raise_mysql_exception(self._data)
-  File "/home/macro/Frappe/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
-    raise errorclass(errno, errval)
-pymysql.err.OperationalError: (1045, "Access denied for user '_3259b121be192e9f'@'localhost' (using password: YES)")
+2025-09-05 02:06:32,966 ERROR scheduler Skipped queueing erpnext.support.doctype.service_level_agreement.service_level_agreement.check_agreement_status because it was found in queue for HRPU.localhost
+2025-09-05 02:06:32,976 ERROR scheduler Skipped queueing erpnext.quality_management.doctype.quality_review.quality_review.review because it was found in queue for HRPU.localhost
+2025-09-05 02:06:32,982 ERROR scheduler Skipped queueing erpnext.projects.doctype.project.project.send_project_status_email_to_users because it was found in queue for HRPU.localhost
+2025-09-05 02:06:32,986 ERROR scheduler Skipped queueing erpnext.crm.doctype.contract.contract.update_status_for_contracts because it was found in queue for HRPU.localhost
+2025-09-05 02:06:32,990 ERROR scheduler Skipped queueing erpnext.projects.doctype.project.project.update_project_sales_billing because it was found in queue for HRPU.localhost
+2025-09-05 02:06:32,994 ERROR scheduler Skipped queueing erpnext.crm.doctype.email_campaign.email_campaign.set_email_campaign_status because it was found in queue for HRPU.localhost
+2025-09-05 02:06:32,998 ERROR scheduler Skipped queueing frappe.website.doctype.personal_data_deletion_request.personal_data_deletion_request.process_data_deletion_request because it was found in queue for HRPU.localhost
+2025-09-05 02:06:33,003 ERROR scheduler Skipped queueing hrms.hr.utils.allocate_earned_leaves because it was found in queue for HRPU.localhost
+2025-09-05 02:06:33,006 ERROR scheduler Skipped queueing erpnext.stock.doctype.serial_no.serial_no.update_maintenance_status because it was found in queue for HRPU.localhost
+2025-09-05 02:06:33,010 ERROR scheduler Skipped queueing hrms.controllers.employee_reminders.send_birthday_reminders because it was found in queue for HRPU.localhost
+2025-09-05 02:06:33,020 ERROR scheduler Skipped queueing frappe.integrations.doctype.dropbox_settings.dropbox_settings.take_backups_daily because it was found in queue for HRPU.localhost
+2025-09-05 02:06:33,032 ERROR scheduler Skipped queueing erpnext.assets.doctype.asset.depreciation.post_depreciation_entries because it was found in queue for HRPU.localhost
+2025-09-05 02:06:33,039 ERROR scheduler Skipped queueing erpnext.accounts.utils.auto_create_exchange_rate_revaluation_daily because it was found in queue for HRPU.localhost
+2025-09-05 02:06:33,054 ERROR scheduler Skipped queueing frappe.desk.page.backups.backups.delete_downloadable_backups because it was found in queue for HRPU.localhost
+2025-09-05 02:06:33,058 ERROR scheduler Skipped queueing frappe.website.doctype.web_page.web_page.check_publish_status because it was found in queue for HRPU.localhost
+2025-09-05 02:06:33,070 ERROR scheduler Skipped queueing frappe.monitor.flush because it was found in queue for HRPU.localhost
+2025-09-05 02:06:33,076 ERROR scheduler Skipped queueing frappe.integrations.doctype.s3_backup_settings.s3_backup_settings.take_backups_daily because it was found in queue for HRPU.localhost
+2025-09-05 02:06:33,089 ERROR scheduler Skipped queueing frappe.twofactor.delete_all_barcodes_for_users because it was found in queue for HRPU.localhost
+2025-09-05 02:06:33,096 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_contacts.google_contacts.sync because it was found in queue for HRPU.localhost
+2025-09-05 02:06:33,104 ERROR scheduler Skipped queueing erpnext.controllers.accounts_controller.update_invoice_status because it was found in queue for HRPU.localhost
+2025-09-05 02:06:33,109 ERROR scheduler Skipped queueing erpnext.projects.doctype.project.project.collect_project_status because it was found in queue for HRPU.localhost
+2025-09-05 02:06:33,116 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for HRPU.localhost
+2025-09-05 02:06:33,127 ERROR scheduler Skipped queueing erpnext.accounts.utils.run_ledger_health_checks because it was found in queue for HRPU.localhost
+2025-09-05 02:06:33,138 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_drive.google_drive.daily_backup because it was found in queue for HRPU.localhost
+2025-09-05 02:06:33,142 ERROR scheduler Skipped queueing hrms.hr.doctype.shift_type.shift_type.process_auto_attendance_for_all_shifts because it was found in queue for HRPU.localhost
+2025-09-05 02:06:33,149 ERROR scheduler Skipped queueing erpnext.crm.doctype.opportunity.opportunity.auto_close_opportunity because it was found in queue for HRPU.localhost
+2025-09-05 02:06:33,156 ERROR scheduler Skipped queueing erpnext.stock.reorder_item.reorder_item because it was found in queue for HRPU.localhost
+2025-09-05 02:06:33,161 ERROR scheduler Skipped queueing frappe.email.doctype.auto_email_report.auto_email_report.send_daily because it was found in queue for HRPU.localhost
+2025-09-05 02:06:33,170 ERROR scheduler Skipped queueing frappe.deferred_insert.save_to_db because it was found in queue for HRPU.localhost
+2025-09-05 02:06:33,186 ERROR scheduler Skipped queueing frappe.utils.global_search.sync_global_search because it was found in queue for HRPU.localhost
+2025-09-05 02:06:33,199 ERROR scheduler Skipped queueing erpnext.setup.doctype.email_digest.email_digest.send because it was found in queue for HRPU.localhost
+2025-09-05 02:06:33,205 ERROR scheduler Skipped queueing frappe.oauth.delete_oauth2_data because it was found in queue for HRPU.localhost
+2025-09-05 02:06:33,215 ERROR scheduler Skipped queueing erpnext.stock.doctype.repost_item_valuation.repost_item_valuation.repost_entries because it was found in queue for HRPU.localhost
+2025-09-05 02:06:33,221 ERROR scheduler Skipped queueing frappe.desk.notifications.clear_notifications because it was found in queue for HRPU.localhost
+2025-09-05 02:06:33,235 ERROR scheduler Skipped queueing hrms.hr.utils.generate_leave_encashment because it was found in queue for HRPU.localhost
+2025-09-05 02:06:33,244 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.notify_unreplied because it was found in queue for HRPU.localhost
+2025-09-05 02:06:33,254 ERROR scheduler Skipped queueing frappe.email.queue.flush because it was found in queue for HRPU.localhost
+2025-09-05 02:06:33,282 ERROR scheduler Skipped queueing erpnext.utilities.bulk_transaction.retry because it was found in queue for HRPU.localhost
+2025-09-05 02:06:33,293 ERROR scheduler Skipped queueing erpnext.accounts.doctype.gl_entry.gl_entry.rename_gle_sle_docs because it was found in queue for HRPU.localhost
+2025-09-05 02:06:33,300 ERROR scheduler Skipped queueing erpnext.erpnext_integrations.doctype.plaid_settings.plaid_settings.automatic_synchronization because it was found in queue for HRPU.localhost
+2025-09-05 02:06:33,311 ERROR scheduler Skipped queueing erpnext.manufacturing.doctype.bom_update_tool.bom_update_tool.auto_update_latest_price_in_all_boms because it was found in queue for HRPU.localhost
+2025-09-05 02:06:33,332 ERROR scheduler Skipped queueing frappe.core.doctype.prepared_report.prepared_report.expire_stalled_report because it was found in queue for HRPU.localhost
+2025-09-05 02:06:33,336 ERROR scheduler Skipped queueing frappe.model.utils.user_settings.sync_user_settings because it was found in queue for HRPU.localhost
+2025-09-05 02:06:33,343 ERROR scheduler Skipped queueing hrms.hr.doctype.interview.interview.send_interview_reminder because it was found in queue for HRPU.localhost
+2025-09-05 02:06:33,354 ERROR scheduler Skipped queueing frappe.automation.doctype.reminder.reminder.send_reminders because it was found in queue for HRPU.localhost
+2025-09-05 02:06:33,358 ERROR scheduler Skipped queueing hrms.hr.doctype.shift_schedule_assignment.shift_schedule_assignment.process_auto_shift_creation because it was found in queue for HRPU.localhost
+2025-09-05 02:06:33,383 ERROR scheduler Skipped queueing erpnext.assets.doctype.asset.asset.update_maintenance_status because it was found in queue for HRPU.localhost
+2025-09-05 02:06:33,400 ERROR scheduler Skipped queueing erpnext.utilities.doctype.video.video.update_youtube_data because it was found in queue for HRPU.localhost
+2025-09-05 02:06:33,411 ERROR scheduler Skipped queueing frappe.model.utils.link_count.update_link_count because it was found in queue for HRPU.localhost
+2025-09-05 02:06:33,419 ERROR scheduler Skipped queueing hrms.hr.doctype.leave_ledger_entry.leave_ledger_entry.process_expired_allocation because it was found in queue for HRPU.localhost
+2025-09-05 02:06:33,423 ERROR scheduler Skipped queueing hrms.controllers.employee_reminders.send_work_anniversary_reminders because it was found in queue for HRPU.localhost
+2025-09-05 02:06:33,432 ERROR scheduler Skipped queueing erpnext.crm.doctype.email_campaign.email_campaign.send_email_to_leads_or_contacts because it was found in queue for HRPU.localhost
+2025-09-05 02:06:33,438 ERROR scheduler Skipped queueing erpnext.projects.doctype.project.project.project_status_update_reminder because it was found in queue for HRPU.localhost
+2025-09-05 02:06:33,443 ERROR scheduler Skipped queueing frappe.automation.doctype.auto_repeat.auto_repeat.set_auto_repeat_as_completed because it was found in queue for HRPU.localhost
+2025-09-05 02:06:33,451 ERROR scheduler Skipped queueing erpnext.assets.doctype.asset.asset.make_post_gl_entry because it was found in queue for HRPU.localhost
+2025-09-05 02:06:33,464 ERROR scheduler Skipped queueing erpnext.assets.doctype.asset_maintenance_log.asset_maintenance_log.update_asset_maintenance_log_status because it was found in queue for HRPU.localhost
+2025-09-05 02:06:33,489 ERROR scheduler Skipped queueing hrms.hr.doctype.job_opening.job_opening.close_expired_job_openings because it was found in queue for HRPU.localhost
+2025-09-05 02:06:33,503 ERROR scheduler Skipped queueing frappe.desk.form.document_follow.send_hourly_updates because it was found in queue for HRPU.localhost
+2025-09-05 02:06:33,514 ERROR scheduler Skipped queueing erpnext.accounts.doctype.process_subscription.process_subscription.create_subscription_process because it was found in queue for HRPU.localhost
+2025-09-05 02:06:33,539 ERROR scheduler Skipped queueing erpnext.crm.utils.open_leads_opportunities_based_on_todays_event because it was found in queue for HRPU.localhost
+2025-09-05 02:06:33,544 ERROR scheduler Skipped queueing frappe.sessions.clear_expired_sessions because it was found in queue for HRPU.localhost
